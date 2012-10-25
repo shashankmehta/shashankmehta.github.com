@@ -29,7 +29,7 @@ body {
 		float: none;
 	}
 
-	#main-nav {
+	.main-nav {
 		float: none;
 		margin-left: 0px;
 
@@ -112,7 +112,7 @@ body {
 		#header {
 			width: 100%;
 			padding: 20% 0% 0% 15%;
-			#main-nav {
+			.main-nav {
 				margin-top: 10px;
 			}
 			.profilepic {
@@ -167,4 +167,29 @@ a {
 
 a:hover {
 	color: $greyshade;
+}
+
+body {
+	@media screen and (max-width: 1040px){
+			margin: 0 0;
+	}
+}
+@media screen and (max-width: 700px){
+	#sub-nav{
+		display: block;
+	}
+	.container {
+		.left-col {
+			position: relative;
+			width: 100%;
+			#header {
+				padding: 40px 0px;
+				text-align: center;
+			}
+		}
+		.mid-col {
+			float: none;
+			width: 100%;
+		}
+	}
 }

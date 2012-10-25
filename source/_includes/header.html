@@ -2,19 +2,9 @@
 	<img src="/images/dp.jpg" alt="Profile Picture" style="width: 160px;">
 </div>
 <h1><a href="{{ root_url }}/">{{ site.title }}</a></h1>
-<nav id="main-nav">{% include navigation.html %}</nav>
+<nav class="main-nav">{% include navigation.html %}</nav>
 <br/>
 <h3 class="alignleft">{{ site.subtitle }}</h3>
-<nav id="mobile-nav">
-	<div class="alignleft menu">
-		<a class="button">Menu</a>
-		<div class="container">{% include navigation.html %}</div>
-	</div>
-	<br/>
-	<div class="alignright search">
-		<a class="button"></a>
-	</div>
-</nav>
 <nav id="sub-nav" class="alignright">
 	<div class="social">
 		{% if site.facebook_user %}

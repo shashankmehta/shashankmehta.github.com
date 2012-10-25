@@ -58,14 +58,14 @@ default_asides: [custom/asides/aboutme.html, asides/recent_posts.html, asides/gi
 # ----------------------- #
 
 # Github repositories
-github_user: 
+github_user: shashankmehta
 github_repo_count: 4
 github_show_profile_link: true
 github_skip_forks: false
 
 # Twitter
-twitter_user:
-twitter_tweet_count: 4
+twitter_user: leostatic
+twitter_tweet_count: 0
 twitter_show_replies: false
 twitter_follow_button: true
 twitter_show_follower_count: false

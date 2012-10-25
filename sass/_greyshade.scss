@@ -71,11 +71,16 @@ body {
 						float: right;
 						top: 0px;
 						color: #555;
+						text-align: right;
 						.date::before {
 							color: #555;
+							position: relative;
+							margin-right: 10px;
 						}
 						.tags::before {
-							color: #555;
+							color: #999;
+							position: relative;
+							margin-right: 10px;
 						}
 					}
 					h1.title{
@@ -107,6 +112,9 @@ body {
 		#header {
 			width: 100%;
 			padding: 20% 0% 0% 15%;
+			#main-nav {
+				margin-top: 10px;
+			}
 			.profilepic {
 				img {
 					border-radius: 50%;
@@ -136,6 +144,15 @@ body {
 .archives {
 	.title {
 		font-size: 1.2em;
+	}
+	article {
+		.meta {
+			line-height: 1.5em;
+			margin-top: 0;
+			span::before {
+				padding-right: 0;
+			}
+		}
 	}
 }
 

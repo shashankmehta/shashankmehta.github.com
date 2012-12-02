@@ -10,7 +10,10 @@ body {
 #header {
 	height: auto;
 	border-bottom: none;
-
+	.subtitle {
+		color: #999;
+		font-style: italic;
+	}
 	#sub-nav {
 		float: none;
 		position: relative;

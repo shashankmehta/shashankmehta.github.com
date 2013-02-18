@@ -43,13 +43,13 @@ $pre-border: $color-gray03;
 
 article{
 	code, pre{
-		background: $pre-bg;
+		background: white;
 		border: 1px solid $pre-border;
 		font-family: $font-mono;
 	}
 	code{
 		font-size: 0.9em;
-		padding: 1px 3px;
+		padding: 4px 5px;
 		margin: 0 3px;
 		@include border-radius(5px);
 	}
@@ -121,7 +121,6 @@ figure.code{
 	td.code{
 		width: 100%;
 		padding-left: 15px;
-		overflow-x: auto;
 	}
 }
 .entry-content .gist{

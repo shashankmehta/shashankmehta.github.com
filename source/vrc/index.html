@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>EC 252 Updates</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link rel="shortcut icon" href="/vrc/img/computer1.png" type="image/x-icon" />
+
+        <link rel="stylesheet" href="/vrc/css/bootstrap.css">
+        <style>body {
+            text-align: center;
+            background-image: url(/vrc/img/shl.png);
+        }
+    </style>
+    </head>
+    <body>
+        <img src="/vrc/img/computer1.png" width=100 alt="">
+        <img src="/vrc/img/computer2.png" width=100 alt="">
+        <img src="/vrc/img/computer3.png" width=135 alt="">
+
+        <div class="container">
+                <h1>Computer Architecture and Microprocessors</h1>
+
+            <div style="margin-top: 50px">
+                <h3>
+                    Missing Prof. Vaskar's updates on the course page?
+                </h3>
+                <p>
+                    Modern day technology enables use of <span style="text-decoration: underline;">email notifications</span> whenever the course page is updated. <br>
+                    No it's not magic, it's just simple scraping. <br>
+                </p>
+                <p>
+                    Submit your email id and get a notification in your inbox within an hour of the course page being updated  
+                </p>
+                <p style="font-size: .8em;">If you are too lazy to even check your mail, well then, may god help you.</p>
+            </div>
+
+            <div class="email" style="margin-top: 40px;">
+                <div class="notice" style="display: none;"></div>
+                <form>
+                    <fieldset>
+                        <input type="text" class="input-xlarge" id="input01" name="emailid"> <br>
+                        <div class="btn btn-primary" id="submit">Submit Email ID</div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer" style="bottom: 0px;position: fixed;width: 100%;margin: 20px 0px;">
+            Made by <a href="http://shashankmehta.in">Shashank Mehta</a> | <a href="http://sdslabs.co.in">SDSLabs</a>
+        </div>
+        <script src="/vrc/js/jquery-1.7.2.min.js"></script>
+        <script>
+            $('#input01').keypress(function(e){
+                if ( e.which == 13 ) e.preventDefault();
+            });
+            function valid(emailAddress) {
+                var pattern = new RegExp(/^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?$/i);
+                return pattern.test(emailAddress);
+            };
+            $('form').delegate('#submit','click',function(){
+                email = $('#input01').val();
+                $('.notice').fadeOut();
+                if (valid(email)){
+                    $('form').remove();
+                    $('.email').append('<img class="loader" src="/vrc/img/loader.gif"/>');
+                    $.ajax({
+                        url: 'http://192.168.208.213/vrc/mailid.php?emailid='+email,
+                        type: 'GET',
+                        success: function(data){
+                            $('.loader').remove();
+                            $('.email').append('<img class="loader" width=100 src="/vrc/img/done.png"/>');
+                        }
+                    });
+                }
+                else {
+                    $('.notice').html("Let's not play games here. I need a valid email address!").fadeIn();
+                }
+
+            })
+        </script>
+
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
+</html>

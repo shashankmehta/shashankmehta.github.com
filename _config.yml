@@ -6,10 +6,15 @@ rdiscount:
 
 name: Shashank Mehta
 url: http://shashankmehta.in
-description: A fantastic blog that is fantastic.
+description: Electronics and Communication Undergrad at IIT Roorkee, member of SDSLabs and WONA.
 twitter: leostatic
 github: leostatic
 gravatar_url: http://www.gravatar.com/avatar/91d05b8aab2671b4abc8a8c76435bf5a
 
 disqus_short_name: leostatic
 disqus_show_comment_count: false
+
+googleplus_user: 109764126807838271120
+googleplus_hidden: false
+
+google_analytics_tracking_id: UA-32545112-1

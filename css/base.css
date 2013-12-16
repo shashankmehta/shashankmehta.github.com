@@ -18,7 +18,8 @@
 
 body {
   font-family: AvenirNext, sans serif;
-  font-size: 16px; }
+  font-size: 16px;
+  color: #081522; }
 
 a {
   color: inherit;
@@ -55,6 +56,9 @@ a {
 @media screen and (max-width: 500px) {
   #homepage {
     padding: 10px 20px 20px 20px; } }
+@media screen and (max-width: 500px) {
+  .content {
+    padding: 0px 20px; } }
 .pure-g-r .content {
   font-family: AvenirNext, sans serif;
   font-weight: 500;
@@ -65,6 +69,14 @@ a {
   .pure-g-r .content .archives .title h1 {
     font-weight: 500;
     font-size: 1.3em; }
+  .pure-g-r .content .post p {
+    line-height: 1.4em; }
+  .pure-g-r .content .post .meta {
+    margin-top: 50px;
+    border-top: 1px solid #ccc; }
+  .pure-g-r .content .post #disqus_thread {
+    padding-top: 25px;
+    border-top: 1px solid #eee; }
 
 .navigation {
   position: fixed;
@@ -89,7 +101,7 @@ a {
       .navigation .holder .nav a {
         font-size: 0.8em; }
     .navigation .holder:hover {
-      height: 180px;
+      height: 150px;
       width: 100px;
       -webkit-transition: all 0.2s ease-in;
       -moz-transition: all 0.2s ease-in;
@@ -98,3 +110,10 @@ a {
       transition: all 0.2s ease-in; }
       .navigation .holder:hover .nav {
         display: block; }
+
+@media screen and (max-width: 767px) {
+  .navigation {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    left: initial; } }

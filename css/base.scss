@@ -36,6 +36,7 @@
 body {
 	font-family: AvenirNext, sans serif;
 	font-size: 16px;
+	color: #081522;
 }
 
 // ============== COMPONENTS ============== //
@@ -91,12 +92,19 @@ a{
 	}
 }
 
+@media screen and (max-width: 500px){
+	.content{
+		padding: 0px 20px;
+	}
+}
+
 .pure-g-r{
 
 	.content {
 		font-family: AvenirNext, sans serif;
 		font-weight: 500;
 		margin: 20px auto 20px;
+		
 		
 		.archives{
 
@@ -111,6 +119,21 @@ a{
 					font-weight: 500;
 					font-size: 1.3em;
 				}
+			}
+		}
+
+		.post {
+			p{
+				line-height: 1.4em;
+			}
+			.meta {
+				margin-top: 50px;
+				border-top: 1px solid #ccc;
+			}
+
+			#disqus_thread {
+				padding-top: 25px;
+				border-top: 1px solid #eee;
 			}
 		}
 	}
@@ -144,7 +167,7 @@ a{
 		}
 
 		&:hover{
-			height: 180px;
+			height: 150px;
 			width: 100px;
 			@include transition(all, 0.2s, ease-in);
 
@@ -154,5 +177,15 @@ a{
 		}
 	}
 }
+
+@media screen and (max-width: 767px){
+	.navigation{
+		position: absolute;
+		right: 10px;
+		top: 10px;
+		left: initial;
+	}
+}
+
 
 // ============== /NAVIGATION ============== //

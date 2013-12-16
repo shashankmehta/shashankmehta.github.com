@@ -1,0 +1,55 @@
+@font-face {
+  font-family: 'AvenirNext';
+  font-style: normal;
+  font-weight: 300;
+  src: local("Avenir Next"), local("Avenir Next"), url(/fonts/avenirnext-thin.woff) format("woff"); }
+
+@font-face {
+  font-family: 'AvenirNext';
+  font-style: normal;
+  font-weight: 500;
+  src: local("Avenir Next"), local("Avenir Next"), url(/fonts/avenirnext-regular.woff) format("woff"); }
+
+@font-face {
+  font-family: 'AvenirNext';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Avenir Next Bold"), local("Avenir Next Bold"), url(/fonts/avenirnext-bold.woff) format("woff"); }
+
+body {
+  font-family: Avenir Next, sans serif; }
+
+#homepage {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  padding: 0px 100px 100px 0px;
+  text-align: right;
+  color: #2c3e50;
+  font-family: 'AvenirNext', sans serif;
+  font-weight: 300; }
+  #homepage .main {
+    margin-bottom: 25px; }
+    #homepage .main h1, #homepage .main h3 {
+      font-weight: 300;
+      margin: 0px; }
+    #homepage .main h1 {
+      font-size: 2.5em; }
+    #homepage .main h3 {
+      font-size: 0.9em; }
+  #homepage .meta div {
+    margin-bottom: 10px; }
+  #homepage .meta a {
+    color: inherit;
+    text-decoration: none;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in; }
+    #homepage .meta a:hover {
+      color: #3498db; }
+
+@media screen and (max-width: 500px) {
+  #homepage {
+    padding: 10px 20px 20px 20px; } }

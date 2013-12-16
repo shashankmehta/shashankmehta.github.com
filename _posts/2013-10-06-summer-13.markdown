@@ -1,0 +1,44 @@
+---
+layout: post
+title: "Summer Intern 2013"
+date: 2013-10-06 02:11
+comments: true
+categories: [intern]
+---
+
+Bangalore, my favorite city, the city where I had spent 3 years before, was calling me. At least I thought so! So there were two things:
+
+1. Internship
+2. I wanted to go back to Bangalore
+
+Common sense says, "Combine the two, idiot!!" And that's exactly what I did. And 'lo behold! I had 2 months in the city of Bangalore!
+
+<!--more-->
+
+A lot of people in my year spent a lot of time last year sending a lot of mails to a lot of professors for an internship. Some succeeded in landing a foreign intern. Most did not. Me? I applied to two companies and one startup. I got an offer for internship from the startup.
+
+One of the most common question is "How do I find good startups in India?" I just followed listings on [Hasjob](http://jobs.hasgeek.com). But the sheer number of "Web developer intern needed, stipend: 5k INR" was exasperating. I can make websites but I definitely wasn't spending 2 months of my non academic time working on a website. The money offered tells you a lot. 5k translates to poor quality work.
+
+But then one day I saw listing by a startup called "Mango Man Technologies". Yeah, the name did scare me a bit. But then I went through the listing. They seemed to be working on an entertainment device. They needed C coders, people with Unix experience and Android. I knew basics of C and had Unix experience but I knew next to nothing about Android dev. I still applied and 2 telephonic interviews later, I was selected. Woot!!
+
+While I'm always up for surprises and pushing my self, what happened next was something very challenging. I joined on 26th May and the sub project that I was assigned involved Android development. Up till that day, I had written exactly zilch lines of code in Java, forget about Android. There was one more intern apart from me who also was assigned an android dev sub project. We were given a weeks time to learn Java + Android which turned out to be enough. 
+
+<img class="basic-alignment center" title="Perks of Interning at a startup" src="/images/posts/summer13/tv.jpg" alt="">
+
+Over the course of the internship, I was assigned 3 sub projects. I initially worked on User Experience and User On Boarding for the device. In the last stage I worked on an application that was a project in itself. Learning a new language and working on a project in a completely different setup that I'm used to was tough. But at the same time, it was highly satisfying at the end of the internship, 2 months later. I had been working on similar stuff in SDSLabs, albeit, on a different stack. So it was a good to see that what I did in my spare time in college was actually of use in the outside world!
+
+One interesting thing in this startup was the "Saturday is a working day" culture. On Saturday, the whole team would get together and a sort of Dev Sprint would take place where we'd split ourselves into two teams and finish a feature each. We'd start working around 4 in the evening and be done by next day morning around breakfast! A lot of code was written during this time. The only sad part was that it did take away the Saturday nights from me, which brings me to the other part of the summer.
+
+A few of my good friends were also in the city. Thanks to them, the weekends, no, the Sundays were pretty interesting. Bangalore is a beautiful city and Sunday evenings on MG Road were brilliant. Memories were obviously created, like this one time where Rushil Nagda got lost.
+
+>Nagda awesome nagda. So he is a proud owner of an awesome 'Chinese' phone which doesn't last half a day. Out of battery, out of juice, but he has to meet Anupriya and me at MG Road. A smart scientist that he is, he decided to walk up and down the entire road in the hopes of meeting us. Sadly, this super clever plan fails. But he doesn't give up easily. So, in all his cleverness, he decided to scan the roads parallel to MG road in the hopes of meeting us. What a brilliant idea, don't you agree? But for some reason, he fails again. So he musters up courage and asks a few local people if he can borrow their phone. Turns out half of Bangalore's residents don't have enough balance in their phones. He keeps trying even after being rejected so many times and strikes gold with an old lady (who he claims is actually a really hot woman) who lends him her phone. Then he calls up Rishika, takes my phone number and tries calling me. Turns out it is just not his day. He dialed a wrong number! Now he can't ask that lady for her phone again and everyone else in Bangalore seems to be out of balance. So he next borrowed a phone from a Chinese (the irony was lost on him. He has a Chinese phone, remember?) and calls up Rishika again who has the brains to connect me on conference call this time. She knows that you can't trust scientists.
+On the phone he tells me that after walking the entire area, all that he remembers is the Metro station and asks us to meet him there. He also added that being lost in Bangalore was a very scary experience. 
+He met us there, after 10-15 minutes, visibly shaken from this once in a lifetime experience. I hope he recovers soon. Get well soon, genius.
+
+I crack up every time I read this! Actually, a lot of crazy stuff happened. This another time, a random guy walked up to Rushil and said "You! Give me a hi five!" Ah, how much I love this city!
+
+All in all, it was a great summer! I don't know where I'll land next year but all I'm hoping for is that the experience can match Summer of '13.
+
+<img src="/images/posts/summer13/friends.jpg" class="basic-alignment center" alt="">
+
+PS: I know this blog post is too many months late but I just haven't felt like writing for last few months.

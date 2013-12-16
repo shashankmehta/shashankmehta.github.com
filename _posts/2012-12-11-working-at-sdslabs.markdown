@@ -8,7 +8,7 @@ published: true
 ---
 _This post has been cross posted from the official [blog of sdslabs](http://blog.sdslabs.co)_
 
-<img src="/images/posts/sdslabs.jpg" style="float: right; margin: 5px 0px 20px 20px;">
+<img src="/images/posts/sdslabs.jpg" />
 
 If you have ever spoken to me in real life or follow me on [twitter](http://twitter.com/leostatic) or are in my friend list in facebook or instagram or ..... you get the point, then you must have seen my posts related to a certain something known as SDSLabs. It's been 11 months since I joined this student group in IITR and it has more or less become a part of my identity. Before I write anything more I should probably explain what is SDSLabs.
 
@@ -20,12 +20,12 @@ IITR has a very vibrant culture of student groups with there being a group for n
 ##Recruitment Process
 SDSLabs' recruitment process for first years started off in the second week of January. A two and half hours of written test and a nearly three hours of interview later I was in. I was one of the 13, out of nearly 200 people who had applied, to be chosen in the programmer category (Design being the other). The process was long and ardous but the end result has been wonderful. The last 11 months in SDSLabs have been amazing.
 
-<img src="/images/posts/sds1.jpg" style="margin: 5px 0px 20px 20px;">
+<img src="/images/posts/sds1.jpg" />
 
 ##What's it like inside of SDSLabs
 The first thing that you realise is the level of service and infrastructure available inside the lab. A fingerprint scanner based entry, 42 inch TV, an enterprise level server, bean bags, AC, radiator are just a few among many other things available. Funds have never been a problem for us, courtesy IITR administration, with another server in the line and along with a Nexus 7 for android development. It's more like a startup inside college with people even sleeping inside lab! Anyways, looking beyond things that you can buy with a Mastercard, the best part of the lab is the people in there. A conversation with a senior leaves you with wealth of knowledge each time unless, of course, it is a bakkar conversation. SDSLabs was the first place where I could talk about [Hacker News](http://news.ycombinator.org) without getting clueless looks. It was also the first place where when I complained about unnecessary clicks on a website people actually understood because it is in their system to create user friendly apps.
 
-<img alt="ManUtd vs ManCity" src="/images/posts/sds2.jpg" style="margin: 5px 0px 20px 20px;">
+<img alt="ManUtd vs ManCity" src="/images/posts/sds2.jpg" />
 
 ##Technology
 After joining lab I was introduced to git(version control system), redmine(project management system), php, js, ajax, sass, bash, jquery, node.js to name a few. Few people are also using ruby and scala. I have since fallen in love with git and wherever I can use vcs, I do. As a result, I have also fallen head over heels in love with [Github](http://github.com), so much so that I queued up to avail their free student plan the moment I came to know about it (although nearly all my projects are in redmine and gitolite combo). I have also moved to using Ubuntu full time since. I have seen 11.10 and 12.04 come and go. I have become fearless when it comes to partition tables and experiments. And all this happened over the last 11 months along with the load of regular college and other extra-curricular activities. I have also met some absolutely brilliant people like [Abhay Rana](http://captnemo.in), [Harshil Mathur](http://harshilmathur.in), Shobhit Singh. They are so brilliant that I could probably end up writing separate blog posts for each one of them and even then I doubt I would be able to do justice to their brilliance! All in all, it's safe to say that lab has become my home away from home with countless hours spent sitting on a bean bag with a laptop and arguing about the merits and demerits of various frameworks.
@@ -43,4 +43,3 @@ It's December and come January, SDSLabs will start recruiting again. If you are 
 2. We don't care about how much programming you know right now as long as you can convince us that you _can_ do it and you have the aptitude for it. I did not know programming when I applied.
 4. If you think that joining SDS is going to get you a high paying job in some software company 4 years later then please stay away. No I'm not saying SDS does _not_ give an advantage (it does) but we don't want people who only and only care about package.
 5. If you are a CS undergrad and are applying just because it is something in your field, please stay away! We want self motivated people.
-6. If you are a bond, don't apply, just COME TO LAB!

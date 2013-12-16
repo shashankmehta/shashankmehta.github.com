@@ -14,7 +14,7 @@ My mornings and afternoons are spent in classes *(if I'm able wake up, that is)*
 
 <!--more-->
 
-<img src="/images/posts/setup/1.png" class="center" alt="">
+<img src="/images/posts/setup/1.png" />
 
 ##What Hardware do I use
 I own a Dell Inspiron 15R, which packs an i5 processor, 4GB RAM, 640GB HDD, NVIDIA GT 525M graphics card and a 15.6 inch screen. I hate its 720p resolution. I use Seagate's 1TB Expansion Portable Hard Disk for storing my media and backup. 
@@ -27,7 +27,7 @@ My main consumption device is Nexus 7 (2012) 32GB 3G, which I use for general we
 
 I'm currently working on a departmental project using an Arduino Uno and a Cubie Board. I also own a Leap Motion but I'm yet to make an app for that.
 
-<img src="/images/posts/setup/2.png" class="center" alt="">
+<img src="/images/posts/setup/2.png" />
 
 ##And What Software?
 Till a month ago I was using Ubuntu 12.10 + Gnome 3.6 combination. Now I have switched to ElementaryOS Luna and there's no turning back. It is smoother and way faster than Ubuntu.

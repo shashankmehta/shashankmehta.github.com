@@ -13,9 +13,8 @@ I have been using Ubuntu full time since January 2012 and I love it, *in general
 ###WHY?
 
 ####1. Just the topbar is enough
-<div style="text-align: center;">
-<img src="/images/posts/gnome/1.png" style="margin: 5px 0px 20px 20px; border: 1px solid #ccc" />
-</div>
+
+<img src="/images/posts/gnome/1.png"/>
 
 This is the screenshot of my workspace. Google Chrome takes majority of the space. All the other open apps are hidden. They do not appear in any kind of taskbar. The topbar, the only part of Gnome that is visible, has the basic indicators that I ever need to look at, like
 
@@ -27,9 +26,8 @@ This is the screenshot of my workspace. Google Chrome takes majority of the spac
 Everything else is out my sight, out of my way. I use `alt+tab` to switch apps. I don't *need* to use touchpad to select an app from some taskbar! But for those times when I have many apps open and `alt+tab` just doesn't cut it, I have the brilliant 'Activities' view in Gnome. 
 
 ####2. Activities View
-<div style="text-align: center;">
-<img src="/images/posts/gnome/2.png" style="margin: 15px 0px 20px 20px;" />
-</div>
+
+<img src="/images/posts/gnome/2.png" />
 
 Through this view (which is accessible via the windows key) I can launch my common apps, search for other installed apps, get the graphic view of all open apps and other workspaces too. 
 

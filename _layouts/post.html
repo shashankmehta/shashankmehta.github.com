@@ -7,7 +7,8 @@ layout: layout
     <a href="/blog">&larr; Back</a>
   </div>
 
-  <h1>
+
+  <h1 class="title">
     <a href="{{ page.url }}">{{ page.title }}</a>
   </h1>
 
@@ -16,9 +17,11 @@ layout: layout
   </section>
     
   {{ content }}
-
-  <a href="http://twitter.com/share" class="twitter-share-button" data-count="none" data-via="{{ site.twitter }}">Tweet</a>
-  <a href="http://twitter.com/{{ site.twitter }}" class="twitter-follow-button" data-show-count="false">Follow @{{ site.twitter }}</a>
+  
+  <div class="twitter">
+    <a href="http://twitter.com/share" class="twitter-share-button" data-count="none" data-via="{{ site.twitter }}">Tweet</a>
+    <a href="http://twitter.com/{{ site.twitter }}" class="twitter-follow-button" data-show-count="false">Follow @{{ site.twitter }}</a>
+  </div>
     
   <section class="meta">
     <h3>Discussion</h3>

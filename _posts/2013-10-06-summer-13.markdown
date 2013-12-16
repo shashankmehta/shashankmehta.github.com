@@ -13,8 +13,6 @@ Bangalore, my favorite city, the city where I had spent 3 years before, was call
 
 Common sense says, "Combine the two, idiot!!" And that's exactly what I did. And 'lo behold! I had 2 months in the city of Bangalore!
 
-<!--more-->
-
 A lot of people in my year spent a lot of time last year sending a lot of mails to a lot of professors for an internship. Some succeeded in landing a foreign intern. Most did not. Me? I applied to two companies and one startup. I got an offer for internship from the startup.
 
 One of the most common question is "How do I find good startups in India?" I just followed listings on [Hasjob](http://jobs.hasgeek.com). But the sheer number of "Web developer intern needed, stipend: 5k INR" was exasperating. I can make websites but I definitely wasn't spending 2 months of my non academic time working on a website. The money offered tells you a lot. 5k translates to poor quality work.
@@ -23,7 +21,7 @@ But then one day I saw listing by a startup called "Mango Man Technologies". Yea
 
 While I'm always up for surprises and pushing my self, what happened next was something very challenging. I joined on 26th May and the sub project that I was assigned involved Android development. Up till that day, I had written exactly zilch lines of code in Java, forget about Android. There was one more intern apart from me who also was assigned an android dev sub project. We were given a weeks time to learn Java + Android which turned out to be enough. 
 
-<img class="basic-alignment center" title="Perks of Interning at a startup" src="/images/posts/summer13/tv.jpg" alt="">
+<img title="Perks of Interning at a startup" src="/images/posts/summer13/tv.jpg" />
 
 Over the course of the internship, I was assigned 3 sub projects. I initially worked on User Experience and User On Boarding for the device. In the last stage I worked on an application that was a project in itself. Learning a new language and working on a project in a completely different setup that I'm used to was tough. But at the same time, it was highly satisfying at the end of the internship, 2 months later. I had been working on similar stuff in SDSLabs, albeit, on a different stack. So it was a good to see that what I did in my spare time in college was actually of use in the outside world!
 
@@ -39,6 +37,6 @@ I crack up every time I read this! Actually, a lot of crazy stuff happened. This
 
 All in all, it was a great summer! I don't know where I'll land next year but all I'm hoping for is that the experience can match Summer of '13.
 
-<img src="/images/posts/summer13/friends.jpg" class="basic-alignment center" alt="">
+<img src="/images/posts/summer13/friends.jpg" />
 
 PS: I know this blog post is too many months late but I just haven't felt like writing for last few months.

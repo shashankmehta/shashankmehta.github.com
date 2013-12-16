@@ -92,7 +92,7 @@ a{
 	}
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 767px){
 	.content{
 		padding: 0px 20px;
 	}
@@ -123,12 +123,42 @@ a{
 		}
 
 		.post {
+			a {
+				border-bottom: 1px dashed #333;
+			}
+
+			h1, h2, h3, h4, h5, h6{
+				a{
+					border-bottom: none;
+				}
+			}
+
 			p{
 				line-height: 1.4em;
 			}
+
+			.title{
+				margin-bottom: 5px;
+			}
+
+			.byline{
+				font-style: italic;
+				font-size: 0.8em;
+			}
+
+			.twitter {
+				margin-top: 50px; 
+			}
+
 			.meta {
-				margin-top: 50px;
+				margin-top: 25px;
 				border-top: 1px solid #ccc;
+			}
+
+			blockquote {
+				border-left: 5px solid #c0392b;
+				margin-left: 0px;
+				padding-left: 20px;
 			}
 
 			#disqus_thread {
@@ -155,6 +185,7 @@ a{
 		box-sizing: border-box;
 		padding: 15px 12px;
 		font-size: 18px;
+		box-shadow: inset 0 0 15px rgba(0,0,0,.5);
 		@include transition(all, 0.2s, ease-in);
 
 		.nav{
@@ -167,7 +198,7 @@ a{
 		}
 
 		&:hover{
-			height: 150px;
+			height: 125px;
 			width: 100px;
 			@include transition(all, 0.2s, ease-in);
 

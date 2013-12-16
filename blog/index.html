@@ -17,7 +17,7 @@ title: "Blog Archives"
 				{{ date | date: "%Y" }}
 			</h1>
 	{% endunless %}
-		<article class="pure-g-r" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+		<article class="pure-g" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
 			<div class="meta pure-u-1-8">
 				<h3 class="date"><time datetime="{{ date | datetime | date_to_xmlschema }}" itemprop="datePublished">{{ date | date: "%b %e" }}</time></h3>
 			</div>

@@ -5,7 +5,9 @@ date: 2012-07-15 16:30
 comments: true
 categories: [book recommendation]
 ---
-<img title="Don't Make Me Think, Book Cover" src="/images/posts/dont_make_me_think_2nd.png" style="float: right; margin: 5px 0px 20px 20px;"/>
+
+
+<img title="Don't Make Me Think, Book Cover" src="/images/posts/dont_make_me_think_2nd.png" style="width: initial"/>
 
 With so many books to read and so little time, every book that I actually do end up reading should be worth my precious little time. Tough sitaution, as practically this isn't possible with every book. When it comes to fiction recommendations are not very effective. But for technical books recommendations are effective enough for me to completely rely on them. I need a book on HTML/CSS? Ask a friend who is good in this field. Book on algorithms? There's a friend for that too. 
 

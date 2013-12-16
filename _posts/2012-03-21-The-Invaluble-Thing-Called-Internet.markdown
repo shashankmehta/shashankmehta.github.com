@@ -6,7 +6,7 @@ comments: true
 categories: [internet, reddit]
 published: true
 ---
-<img src="http://media.tumblr.com/tumblr_m0ifz3LZoA1r8a4fg.png" style="float: right; margin: 5px 0px 20px 20px;" />
+<img src="http://media.tumblr.com/tumblr_m0ifz3LZoA1r8a4fg.png" />
 
 
 Well it takes special moments to realise the importance and value of internet. Really special moments because at any other time internet seems more like something that has existed since time immemorial and we don’t really value it as much as we should. [SOPA](http://en.wikipedia.org/wiki/Stop_Online_Piracy_Act "SOPA") would be a nice example for such moments, but no, I’m talking about some personal ones that leave you with a warm feeling for the internet. 

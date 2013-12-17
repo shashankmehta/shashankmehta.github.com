@@ -16,12 +16,17 @@
   font-weight: 700;
   src: local("Avenir Next Bold"), local("Avenir Next Bold"), url(/fonts/avenirnext-bold.woff) format("woff"); }
 
+html {
+  height: 100%; }
+
 body {
   font-family: AvenirNext, sans serif;
   font-size: 16px;
   color: #081522;
   border-top: 10px solid black;
-  border-bottom: 10px solid black; }
+  border-bottom: 10px solid black;
+  min-height: 100%;
+  box-sizing: border-box; }
 
 a {
   color: inherit;

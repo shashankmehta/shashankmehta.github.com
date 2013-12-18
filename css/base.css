@@ -66,41 +66,95 @@ a {
 @media screen and (max-width: 767px) {
   .content {
     padding: 0px 20px; } }
-.pure-g-r .content {
+.blog .pure-g-r .content {
   font-family: AvenirNext, sans serif;
   font-weight: 500;
   margin: 20px auto 20px;
   display: block;
   position: relative; }
-  .pure-g-r .content .archives .meta h3 {
+  .blog .pure-g-r .content .archives .meta h3 {
     font-weight: 500;
     font-size: 1em; }
-  .pure-g-r .content .archives .title h1 {
+  .blog .pure-g-r .content .archives .title h1 {
     font-weight: 500;
     font-size: 1.3em; }
-  .pure-g-r .content .post a {
+  .blog .pure-g-r .content .post a {
     border-bottom: 1px dashed #333; }
-  .pure-g-r .content .post h1 a, .pure-g-r .content .post h2 a, .pure-g-r .content .post h3 a, .pure-g-r .content .post h4 a, .pure-g-r .content .post h5 a, .pure-g-r .content .post h6 a {
+  .blog .pure-g-r .content .post h1 a, .blog .pure-g-r .content .post h2 a, .blog .pure-g-r .content .post h3 a, .blog .pure-g-r .content .post h4 a, .blog .pure-g-r .content .post h5 a, .blog .pure-g-r .content .post h6 a {
     border-bottom: none; }
-  .pure-g-r .content .post p {
+  .blog .pure-g-r .content .post p {
     line-height: 1.4em; }
-  .pure-g-r .content .post .title {
+  .blog .pure-g-r .content .post .title {
     margin-bottom: 5px; }
-  .pure-g-r .content .post .byline {
+  .blog .pure-g-r .content .post .byline {
     font-style: italic;
     font-size: 0.8em; }
-  .pure-g-r .content .post .twitter {
+  .blog .pure-g-r .content .post .twitter {
     margin-top: 50px; }
-  .pure-g-r .content .post .meta {
+  .blog .pure-g-r .content .post .meta {
     margin-top: 25px;
     border-top: 1px solid #ccc; }
-  .pure-g-r .content .post blockquote {
+  .blog .pure-g-r .content .post blockquote {
     border-left: 5px solid #c0392b;
     margin-left: 0px;
     padding-left: 20px; }
-  .pure-g-r .content .post #disqus_thread {
+  .blog .pure-g-r .content .post #disqus_thread {
     padding-top: 25px;
     border-top: 1px solid #eee; }
+
+.projects {
+  font-size: 12px;
+  position: relative; }
+  .projects .header h1 {
+    margin-bottom: 30px; }
+  @media screen and (max-width: 767px) {
+    .projects .header h1 {
+      text-align: center; } }
+  .projects .pure-g .container {
+    margin: auto;
+    display: block;
+    margin-top: 40px;
+    margin-bottom: 40px; }
+    .projects .pure-g .container .project {
+      margin: 0px 20px 0px 0px;
+      max-width: 400px;
+      border: 1px solid #eee; }
+      .projects .pure-g .container .project .logo {
+        text-align: center;
+        height: 140px;
+        background: #EEE;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box; }
+        .projects .pure-g .container .project .logo img {
+          max-width: 100%;
+          height: 100%; }
+      .projects .pure-g .container .project .details {
+        padding: 10px;
+        min-height: 160px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box; }
+    .projects .pure-g .container .logo.addPadding {
+      padding: 10px; }
+    .projects .pure-g .container .hackview .logo {
+      background: #F4F3EF; }
+    .projects .pure-g .container .greyshade .logo {
+      text-align: left;
+      background: #F5F5F5; }
+    @media screen and (max-width: 767px) {
+      .projects .pure-g .container .project {
+        margin: 10px auto;
+        max-width: 270px; } }
+  .projects h1, .projects h2, .projects h3, .projects h4, .projects h5, .projects h6 {
+    font-weight: 500;
+    margin-top: 5px;
+    margin-bottom: 5px; }
+  .projects ul {
+    padding-left: 15px;
+    line-height: 16px; }
+  .projects a {
+    border-bottom: 1px dashed #333; }
 
 .navigation {
   position: fixed;
@@ -126,7 +180,8 @@ a {
       display: none;
       padding-top: 5px; }
       .navigation .holder .nav a {
-        font-size: 0.8em; }
+        font-size: 0.8em;
+        border: none; }
     .navigation .holder:hover {
       height: 125px;
       width: 100px;
@@ -143,4 +198,7 @@ a {
     position: absolute;
     right: 20px;
     top: -10px;
-    left: initial; } }
+    left: initial; }
+
+  .projects .navigation {
+    top: 10px; } }

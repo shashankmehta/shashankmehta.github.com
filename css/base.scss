@@ -10,6 +10,12 @@
     transition: $transition-property $transition-time $method;
 }
 
+@mixin box-sizing(){
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+}
+
 // ============== /MIXINS ============== //
 
 @font-face {
@@ -99,6 +105,9 @@ a{
 		padding: 10px 20px 20px 20px;
 	}
 }
+// ============== /HOMEPAGE ============== //
+
+// ============== BLOG ============== //
 
 @media screen and (max-width: 767px){
 	.content{
@@ -106,79 +115,174 @@ a{
 	}
 }
 
-.pure-g-r{
+.blog {
+	.pure-g-r{
 
-	.content {
-		font-family: AvenirNext, sans serif;
-		font-weight: 500;
-		margin: 20px auto 20px;
-		display: block;
-		position: relative;
-		
-		.archives{
+		.content {
+			font-family: AvenirNext, sans serif;
+			font-weight: 500;
+			margin: 20px auto 20px;
+			display: block;
+			position: relative;
+			
+			.archives{
 
-			.meta {
-				h3{
-					font-weight: 500;
-					font-size: 1em;
+				.meta {
+					h3{
+						font-weight: 500;
+						font-size: 1em;
+					}
 				}
-			}
-			.title {
-				h1{	
-					font-weight: 500;
-					font-size: 1.3em;
-				}
-			}
-		}
-
-		.post {
-			a {
-				border-bottom: 1px dashed #333;
-			}
-
-			h1, h2, h3, h4, h5, h6{
-				a{
-					border-bottom: none;
+				.title {
+					h1{	
+						font-weight: 500;
+						font-size: 1.3em;
+					}
 				}
 			}
 
-			p{
-				line-height: 1.4em;
-			}
+			.post {
+				a {
+					border-bottom: 1px dashed #333;
+				}
 
-			.title{
-				margin-bottom: 5px;
-			}
+				h1, h2, h3, h4, h5, h6{
+					a{
+						border-bottom: none;
+					}
+				}
 
-			.byline{
-				font-style: italic;
-				font-size: 0.8em;
-			}
+				p{
+					line-height: 1.4em;
+				}
 
-			.twitter {
-				margin-top: 50px; 
-			}
+				.title{
+					margin-bottom: 5px;
+				}
 
-			.meta {
-				margin-top: 25px;
-				border-top: 1px solid #ccc;
-			}
+				.byline{
+					font-style: italic;
+					font-size: 0.8em;
+				}
 
-			blockquote {
-				border-left: 5px solid #c0392b;
-				margin-left: 0px;
-				padding-left: 20px;
-			}
+				.twitter {
+					margin-top: 50px; 
+				}
 
-			#disqus_thread {
-				padding-top: 25px;
-				border-top: 1px solid #eee;
+				.meta {
+					margin-top: 25px;
+					border-top: 1px solid #ccc;
+				}
+
+				blockquote {
+					border-left: 5px solid #c0392b;
+					margin-left: 0px;
+					padding-left: 20px;
+				}
+
+				#disqus_thread {
+					padding-top: 25px;
+					border-top: 1px solid #eee;
+				}
 			}
 		}
 	}
 }
 
-// ============== /HOMEPAGE ============== //
+// ============== /BLOG ============== //
+
+// ============== PROJECTS ============== //
+
+.projects {
+	font-size: 12px;
+	position: relative;
+
+	.header {
+		h1 {
+			margin-bottom: 30px;
+		}
+
+		@media screen and (max-width: 767px){
+			h1 {
+				text-align: center;
+			}
+		}
+	}
+
+	.pure-g {
+		.container {
+			margin: auto;
+			display: block;
+			margin-top: 40px;
+			margin-bottom: 40px;
+
+			.project {
+				margin: 0px 20px 0px 0px;
+				max-width: 400px;
+				border: 1px solid #eee;
+
+				.logo {
+					text-align: center;
+					height: 140px;
+					background: #EEE;
+					@include box-sizing();
+
+					img {
+						max-width: 100%;
+						height: 100%;
+					}
+				}
+
+				.details {
+					padding: 10px;
+					min-height: 160px;
+					@include box-sizing();
+				}
+			}
+		
+			.logo.addPadding {
+				padding: 10px;
+			}
+
+			.hackview {
+				.logo {
+					background: #F4F3EF;					
+				}
+			}
+			.greyshade {
+				.logo {
+					text-align: left;
+					background: #F5F5F5;					
+				}
+			}
+
+			@media screen and (max-width: 767px){
+				.project {
+					margin: 10px auto;
+					max-width: 270px;
+				}
+			}
+		}
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		font-weight: 500;
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
+
+	ul {
+		padding-left: 15px;
+		line-height: 16px
+	}
+
+	a {
+		border-bottom: 1px dashed #333;
+	}
+
+}
+
+// ============== /PROJECTS ============== //
 
 // ============== NAVIGATION ============== //
 
@@ -206,6 +310,7 @@ a{
 
 			a{
 				font-size: 0.8em;
+				border: none;
 			}
 		}
 
@@ -227,6 +332,10 @@ a{
 		right: 20px;
 		top: -10px;
 		left: initial;
+	}
+
+	.projects .navigation {
+		top: 10px;
 	}
 }
 

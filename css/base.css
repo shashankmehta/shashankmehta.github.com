@@ -183,7 +183,7 @@ a {
         font-size: 0.8em;
         border: none; }
     .navigation .holder:hover {
-      height: 125px;
+      height: 140px;
       width: 100px;
       -webkit-transition: all 0.2s ease-in;
       -moz-transition: all 0.2s ease-in;

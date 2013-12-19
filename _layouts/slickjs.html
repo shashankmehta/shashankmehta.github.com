@@ -3,17 +3,18 @@
 <link rel="stylesheet" href="/slick.js/style.css">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="/slick.js/slick.min.js"></script>
+<script src="/slick.js/screenfull.js"></script>
 
 <body class="blog">
 	<div class="pure-g-r">
 		<div class="pure-u-1-2 content">
 			{% include nav.html %}
 
-			<div class="back">
+			<div class="back" style="margin-bottom: 50px;">
 				<a href="/blog">&larr; Back</a>
 			</div>
 
-			<div class="slick" style="margin-top: 50px;">
+			<div class="slick" >
 
 				<!-- This will containt the images -->
 				<div class="slick-content">
@@ -71,7 +72,7 @@
 							setTimeout(function(){
 								$('.slick').addClass('fullscreen');
 								$('.slick .slick-bottom').width($('.slick-content img.current').width()).css('margin', 'auto');
-							}, 100);
+							}, 150);
 						}
 					}
 				});

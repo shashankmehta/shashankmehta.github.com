@@ -107,6 +107,7 @@
 .fullscreen {
   width: initial;
   border: none;
+  height: 100%;
   box-shadow: none; }
   .fullscreen .slick-content {
     width: initial;

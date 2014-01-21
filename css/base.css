@@ -57,9 +57,33 @@ p code {
   font-weight: 300; }
   #homepage .main {
     margin-bottom: 25px; }
-    #homepage .main img {
+    #homepage .main #logo {
       width: 150px;
-      padding-bottom: 50px; }
+      height: 150px;
+      position: relative;
+      margin: auto;
+      margin-bottom: 30px; }
+    #homepage .main #logo:before, #homepage .main #logo:after {
+      content: "";
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 1; }
+    #homepage .main #logo:before {
+      background: white url("/images/homelogo.png");
+      z-index: 1;
+      -webkit-transition: all 0.2s ease-in;
+      -moz-transition: all 0.2s ease-in;
+      -ms-transition: all 0.2s ease-in;
+      -o-transition: all 0.2s ease-in;
+      transition: all 0.2s ease-in; }
+    #homepage .main #logo:after {
+      background: url("/images/dp.png");
+      border-radius: 50%; }
+    #homepage .main #logo:hover:before {
+      opacity: 0; }
     #homepage .main h1, #homepage .main h3 {
       font-weight: 300;
       margin: 0px; }

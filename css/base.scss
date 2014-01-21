@@ -3,11 +3,11 @@
 // ============== MIXINS ============== //
 
 @mixin transition($transition-property, $transition-time, $method) {
-    -webkit-transition: $transition-property $transition-time $method;
-    -moz-transition: $transition-property $transition-time $method;
-    -ms-transition: $transition-property $transition-time $method;
-    -o-transition: $transition-property $transition-time $method;
-    transition: $transition-property $transition-time $method;
+		-webkit-transition: $transition-property $transition-time $method;
+		-moz-transition: $transition-property $transition-time $method;
+		-ms-transition: $transition-property $transition-time $method;
+		-o-transition: $transition-property $transition-time $method;
+		transition: $transition-property $transition-time $method;
 }
 
 @mixin box-sizing(){
@@ -19,24 +19,24 @@
 // ============== /MIXINS ============== //
 
 @font-face {
-  font-family: 'AvenirNext';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Avenir Next'), local('Avenir Next'), url(/fonts/avenirnext-thin.woff) format('woff');
+	font-family: 'AvenirNext';
+	font-style: normal;
+	font-weight: 300;
+	src: local('Avenir Next'), local('Avenir Next'), url(/fonts/avenirnext-thin.woff) format('woff');
 }
 
 @font-face {
-  font-family: 'AvenirNext';
-  font-style: normal;
-  font-weight: 500;
-  src: local('Avenir Next'), local('Avenir Next'), url(/fonts/avenirnext-regular.woff) format('woff');
+	font-family: 'AvenirNext';
+	font-style: normal;
+	font-weight: 500;
+	src: local('Avenir Next'), local('Avenir Next'), url(/fonts/avenirnext-regular.woff) format('woff');
 }
 
 @font-face {
-  font-family: 'AvenirNext';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Avenir Next Bold'), local('Avenir Next Bold'), url(/fonts/avenirnext-bold.woff) format('woff');
+	font-family: 'AvenirNext';
+	font-style: normal;
+	font-weight: 700;
+	src: local('Avenir Next Bold'), local('Avenir Next Bold'), url(/fonts/avenirnext-bold.woff) format('woff');
 }
 
 html{
@@ -91,10 +91,38 @@ p code {
 	
 	.main{
 		margin-bottom: 25px;
-		
-		img {
+
+		#logo {
 			width: 150px;
-			padding-bottom: 50px;
+			height: 150px;
+			position: relative;
+			margin: auto;
+			margin-bottom: 30px;
+		}
+
+		#logo:before, #logo:after {
+			content: "";
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			bottom: 0px;
+			left: 0px;
+			opacity: 1;
+		}
+
+		#logo:before {
+			background: #fff url('/images/homelogo.png');
+			z-index: 1;
+			@include transition(all, 0.2s, ease-in);
+		}
+
+		#logo:after {
+			background: url('/images/dp.png');
+			border-radius: 50%;
+		}
+
+		#logo:hover:before {
+		    opacity: 0;
 		}
 
 		h1, h3{	
@@ -118,7 +146,7 @@ p code {
 
 		.row {
 			a {
-			 	padding: 0 10px;
+				padding: 0 10px;
 			}
 		}
 	}

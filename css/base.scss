@@ -83,24 +83,29 @@ p code {
 // ============== HOMEPAGE ============== //
 
 #homepage {
-	position: absolute;
-	right: 0px;
-	bottom: 0px;
-	padding: 0px 100px 100px 0px;
-	text-align: right;
+	padding: 100px 0px 0px 0px;
+	text-align: center;
 	color: #2c3e50;
 	font-family: 'AvenirNext', sans serif;
 	font-weight: 300;
 	
 	.main{
 		margin-bottom: 25px;
+		
+		img {
+			width: 150px;
+			padding-bottom: 50px;
+		}
+
 		h1, h3{	
 			font-weight: 300;
 			margin: 0px;
 		}
+
 		h1{
 			font-size: 2.5em;	
 		}
+
 		h3{
 			font-size: 0.9em;
 		}
@@ -109,6 +114,12 @@ p code {
 	.meta{
 		div{
 			margin-bottom: 10px;
+		}
+
+		.row {
+			a {
+			 	padding: 0 10px;
+			}
 		}
 	}
 }

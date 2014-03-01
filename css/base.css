@@ -179,6 +179,8 @@ p code {
     .projects .pure-g .container .greyshade .logo {
       text-align: left;
       background: #F5F5F5; }
+    .projects .pure-g .container .nano .logo {
+      background: #2C3E50; }
     @media screen and (max-width: 767px) {
       .projects .pure-g .container .project {
         margin: 10px auto;

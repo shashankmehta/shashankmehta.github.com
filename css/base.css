@@ -54,7 +54,7 @@ p code {
   text-align: center;
   color: #2c3e50;
   font-family: 'AvenirNext', sans serif;
-  font-weight: 300; }
+  font-weight: 500; }
   #homepage .main {
     margin-bottom: 25px; }
     #homepage .main #logo {
@@ -85,11 +85,12 @@ p code {
     #homepage .main #logo:hover:before {
       opacity: 0; }
     #homepage .main h1, #homepage .main h3 {
-      font-weight: 300;
       margin: 0px; }
     #homepage .main h1 {
+      font-weight: 300;
       font-size: 2.5em; }
     #homepage .main h3 {
+      font-weight: 500;
       font-size: 0.9em; }
   #homepage .meta div {
     margin-bottom: 10px; }

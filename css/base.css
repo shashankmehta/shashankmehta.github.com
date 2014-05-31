@@ -21,8 +21,8 @@ html {
 
 body {
   font-family: AvenirNext, sans serif;
-  font-size: 16px;
-  color: #081522;
+  font-size: 18px;
+  color: #2c3e50;
   border-top: 10px solid black;
   border-bottom: 10px solid black;
   min-height: 100%;
@@ -120,7 +120,7 @@ p code {
   .blog .pure-g-r .content .post h1 a, .blog .pure-g-r .content .post h2 a, .blog .pure-g-r .content .post h3 a, .blog .pure-g-r .content .post h4 a, .blog .pure-g-r .content .post h5 a, .blog .pure-g-r .content .post h6 a {
     border-bottom: none; }
   .blog .pure-g-r .content .post p {
-    line-height: 1.4em; }
+    line-height: 1.5em; }
   .blog .pure-g-r .content .post .title {
     margin-bottom: 5px; }
   .blog .pure-g-r .content .post .byline {
@@ -222,7 +222,7 @@ p code {
         font-size: 0.8em;
         border: none; }
     .navigation .holder:hover {
-      height: 140px;
+      height: 150px;
       width: 100px;
       -webkit-transition: all 0.2s ease-in;
       -moz-transition: all 0.2s ease-in;

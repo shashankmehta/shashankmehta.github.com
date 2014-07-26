@@ -97,6 +97,10 @@ p code {
   #homepage .meta .row a {
     padding: 0 10px; }
 
+.ig {
+  position: absolute;
+  bottom: 0; }
+
 @media screen and (max-width: 500px) {
   #homepage {
     padding: 10px 20px 20px 20px; } }

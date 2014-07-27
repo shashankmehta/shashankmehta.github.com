@@ -1,34 +1,79 @@
-$(document).ready(function(){
+var instagram = {
+  client_id: 'b65e71d3b4c94bc29ff2172a7669f0ad',
 
-  var width = $(window).width();
-  var count = Math.ceil(width / 150);
-  var img_width = width / count;
+  max_width: 150,
+  width: 0,
+  count: 0,
+  img_width: 0,
 
-  if(count < 2){
-    img_width = width / 3;
-    count = 3;
-  }
+  data: {},
 
-  $.ajax({
-    url: 'https://api.instagram.com/v1/users/190481304/media/recent',
-    method: 'GET',
-    data: {
-      client_id: 'b65e71d3b4c94bc29ff2172a7669f0ad',
-      count: count
-    },
-    dataType: 'jsonp',
-    success: function(d){
-      if(d.data.length < count){
-        return;
-      }
+  init: function(){
+    this.setDimensions();
+    this.fetch();
+  },
 
-      for(var i = 0; i < count; i++){
-        var item = d.data[i];
-        $('.ig').append('<a href="'+item.link+'" target="_blank"><img src="'+item.images.thumbnail.url+'" width='+img_width+' /></a>');
-      }
+  setDimensions: function(){
+    this.width = $(window).width();
+    this.count = Math.ceil(this.width / this.max_width);
+    this.img_width = this.width / this.count;
 
-      a = d;
-      b = d.data[1];
+    if(this.count < 2){
+      this.img_width = this.width / 3;
+      this.count = 3;
     }
-  })
+  },
+
+  fetch: function(){
+    var that = this;
+    $.ajax({
+      url: 'https://api.instagram.com/v1/users/190481304/media/recent',
+      method: 'GET',
+      data: {
+        client_id: this.client_id,
+        count: this.count
+      },
+      dataType: 'jsonp',
+      success: function(d){
+        that.data = d;
+        that.display();
+      }
+    })
+  },
+
+  display: function(){
+    var d = this.data;
+    if(d.data.length < this.count){
+      return;
+    }
+
+    this.clear();
+
+    for(var i = 0; i < this.count; i++){
+      var item = d.data[i];
+      $('.ig').append('<a href="'+item.link+'" target="_blank"><img src="'+item.images.thumbnail.url+'" width='+this.img_width+' /></a>');
+    }
+  },
+
+  clear: function(){
+    $('.ig').html('');
+  },
+
+  handleResize: function(){
+    this.setDimensions();
+
+    if(this.count <= this.data.data.length){
+      this.display();
+    }
+    else if(this.count > this.data.data.length){
+      this.fetch();
+    }
+  }
+}
+
+$(document).ready(function(){
+  instagram.init();
+  $(window).resize(function(){
+    instagram.handleResize();
+  });
 })

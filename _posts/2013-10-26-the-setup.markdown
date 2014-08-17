@@ -3,9 +3,10 @@ layout: post
 title: "The Setup"
 date: 2013-10-26 17:38
 comments: true
-categories: 
+categories:
 ---
 
+_**UPDATE:** I am now maintaining my setup at [/setup](/setup/)._
 
 ##Who am I and what do I do
 I'm Shashank Mehta, an Electronics & Communication undergrad at [IIT Roorkee](http://www.iitr.ac.in). I code, play squash and critic my institute in the official campus news magazine where I'm an editor.
@@ -17,13 +18,13 @@ My mornings and afternoons are spent in classes *(if I'm able wake up, that is)*
 <img src="/images/posts/setup/1.png" />
 
 ##What Hardware do I use
-I own a Dell Inspiron 15R, which packs an i5 processor, 4GB RAM, 640GB HDD, NVIDIA GT 525M graphics card and a 15.6 inch screen. I hate its 720p resolution. I use Seagate's 1TB Expansion Portable Hard Disk for storing my media and backup. 
+I own a Dell Inspiron 15R, which packs an i5 processor, 4GB RAM, 640GB HDD, NVIDIA GT 525M graphics card and a 15.6 inch screen. I hate its 720p resolution. I use Seagate's 1TB Expansion Portable Hard Disk for storing my media and backup.
 
 I use Roland Cube 20XL amplifier as my speaker system and I absolutely love it. I play guitar and own ESP F50, which has two single coil pickups. I use B-Speech's Calypso Bluetooth headphones when I feel like going wire free.
 
 A Sony Xperia U serves my calling and messaging needs. Sony gave up on it at 4.0 ICS but thanks to the good folks at XDA, it's now running 4.1.2 Jelly Bean. I use this device for capturing photos, whatsapp, and music on the go. I also own a dumb Samsung dual sim phone whose battery lasts nearly 5 days. I use this phone when I go on trips.
 
-My main consumption device is Nexus 7 (2012) 32GB 3G, which I use for general web browsing, reading, YouTube and casual gaming. 
+My main consumption device is Nexus 7 (2012) 32GB 3G, which I use for general web browsing, reading, YouTube and casual gaming.
 
 I'm currently working on a departmental project using an Arduino Uno and a Cubie Board. I also own a Leap Motion but I'm yet to make an app for that.
 
@@ -38,7 +39,7 @@ I absolutely love Redshift which slowly warms the colors of your screen based on
 
 I use Terminator for command line fu. All my projects are version controlled using Git. SCM Breeze and autojump are the two command line tools I use the most. I prefer writing my own bash scripts for tasks like backup, file format conversion etc.
 
-Workflowy helps me keep all my ideas and notes organized and I hope that they launch an android app soon. 
+Workflowy helps me keep all my ideas and notes organized and I hope that they launch an android app soon.
 
 My Nexus 7 is on the latest and greatest android, 4.3 Jelly Bean. The apps that I can't live without are AirDroid, Mantano reader, Chrome, YouTube, Pocket, 8tracks, Google Keep, Press and Draft. I have quite a few casual games but the one I keep returning to is Super Hexagon.
 

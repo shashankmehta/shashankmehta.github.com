@@ -88,7 +88,7 @@ p code {
 	color: #2c3e50;
 	font-family: 'AvenirNext', sans serif;
 	font-weight: 500;
-	
+
 	.main{
 		margin-bottom: 25px;
 
@@ -125,13 +125,13 @@ p code {
 		    opacity: 0;
 		}
 
-		h1, h3{	
+		h1, h3{
 			margin: 0px;
 		}
 
 		h1{
 			font-weight: 300;
-			font-size: 2.5em;	
+			font-size: 2.5em;
 		}
 
 		h3{
@@ -150,6 +150,7 @@ p code {
 				padding: 0 10px;
 			}
 		}
+
 	}
 
 }
@@ -182,7 +183,7 @@ p code {
 			margin: 20px auto 20px;
 			display: block;
 			position: relative;
-			
+
 			.archives{
 
 				.meta {
@@ -192,7 +193,7 @@ p code {
 					}
 				}
 				.title {
-					h1{	
+					h1{
 						font-weight: 500;
 						font-size: 1.3em;
 					}
@@ -201,7 +202,7 @@ p code {
 
 			.post {
 				a {
-					border-bottom: 1px dashed #333;
+					border-bottom: 1px solid #ccc;
 				}
 
 				h1, h2, h3, h4, h5, h6{
@@ -214,6 +215,12 @@ p code {
 					line-height: 1.4em;
 				}
 
+				ul, ol {
+					li {
+						padding: 3px 0;
+					}
+				}
+
 				.title{
 					margin-bottom: 5px;
 				}
@@ -224,12 +231,20 @@ p code {
 				}
 
 				.twitter {
-					margin-top: 50px; 
+					margin-top: 50px;
 				}
 
 				.meta {
 					margin-top: 25px;
 					border-top: 1px solid #ccc;
+				
+					.copy {
+						font-size: 0.9em;
+						
+						p {
+							margin-top: 0px;
+						}
+					}
 				}
 
 				blockquote {
@@ -297,25 +312,25 @@ p code {
 					@include box-sizing();
 				}
 			}
-		
+
 			.logo.addPadding {
 				padding: 10px;
 			}
 
 			.hackview {
 				.logo {
-					background: #F4F3EF;					
+					background: #F4F3EF;
 				}
 			}
 			.greyshade {
 				.logo {
 					text-align: left;
-					background: #F5F5F5;					
+					background: #F5F5F5;
 				}
 			}
 			.nano {
 				.logo {
-					background: #2C3E50;					
+					background: #2C3E50;
 				}
 			}
 

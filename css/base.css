@@ -3,26 +3,23 @@
   font-style: normal;
   font-weight: 300;
   src: local("Avenir Next"), local("Avenir Next"), url(/fonts/avenirnext-thin.woff) format("woff"); }
-
 @font-face {
   font-family: 'AvenirNext';
   font-style: normal;
   font-weight: 500;
   src: local("Avenir Next"), local("Avenir Next"), url(/fonts/avenirnext-regular.woff) format("woff"); }
-
 @font-face {
   font-family: 'AvenirNext';
   font-style: normal;
   font-weight: 700;
   src: local("Avenir Next Bold"), local("Avenir Next Bold"), url(/fonts/avenirnext-bold.woff) format("woff"); }
-
 html {
   height: 100%; }
 
 body {
   font-family: AvenirNext, sans serif;
-  font-size: 18px;
-  color: #2c3e50;
+  font-size: 16px;
+  color: #081522;
   border-top: 10px solid black;
   border-bottom: 10px solid black;
   min-height: 100%;
@@ -120,11 +117,13 @@ p code {
     font-weight: 500;
     font-size: 1.3em; }
   .blog .pure-g-r .content .post a {
-    border-bottom: 1px dashed #333; }
+    border-bottom: 1px solid #ccc; }
   .blog .pure-g-r .content .post h1 a, .blog .pure-g-r .content .post h2 a, .blog .pure-g-r .content .post h3 a, .blog .pure-g-r .content .post h4 a, .blog .pure-g-r .content .post h5 a, .blog .pure-g-r .content .post h6 a {
     border-bottom: none; }
   .blog .pure-g-r .content .post p {
-    line-height: 1.5em; }
+    line-height: 1.4em; }
+  .blog .pure-g-r .content .post ul li, .blog .pure-g-r .content .post ol li {
+    padding: 3px 0; }
   .blog .pure-g-r .content .post .title {
     margin-bottom: 5px; }
   .blog .pure-g-r .content .post .byline {
@@ -135,6 +134,10 @@ p code {
   .blog .pure-g-r .content .post .meta {
     margin-top: 25px;
     border-top: 1px solid #ccc; }
+    .blog .pure-g-r .content .post .meta .copy {
+      font-size: 0.9em; }
+      .blog .pure-g-r .content .post .meta .copy p {
+        margin-top: 0px; }
   .blog .pure-g-r .content .post blockquote {
     border-left: 5px solid #c0392b;
     margin-left: 0px;
@@ -226,7 +229,7 @@ p code {
         font-size: 0.8em;
         border: none; }
     .navigation .holder:hover {
-      height: 150px;
+      height: 140px;
       width: 100px;
       -webkit-transition: all 0.2s ease-in;
       -moz-transition: all 0.2s ease-in;

@@ -3,11 +3,11 @@ layout: post
 title: Making Captain in Golang
 ---
 
-I recently had an idea for a small project for SDSLabs and Go seemed like the perfect choice for it. 
+I recently had an idea for a small project for [SDSLabs](http://github.com/sdslabs) and Go seemed like the perfect choice for it.
 
-**Problem**: We have VMs through Xen Server for our applications. So when a developer needed to access the VMs, he'd use a password. Just typing this makes me cringe. This is highly insecure. We haven't had much problem with this setup but that doesn't make it less insecure. 
+**Problem**: We have VMs through Xen Server for our applications. So when a developer needed to access the VMs, he'd use a password. Just typing this makes me cringe. This is highly insecure. We haven't had much problem with this setup but that doesn't make it less insecure.
 
-**Solution**: Use key based authorization. But manually managing this would be a headache. Hence, I wanted to create a tool that would help me and other admins in SDSLabs to manage permissions via keys. This still isn't super secure. A better way would be create a new user and handle file permissions via groups. We might go for that, maybe later. 
+**Solution**: Use key based authorization. But manually managing this would be a headache. Hence, I wanted to create a tool that would help me and other admins in SDSLabs to manage permissions via keys. This still isn't super secure. A better way would be create a new user and handle file permissions via groups. We might go for that, maybe later.
 
 The basic premise of the tool is that admins can run commands to add a person's public key to a deployment server's `.ssh/authorized_keys` file instead of having to manually do this. The tool, called captain, is tightly bound to our git server, Gitolite. Gitolite already has all our developer's public keys and it also has a list of admins. So we keep Gitolite as the _single source_ of truth. Thanks to all of this, an admin only has to run `capt grant shashankmehta 218` to give `shashankmehta` access to `x.x.x.218` _(The first three parts are common for all our servers)_. Captain ensures that the person running the command is an admin, it picks up `shashankmehta`'s keys from Gitolite, sshs to `x.x.x.218` and adds the key to `.ssh/authorized_keys` if it isn't present already.
 

@@ -78,7 +78,8 @@ p code {
       transition: all 0.2s ease-in; }
     #homepage .main #logo:after {
       background: url("/images/dp.png");
-      border-radius: 50%; }
+      border-radius: 50%;
+      background-size: cover; }
     #homepage .main #logo:hover:before {
       opacity: 0; }
     #homepage .main h1, #homepage .main h3 {

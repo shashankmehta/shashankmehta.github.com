@@ -119,6 +119,7 @@ p code {
 		#logo:after {
 			background: url('/images/dp.png');
 			border-radius: 50%;
+      background-size: cover;
 		}
 
 		#logo:hover:before {

@@ -14,11 +14,11 @@ _Things that I use. Last updated on 18th August, 2014._
 
 **Audio**: I own a [Sennheiser HD439](http://en-us.sennheiser.com/on-ear-headphones-audio-hd-439). It's a closed back circumaural headphone. It has sufficient passive noise canceling. I also have a Roland Cube 20XL guitar amplifier that I use as speakers sometimes.
 
-**DIY Electronics**: I have an [Arduino Uno](http://arduino.cc/en/Main/arduinoBoardUno) rev3 board. I also have a [Cubieboard](http://cubieboard.org) that is running Android 4.1. I'm itching to get my hands on a [Spark core](http://spark.io).
+**DIY Electronics**: I have an [Arduino Uno](http://arduino.cc/en/Main/arduinoBoardUno) rev3 board. I also have a [Cubieboard](http://cubieboard.org) that is running Android 4.1. I also own an [Intel Galileo board](http://arduino.cc/en/ArduinoCertified/IntelGalileo) that was given to me after I reached the finals of Intel Embedded Challenge, 2014. I'm itching to get my hands on a [Spark core](http://spark.io).
 
 ![Software](/images/posts/setup/2.png)
 
-**OS**: I'm dual booting ElemetaryOS Luna and Windows 8. Elementary is my primary OS. I had been jumping distros every few months but haven't done so since trying out Elementary. 
+**OS**: I'm dual booting ElemetaryOS Luna and Windows 8. Elementary is my primary OS. I had been jumping distros every few months but haven't done so since trying out Elementary.
 
 **Development**: I use [Terminator](https://launchpad.net/terminator/) for command line fu. I spend most of my time on either terminator or browser. Some of the terminal tools that I use daily:
 
@@ -26,7 +26,8 @@ _Things that I use. Last updated on 18th August, 2014._
 - Git for version controlling. I put nearly everything in a git repo
 - [SCM Breeze](https://github.com/ndbroadbent/scm_breeze) for easy git
 - [Axel](http://axel.alioth.debian.org/) for downloading
-- [Autojump](https://github.com/joelthelion/autojump) for quickly moving around my system 
+- [Autojump](https://github.com/joelthelion/autojump) for quickly moving around my system
+- [PDFtk](https://www.pdflabs.com/tools/pdftk-server/) for all things pdf. I only deal with pdfs when syncing docs between my devices
 - Whole lot of custom scripts
 - My dotfiles are on [GitHub](http://github.com/shashankmehta/dotfiles)
 
@@ -74,7 +75,7 @@ A5 ruled notebook and Stabilo fine tip pens for sketching when I am working on a
 - [Slack](https://play.google.com/store/apps/details?id=com.Slack&hl=en) for team chat on the go
 - [Press](https://play.google.com/store/apps/details?id=com.twentyfivesquares.press&hl=en) for RSS
 - Google Keep for short notes and reminders
-- [Timely](https://play.google.com/store/apps/details?id=ch.bitspin.timely&hl=en) for alarm. Seriously, this app is amazing. It has so many small, well thought  features that I could write an entire blog post on it 
+- [Timely](https://play.google.com/store/apps/details?id=ch.bitspin.timely&hl=en) for alarm. Seriously, this app is amazing. It has so many small, well thought  features that I could write an entire blog post on it
 - [Astro](https://play.google.com/store/apps/details?id=ch.bitspin.timely&hl=en) file manager
 
 **Xperia U**: I keep my phone super light thanks to the pathetic performance that I'd get otherwise. A more or less exhaustive list of apps on it:

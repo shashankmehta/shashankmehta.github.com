@@ -51,7 +51,10 @@ var instagram = {
 
     for(var i = 0; i < this.count; i++){
       var item = d.data[i];
-      $('.ig').append('<a href="'+item.link+'" target="_blank"><img src="'+item.images.thumbnail.url+'" width='+this.img_width+' /></a>');
+      var url = item.images.thumbnail.url;
+      url = url.split('://');
+      url = '//' + url[1];
+      $('.ig').append('<a href="'+item.link+'" target="_blank"><img src="'+url+'" width='+this.img_width+' /></a>');
     }
   },
 

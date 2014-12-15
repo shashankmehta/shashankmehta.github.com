@@ -119,6 +119,8 @@ p code {
     font-size: 1.3em; }
   .blog .pure-g-r .content .post a {
     border-bottom: 1px solid #ccc; }
+  .blog .pure-g-r .content .post img {
+    padding: 30px 0; }
   .blog .pure-g-r .content .post h1 a, .blog .pure-g-r .content .post h2 a, .blog .pure-g-r .content .post h3 a, .blog .pure-g-r .content .post h4 a, .blog .pure-g-r .content .post h5 a, .blog .pure-g-r .content .post h6 a {
     border-bottom: none; }
   .blog .pure-g-r .content .post p {
@@ -146,6 +148,8 @@ p code {
   .blog .pure-g-r .content .post #disqus_thread {
     padding-top: 25px;
     border-top: 1px solid #eee; }
+  .blog .pure-g-r .content .post .center {
+    text-align: center; }
 
 .projects {
   font-size: 12px;

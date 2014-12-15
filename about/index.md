@@ -26,7 +26,7 @@ I have won a few hackathons with the folks at SDSLabs.
 
 I also play squash. IIT Roorkee Squash courts is where you'll find me most evenings. I served as the Joint Secretary of Squash IITR in 3rd year of college.
 
-I am an [HN](http://news.ycombinator.org) addict.
+I am an [HN](http://news.ycombinator.com) addict.
 
 I am a die hard Manchester United fan at club football level and Spain fan at international football level. 
 

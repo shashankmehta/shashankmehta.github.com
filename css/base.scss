@@ -298,6 +298,10 @@ p code {
 			margin-top: 40px;
 			margin-bottom: 40px;
 
+      .projects.header {
+        margin: 40px 0 0 0;
+      }
+
 			.project {
 				margin: 0px 20px 0px 0px;
 				max-width: 400px;
@@ -342,6 +346,55 @@ p code {
 					background: #2C3E50;
 				}
 			}
+      .zomato {
+        .logo {
+          background: white;
+          padding: 30px 0;
+          border-bottom: 1px solid #eee;
+        }
+      }
+      .rzp {
+        .logo {
+          padding: 40px 0;
+        }
+      }
+      .teewe {
+        .logo {
+          background: #4B1B87;
+          padding: 50px 0;
+        }
+      }
+      .victus {
+        .logo {
+          background: white;
+          border-bottom: 1px solid #eee;
+        }
+      }
+      .iec {
+        .logo {
+          padding: 30px 0;
+          background: white;
+          border-bottom: 1px solid #eee;
+        }
+      }
+      .iitrhf {
+        .logo {
+          background: #434643;
+          padding: 10px 0;
+        }
+      }
+      .cctc {
+        .logo {
+          background: #2c3e50;
+          padding: 50px 0;
+        }
+      }
+      .hubble {
+        .logo {
+          background: #3D566E;
+          padding: 10px 0;
+        }
+      }
 
 			@media screen and (max-width: 767px){
 				.project {

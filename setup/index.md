@@ -2,19 +2,35 @@
 layout: post
 title: The Setup
 ---
-_Things that I use. Last updated on 18th August, 2014._
+_Things that I use. Last updated on 25th February, 2015._
 
 ![Hardware](/images/posts/setup/1.png)
 
-**Laptop**: I own a Dell Inspiron 15R. It costed me &#8377;47,000 in 2011. It has 4GB ram, 650GB HDD, Intel i5. Nothing extraordinary. I carry around a 1TB Seagate external HDD.
+**Laptop Setup**:
 
-**Tablet**: I have a Nexus 7 2012 3G 32GB edition which I bought with my <a href="https://www.facebook.com/photo.php?fbid=10151631176199203">Deloitte CCTC 2013 winnings</a>.
+1. Dell Inspiron 15R. It has 4GB ram, 650GB HDD, Intel i5. Nothing extraordinary.
+1. [Logitech G300](http://gaming.logitech.com/en-au/product/g300-optical-gaming-mouse) mouse.
+1. 1TB Seagate external HDD.
+1. An external monitor. I don't own one but there are enough in [SDSLabs](http://sdslabs.co) for me to monopolize on one.
 
-**Mobile**: I have a Sony Xperia U, bought in 2012. Sony gave up on it after Android 4.0. I've rooted it and I'm running 4.1 for stability. It has a 5MP camera that is, sadly, my main camera right now. I also own a dumb samsung phone for when I'm travelling and need the week long battery life.
+**Tablet**: Nexus 7 2012 3G 32GB running Android 5.0, Lollipop.
 
-**Audio**: I own a [Sennheiser HD439](http://en-us.sennheiser.com/on-ear-headphones-audio-hd-439). It's a closed back circumaural headphone. It has sufficient passive noise canceling. I also have a Roland Cube 20XL guitar amplifier that I use as speakers sometimes.
+**Mobile**:
 
-**DIY Electronics**: I have an [Arduino Uno](http://arduino.cc/en/Main/arduinoBoardUno) rev3 board. I also have a [Cubieboard](http://cubieboard.org) that is running Android 4.1. I also own an [Intel Galileo board](http://arduino.cc/en/ArduinoCertified/IntelGalileo) that was given to me after I reached the finals of Intel Embedded Challenge, 2014. I'm itching to get my hands on a [Spark core](http://spark.io).
+1. [Yu Yureka](http://www.yuplaygod.com/), a Cyanogen OS phone. Bonus point: OTA updates from Cyanogen directly.
+1. A dumb samsung phone for when I'm travelling and need the week long battery life.
+
+**Audio**:
+
+1. [Sennheiser HD439](http://en-us.sennheiser.com/on-ear-headphones-audio-hd-439). It's a closed back circumaural headphone. It has sufficient passive noise canceling.
+1. Panasonic RP-TCM125E-K in-ear headphones for music on the go. Top rated by TheVerge and I would kinda sorta agree.
+1. Roland Cube 20XL guitar amplifier that I use as speakers sometimes.
+
+**DIY Electronics**:
+
+1. [Arduino Uno](http://arduino.cc/en/Main/arduinoBoardUno) rev3 board.
+1. [Cubieboard](http://cubieboard.org) that is running Android 4.1.
+1. [Intel Galileo board](http://arduino.cc/en/ArduinoCertified/IntelGalileo).
 
 ![Software](/images/posts/setup/2.png)
 
@@ -62,26 +78,44 @@ A5 ruled notebook and Stabilo fine tip pens for sketching when I am working on a
 - [Redshift](http://jonls.dk/redshift/) for it slowly warms the colors of your screen based on the time of day. This helps me work late in the nights without straining my eyes.
 - Sublime Text for those few times when I feel like moving out of vim
 
-**Nexus 7**: This is my main consumption device. I prefer reading on tablet than on my laptop. So most of casual browsing happens on my tablet. I use the following apps the most:
+**Nexus 7** and **Yu Yureka**: I do a lot on my mobile and tablet now a days. Some apps that I use multiple times a day:
 
-- Chrome
-- [Workflowy](https://play.google.com/store/apps/details?id=com.workflowy.android&hl=en) for note taking
-- [Pocket](https://play.google.com/store/apps/details?id=com.ideashower.readitlater.pro&hl=en) for offline reading
-- [Twilight](https://play.google.com/store/apps/details?id=com.urbandroid.lux&hl=en) so that I can sleep
-- [Mantano Reader](https://play.google.com/store/apps/details?id=com.mantano.reader.android&hl=en) for ebook reading
-- Google Play Music
-- 8tracks for super awesome, human-curated, music playlists on the go
-- Play Newsstand for casual reading. I wish there was something better. I don't like Flipboard and the rest either.
-- [Slack](https://play.google.com/store/apps/details?id=com.Slack&hl=en) for team chat on the go
-- [Press](https://play.google.com/store/apps/details?id=com.twentyfivesquares.press&hl=en) for RSS
-- Google Keep for short notes and reminders
-- [Timely](https://play.google.com/store/apps/details?id=ch.bitspin.timely&hl=en) for alarm. Seriously, this app is amazing. It has so many small, well thought  features that I could write an entire blog post on it
-- [Astro](https://play.google.com/store/apps/details?id=ch.bitspin.timely&hl=en) file manager
+Photos:
 
-**Xperia U**: I keep my phone super light thanks to the pathetic performance that I'd get otherwise. A more or less exhaustive list of apps on it:
+- [Instagram](http://instagram.com/shashankmehta) for sharing photos
+- Snapseed for times when I need more than Instagram filters
+
+Reading:
 
 - Opera Mini for compressed, faster browsing
+- Play Newsstand for casual reading. I wish there was something better. I don't like Flipboard and the rest either.
+- [Pocket](https://play.google.com/store/apps/details?id=com.ideashower.readitlater.pro&hl=en) for offline reading
+- Feedly for rss feeds of must read blogs
+- Mantano for ebooks
+
+Social:
+
 - Twitter for in class entertainment!
-- [Instagram](http://instagram.com/shashankmehta) for sharing photos
-- Keep for short notes and reminders
+- Facebook messenger and main app
 - Whatsapp for staying in touch
+
+Music:
+
+- Google Music
+- [8tracks](http://8tracks.com/) for super awesome, human-curated, music playlists on the go
+- [SoundHound](www.soundhound.com/) for identifying music
+- [SoundCloud](https://soundcloud.com) for indie stuff
+
+Productivity:
+
+- [Google Keep](https://keep.google.com) for short notes and reminders
+- [Workflowy](https://play.google.com/store/apps/details?id=com.workflowy.android&hl=en) for note taking
+
+Tools:
+
+- [Twilight](https://play.google.com/store/apps/details?id=com.urbandroid.lux&hl=en) so that I can sleep
+- [Splitwise](https://www.splitwise.com) for splitting bills
+- [Google Fit](https://fit.google.com/) for keeping count of my steps
+- [Camscanner](https://www.camscanner.com/)for creating soft copies. Highly recommended for students.
+- [AirDroid](https://www.airdroid.com/) for moving files over WiFi
+

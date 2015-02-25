@@ -111,15 +111,16 @@ p code {
 		}
 
 		#logo:before {
-			background: #fff url('/images/homelogo.png');
+			background: #fff url('/images/dp.jpeg');
+      background-size: cover;
+			border-radius: 50%;
 			z-index: 1;
 			@include transition(all, 0.2s, ease-in);
 		}
 
 		#logo:after {
-			background: url('/images/dp.png');
+			background: url('/images/homelogo.png');
 			border-radius: 50%;
-      background-size: cover;
 		}
 
 		#logo:hover:before {

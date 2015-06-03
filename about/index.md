@@ -6,13 +6,15 @@ title: About Me
 
 A short and sweet version of this page is available at [about.me/shashankmehta](http://about.me/shashankmehta). If you've got time to burn, read on.
 
-Hi, I'm Shashank Mehta! I am a final year Electronics and Communication undergraduate by degree at [IIT Roorkee](http://www.iitr.ac.in) but a software engineer by practice/interest.
+Hi, I'm Shashank Mehta! I am a Software Developer at Razorpay. Earlier I used to be an Electronics and Communication undergrad at [IIT Roorkee](http://www.iitr.ac.in).
+
+I have been working remotely with Razorpay since December 2014 and full time since May 2015.
+
+I interned at [Zomato](http://zomato.com) during the summer of 2014 and at [Mango Man technologies](http://teewe.in/) in summer of 2013.
 
 I started off with PHP but now use whatever feels right like Node or Ruby. I have worked with SlimPHP, Toro, Express, Rails, Backbone, SASS etc. I can work on frontend but I prefer working on the backend.
 
 I code for food, MacBook, fast internet, noise cancelling headphones, a comfortable chair and desk. Pretty basic needs. Truly.
-
-I interned at [Zomato](http://zomato.com) during the summer of 2014 and at [Mango Man technologies](http://teewe.in/) in summer of 2013.
 
 I maintain a post on my Setup at [/setup](/setup).
 

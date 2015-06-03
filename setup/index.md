@@ -8,10 +8,9 @@ _Things that I use. Last updated on 25th February, 2015._
 
 **Laptop Setup**:
 
-1. Dell Inspiron 15R. It has 4GB ram, 650GB HDD, Intel i5. Nothing extraordinary.
+1. MacBook Pro (2015), 256GB SSD, 8GB RAM.
 1. [Logitech G300](http://gaming.logitech.com/en-au/product/g300-optical-gaming-mouse) mouse.
-1. 1TB Seagate external HDD.
-1. An external monitor. I don't own one but there are enough in [SDSLabs](http://sdslabs.co) for me to monopolize on one.
+1. 1TB Western Digital Passbook Ultra, 1TB Seagate external HDD.
 
 **Tablet**: Nexus 7 2012 3G 32GB running Android 5.0, Lollipop.
 
@@ -23,8 +22,8 @@ _Things that I use. Last updated on 25th February, 2015._
 **Audio**:
 
 1. [Sennheiser HD439](http://en-us.sennheiser.com/on-ear-headphones-audio-hd-439). It's a closed back circumaural headphone. It has sufficient passive noise canceling.
-1. Panasonic RP-TCM125E-K in-ear headphones for music on the go. Top rated by TheVerge and I would kinda sorta agree.
 1. Roland Cube 20XL guitar amplifier that I use as speakers sometimes.
+1. Logitech UE Mini Boom bluetooth speakers. Decently priced. Loud enough for one room.
 
 **DIY Electronics**:
 
@@ -34,9 +33,9 @@ _Things that I use. Last updated on 25th February, 2015._
 
 ![Software](/images/posts/setup/2.png)
 
-**OS**: I'm dual booting ElemetaryOS Luna and Windows 8. Elementary is my primary OS. I had been jumping distros every few months but haven't done so since trying out Elementary.
+**OS**: OSX Yosemite
 
-**Development**: I use [Terminator](https://launchpad.net/terminator/) for command line fu. I spend most of my time on either terminator or browser. Some of the terminal tools that I use daily:
+**Development**: I use iTerm2 for command line fu. I spend most of my time on either terminator or browser. Some of the terminal tools that I use daily:
 
 - Vim for all my coding
 - Git for version controlling. I put nearly everything in a git repo
@@ -74,9 +73,14 @@ A5 ruled notebook and Stabilo fine tip pens for sketching when I am working on a
 
 **Desktop Apps**: The few desktop apps that I do use include:
 
-- Banshee for music
-- [Redshift](http://jonls.dk/redshift/) for it slowly warms the colors of your screen based on the time of day. This helps me work late in the nights without straining my eyes.
+- iTunes
+- [Flux](https://justgetflux.com/) for it slowly warms the colors of your screen based on the time of day. This helps me work late in the nights without straining my eyes.
 - Sublime Text for those few times when I feel like moving out of vim
+- Ulysses for writing long form stuff. It has an absolutely brilliant interface
+- DayOne for journalling. It's like personal Twitter
+- VLC. Because if not this then what else
+- Adobe Illustrator and Sketch for creating mockups
+- Alfred for quick switching and general productivity
 
 **Nexus 7** and **Yu Yureka**: I do a lot on my mobile and tablet now a days. Some apps that I use multiple times a day:
 
@@ -119,3 +123,8 @@ Tools:
 - [Camscanner](https://www.camscanner.com/)for creating soft copies. Highly recommended for students.
 - [AirDroid](https://www.airdroid.com/) for moving files over WiFi
 
+### Update Log
+
+- 13th May 2015: Moved to MacBook Pro from the four years old Dell Inspiron 15R which was dual booting ElementaryOS Luna and Windows 8.
+- Removed ElementaryOS/Ubuntu specific apps like Banshee
+- Panasonic RP-TCM125E-K in-ear headphone broke in 3 months. Earphone less right now.

@@ -74,9 +74,11 @@ var instagram = {
   }
 }
 
-$(document).ready(function(){
-  instagram.init();
-  $(window).resize(function(){
-    instagram.handleResize();
-  });
-})
+if(typeof $ !== 'undefined'){
+  $(document).ready(function(){
+    instagram.init();
+    $(window).resize(function(){
+      instagram.handleResize();
+    });
+  })
+}

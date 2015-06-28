@@ -21,7 +21,8 @@ _Things that I use. Last updated on 25th February, 2015._
 
 **Audio**:
 
-1. [Sennheiser HD439](http://en-us.sennheiser.com/on-ear-headphones-audio-hd-439). It's a closed back circumaural headphone. It has sufficient passive noise canceling.
+1. Audio Technica M50X. Absolutely brilliant. Perfect sound, very good passive noise blocking. [MKBHD](https://www.youtube.com/watch?v=y5DyEYuvF3o) certified.
+1. Panasonic RP-TCM125E-K in-ear headphone. Top rated by The Verge. I agree.
 1. Roland Cube 20XL guitar amplifier that I use as speakers sometimes.
 1. Logitech UE Mini Boom bluetooth speakers. Decently priced. Loud enough for one room.
 
@@ -125,6 +126,9 @@ Tools:
 
 ### Update Log
 
-- 13th May 2015: Moved to MacBook Pro from the four years old Dell Inspiron 15R which was dual booting ElementaryOS Luna and Windows 8.
+13th May 2015
+- Moved to MacBook Pro from the four years old Dell Inspiron 15R which was dual booting ElementaryOS Luna and Windows 8.
 - Removed ElementaryOS/Ubuntu specific apps like Banshee
-- Panasonic RP-TCM125E-K in-ear headphone broke in 3 months. Earphone less right now.
+
+28th June 2015
+- Removed [Sennheiser HD439](http://en-us.sennheiser.com/on-ear-headphones-audio-hd-439). Added ATH M50X.

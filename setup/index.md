@@ -2,15 +2,16 @@
 layout: post
 title: The Setup
 ---
-_Things that I use. Last updated on 25th February, 2015._
+_Things that I use. Last updated on 26th July, 2015._
 
 ![Hardware](/images/posts/setup/1.png)
 
 **Laptop Setup**:
 
 1. MacBook Pro (2015), 256GB SSD, 8GB RAM.
+1. [Dell U2414H](http://accessories.us.dell.com/sna/productdetail.aspx?c=us&cs=04&l=en&sku=860-BBCG) monitor
 1. [Logitech G300](http://gaming.logitech.com/en-au/product/g300-optical-gaming-mouse) mouse.
-1. 1TB Western Digital Passbook Ultra, 1TB Seagate external HDD.
+1. 1TB Western Digital Passport Ultra, 1TB Seagate external HDD and 2TB Western Digital Passport.
 
 **Tablet**: Nexus 7 2012 3G 32GB running Android 5.0, Lollipop.
 
@@ -44,6 +45,7 @@ _Things that I use. Last updated on 25th February, 2015._
 - [Axel](http://axel.alioth.debian.org/) for downloading
 - [Autojump](https://github.com/joelthelion/autojump) for quickly moving around my system
 - [PDFtk](https://www.pdflabs.com/tools/pdftk-server/) for all things pdf. I only deal with pdfs when syncing docs between my devices
+- A custom terminal prompt called [Gitster](https://github.com/robbyrussell/oh-my-zsh/wiki/External-themes#gitster)
 - Whole lot of custom scripts
 - My dotfiles are on [GitHub](http://github.com/shashankmehta/dotfiles)
 
@@ -67,14 +69,14 @@ A5 ruled notebook and Stabilo fine tip pens for sketching when I am working on a
 - Most of Google stuff
 - Google Drive for document management. Special mention because it helped me move away from Windows environment. Linux still doesn't have a half decent document suite
 - [8tracks](http://8tracks.com) for super awesome, human-curated, music playlists
-- [Slack](https://slack.com/) for team chat
 - [Workflowy](http://workflowy.com) for note taking. I also use the android app.
 - [Twitter](http://twitter.com/leostatic) for bite sized updates
 - [Feedly](http://feedly.com) for RSS
 
 **Desktop Apps**: The few desktop apps that I do use include:
 
-- iTunes
+- [Slack](https://slack.com/) for team chat
+- [Rdio](https://rdio.com) for music
 - [Flux](https://justgetflux.com/) for it slowly warms the colors of your screen based on the time of day. This helps me work late in the nights without straining my eyes.
 - Sublime Text for those few times when I feel like moving out of vim
 - Ulysses for writing long form stuff. It has an absolutely brilliant interface

@@ -166,7 +166,8 @@ p code {
     margin-top: 25px;
     border-top: 1px solid #ccc; }
     .blog .pure-g-r .content .post .meta .copy {
-      font-size: 0.9em; }
+      font-size: 0.9em;
+      padding-top: 20px; }
       .blog .pure-g-r .content .post .meta .copy p {
         margin-top: 0px; }
   .blog .pure-g-r .content .post blockquote {

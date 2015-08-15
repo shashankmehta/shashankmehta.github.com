@@ -3,6 +3,10 @@ layout: post
 title: Change Can Make Change Easy
 ---
 
+<div class="center">
+    <img src="/images/posts/bangalore/last_light.jpg" alt="">
+</div>
+
 Change is hard. The bigger the change, the harder it gets. Remember that time when you decided "I'm going to wake up at 5 and work on this problem" but you ended up sleeping till your usual 9AM time? "I'm going to try waking up 15 minutes earlier and increase it every few days", said no one ever. Despite the fact that we all know just how hard drastic changes can be. That plan to eat healthy, all of a sudden? Nope, it couldn’t work and it didn’t work. That plan to exercise every day even though it’s been months since you last stepped into the field? Nope. Conventional wisdom has always been about taking small steps in the right direction. But despite all of the intuitive sense in the wisdom, we optimistic fools think that tackling an issue head on is the single most effective way.
 
 Yet, I have realised that one major change can make other changes easier to happen and stick. Sometimes it takes a change to cause the changes you have always desired. Passing out of college was that change for me.

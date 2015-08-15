@@ -3,17 +3,17 @@
 // ============== MIXINS ============== //
 
 @mixin transition($transition-property, $transition-time, $method) {
-		-webkit-transition: $transition-property $transition-time $method;
-		-moz-transition: $transition-property $transition-time $method;
-		-ms-transition: $transition-property $transition-time $method;
-		-o-transition: $transition-property $transition-time $method;
-		transition: $transition-property $transition-time $method;
+    -webkit-transition: $transition-property $transition-time $method;
+    -moz-transition: $transition-property $transition-time $method;
+    -ms-transition: $transition-property $transition-time $method;
+    -o-transition: $transition-property $transition-time $method;
+    transition: $transition-property $transition-time $method;
 }
 
 @mixin box-sizing(){
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-ms-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
 }
 
 // ============== /MIXINS ============== //
@@ -68,42 +68,42 @@
 }
 
 html{
-	height: 100%;
+  height: 100%;
 }
 
 body {
-	font-family: 'Source Sans Pro', sans serif;
-	font-size: 16px;
-	color: #081522;
-	border-top: 10px solid black;
-	border-bottom: 10px solid black;
-	min-height: 100%;
-	box-sizing: border-box;
+  font-family: 'Source Sans Pro', sans serif;
+  font-size: 16px;
+  color: #081522;
+  border-top: 10px solid black;
+  border-bottom: 10px solid black;
+  min-height: 100%;
+  box-sizing: border-box;
 }
 
 // ============== COMPONENTS ============== //
 
 a{
-	color: inherit;
-	text-decoration: none;
-	@include transition(all, 0.2s, ease-in);
+  color: inherit;
+  text-decoration: none;
+  @include transition(all, 0.2s, ease-in);
 
-	&:hover{
-		color: #3498db;
-	}
+  &:hover{
+    color: #3498db;
+  }
 }
 
 .highlight, code {
-	background: whitesmoke;
-	border-radius: 0;
+  background: whitesmoke;
+  border-radius: 0;
 }
 
 code {
-	padding: 3px 5px 1px;
+  padding: 3px 5px 1px;
 }
 
 p code {
-	font-size: 0.8em;
+  font-size: 0.8em;
 }
 
 // ============== /COMPONENTS ============== //
@@ -111,193 +111,193 @@ p code {
 // ============== HOMEPAGE ============== //
 
 #homepage {
-	padding: 100px 0px 0px 0px;
-	text-align: center;
-	color: #2c3e50;
-	font-family: 'Source Sans Pro', sans serif;
-	font-weight: normal;
+  padding: 100px 0px 0px 0px;
+  text-align: center;
+  color: #2c3e50;
+  font-family: 'Source Sans Pro', sans serif;
+  font-weight: normal;
 
-	.main{
-		margin-bottom: 25px;
+  .main{
+    margin-bottom: 25px;
 
-		#logo {
-			width: 150px;
-			height: 150px;
-			position: relative;
-			margin: auto;
-			margin-bottom: 30px;
-		}
+    #logo {
+      width: 150px;
+      height: 150px;
+      position: relative;
+      margin: auto;
+      margin-bottom: 30px;
+    }
 
-		#logo:before, #logo:after {
-			content: "";
-			position: absolute;
-			top: 0px;
-			right: 0px;
-			bottom: 0px;
-			left: 0px;
-			opacity: 1;
-		}
+    #logo:before, #logo:after {
+      content: "";
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 1;
+    }
 
-		#logo:before {
-			background: #fff url('/images/dp.jpeg');
+    #logo:before {
+      background: #fff url('/images/dp.jpeg');
       background-size: cover;
-			border-radius: 50%;
-			z-index: 1;
-			@include transition(all, 0.2s, ease-in);
-		}
+      border-radius: 50%;
+      z-index: 1;
+      @include transition(all, 0.2s, ease-in);
+    }
 
-		#logo:after {
-			background: url('/images/homelogo.png');
-			border-radius: 50%;
-		}
+    #logo:after {
+      background: url('/images/homelogo.png');
+      border-radius: 50%;
+    }
 
-		#logo:hover:before {
-		    opacity: 0;
-		}
+    #logo:hover:before {
+        opacity: 0;
+    }
 
-		h1, h3{
-			margin: 0px;
-		}
+    h1, h3{
+      margin: 0px;
+    }
 
-		h1{
-			font-weight: 300;
-			font-size: 2.5em;
-		}
+    h1{
+      font-weight: 300;
+      font-size: 2.5em;
+    }
 
-		h3{
-			font-weight: 500;
-			font-size: 0.9em;
-		}
-	}
+    h3{
+      font-weight: 500;
+      font-size: 0.9em;
+    }
+  }
 
-	.meta{
-		div{
-			margin-bottom: 10px;
-		}
+  .meta{
+    div{
+      margin-bottom: 10px;
+    }
 
-		.row {
-			a {
-				padding: 0 10px;
-			}
-		}
+    .row {
+      a {
+        padding: 0 10px;
+      }
+    }
 
-	}
+  }
 
 }
 .ig {
-	position: absolute;
-	bottom: 0;
+  position: absolute;
+  bottom: 0;
 }
 
 @media screen and (max-width: 500px){
-	#homepage{
-		padding: 10px 20px 20px 20px;
-	}
+  #homepage{
+    padding: 10px 20px 20px 20px;
+  }
 }
 // ============== /HOMEPAGE ============== //
 
 // ============== BLOG ============== //
 
 @media screen and (max-width: 767px){
-	.content{
-		padding: 0px 20px;
-	}
+  .content{
+    padding: 0px 20px;
+  }
 }
 
 .blog {
-	.pure-g-r{
+  .pure-g-r{
 
-		.content {
-			font-family: 'Source Sans Pro', sans serif;
-			font-weight: normal;
-			margin: 20px auto 20px;
-			display: block;
-			position: relative;
+    .content {
+      font-family: 'Source Sans Pro', sans serif;
+      font-weight: normal;
+      margin: 20px auto 20px;
+      display: block;
+      position: relative;
 
-			.archives{
+      .archives{
 
-				.meta {
-					h3{
-						font-weight: 500;
-						font-size: 1em;
-					}
-				}
-				.title {
-					h1{
-						font-weight: 500;
-						font-size: 1.3em;
-					}
-				}
-			}
+        .meta {
+          h3{
+            font-weight: 500;
+            font-size: 1em;
+          }
+        }
+        .title {
+          h1{
+            font-weight: 500;
+            font-size: 1.3em;
+          }
+        }
+      }
 
-			.post {
-				a {
-					border-bottom: 1px solid #ccc;
-				}
+      .post {
+        a {
+          border-bottom: 1px solid #ccc;
+        }
 
         img {
           padding: 30px 0;
         }
 
-				h1, h2, h3, h4, h5, h6{
-					a{
-						border-bottom: none;
-					}
-				}
+        h1, h2, h3, h4, h5, h6{
+          a{
+            border-bottom: none;
+          }
+        }
 
-				p{
-					line-height: 1.4em;
-				}
+        p{
+          line-height: 1.4em;
+        }
 
-				ul, ol {
-					li {
-						padding: 3px 0;
-					}
-				}
+        ul, ol {
+          li {
+            padding: 3px 0;
+          }
+        }
 
-				.title{
-					margin-bottom: 5px;
-				}
+        .title{
+          margin-bottom: 5px;
+        }
 
-				.byline{
-					font-style: italic;
-					font-size: 0.8em;
-				}
+        .byline{
+          font-style: italic;
+          font-size: 0.8em;
+        }
 
-				.twitter {
-					margin-top: 50px;
-				}
+        .twitter {
+          margin-top: 50px;
+        }
 
-				.meta {
-					margin-top: 25px;
-					border-top: 1px solid #ccc;
-				
-					.copy {
-						font-size: 0.9em;
-						
-						p {
-							margin-top: 0px;
-						}
-					}
-				}
+        .meta {
+          margin-top: 25px;
+          border-top: 1px solid #ccc;
 
-				blockquote {
-					border-left: 5px solid #c0392b;
-					margin-left: 0px;
-					padding-left: 20px;
-				}
+          .copy {
+            font-size: 0.9em;
 
-				#disqus_thread {
-					padding-top: 25px;
-					border-top: 1px solid #eee;
-				}
+            p {
+              margin-top: 0px;
+            }
+          }
+        }
+
+        blockquote {
+          border-left: 5px solid #c0392b;
+          margin-left: 0px;
+          padding-left: 20px;
+        }
+
+        #disqus_thread {
+          padding-top: 25px;
+          border-top: 1px solid #eee;
+        }
 
         .center {
           text-align: center;
         }
-			}
-		}
-	}
+      }
+    }
+  }
 }
 
 // ============== /BLOG ============== //
@@ -305,76 +305,76 @@ p code {
 // ============== PROJECTS ============== //
 
 .projects {
-	font-size: 12px;
-	position: relative;
+  font-size: 12px;
+  position: relative;
 
-	.header {
-		h1 {
-			margin-bottom: 30px;
-		}
+  .header {
+    h1 {
+      margin-bottom: 30px;
+    }
 
-		@media screen and (max-width: 767px){
-			h1 {
-				text-align: center;
-			}
-		}
-	}
+    @media screen and (max-width: 767px){
+      h1 {
+        text-align: center;
+      }
+    }
+  }
 
-	.pure-g {
-		.container {
-			margin: auto;
-			display: block;
-			margin-top: 40px;
-			margin-bottom: 40px;
+  .pure-g {
+    .container {
+      margin: auto;
+      display: block;
+      margin-top: 40px;
+      margin-bottom: 40px;
 
       .projects.header {
         margin: 40px 0 0 0;
       }
 
-			.project {
-				margin: 0px 20px 0px 0px;
-				max-width: 400px;
-				border: 1px solid #eee;
+      .project {
+        margin: 0px 20px 0px 0px;
+        max-width: 400px;
+        border: 1px solid #eee;
 
-				.logo {
-					text-align: center;
-					height: 140px;
-					background: #EEE;
-					@include box-sizing();
+        .logo {
+          text-align: center;
+          height: 140px;
+          background: #EEE;
+          @include box-sizing();
 
-					img {
-						max-width: 100%;
-						height: 100%;
-					}
-				}
+          img {
+            max-width: 100%;
+            height: 100%;
+          }
+        }
 
-				.details {
-					padding: 10px;
-					min-height: 160px;
-					@include box-sizing();
-				}
-			}
+        .details {
+          padding: 10px;
+          min-height: 160px;
+          @include box-sizing();
+        }
+      }
 
-			.logo.addPadding {
-				padding: 10px;
-			}
+      .logo.addPadding {
+        padding: 10px;
+      }
 
-			.hackview {
-				.logo {
-					background: #F4F3EF;
-				}
-			}
-			.greyshade {
-				.logo {
-					text-align: left;
-					background: #F5F5F5;
-				}
-			}
-			.nano {
-				.logo {
-					background: #2C3E50;
-				}
-			}
+      .hackview {
+        .logo {
+          background: #F4F3EF;
+        }
+      }
+      .greyshade {
+        .logo {
+          text-align: left;
+          background: #F5F5F5;
+        }
+      }
+      .nano {
+        .logo {
+          background: #2C3E50;
+        }
+      }
       .zomato {
         .logo {
           background: white;
@@ -425,29 +425,29 @@ p code {
         }
       }
 
-			@media screen and (max-width: 767px){
-				.project {
-					margin: 10px auto;
-					max-width: 270px;
-				}
-			}
-		}
-	}
+      @media screen and (max-width: 767px){
+        .project {
+          margin: 10px auto;
+          max-width: 270px;
+        }
+      }
+    }
+  }
 
-	h1, h2, h3, h4, h5, h6 {
-		font-weight: 500;
-		margin-top: 5px;
-		margin-bottom: 5px;
-	}
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
 
-	ul {
-		padding-left: 15px;
-		line-height: 16px
-	}
+  ul {
+    padding-left: 15px;
+    line-height: 16px
+  }
 
-	a {
-		border-bottom: 1px dashed #333;
-	}
+  a {
+    border-bottom: 1px dashed #333;
+  }
 
 }
 
@@ -456,56 +456,56 @@ p code {
 // ============== NAVIGATION ============== //
 
 .navigation{
-	position: fixed;
-	top: 50px;
-	margin-left: -150px;
+  position: fixed;
+  top: 50px;
+  margin-left: -150px;
 
-	.holder{
-		width: 50px;
-		height: 50px;
-		background: #2c3e50;
-		color: white;
-		box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		-ms-box-sizing: border-box;
-		padding: 15px 12px;
-		font-size: 18px;
-		box-shadow: inset 0 0 15px rgba(0,0,0,.5);
-		@include transition(all, 0.2s, ease-in);
+  .holder{
+    width: 50px;
+    height: 50px;
+    background: #2c3e50;
+    color: white;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    padding: 15px 12px;
+    font-size: 18px;
+    box-shadow: inset 0 0 15px rgba(0,0,0,.5);
+    @include transition(all, 0.2s, ease-in);
 
-		.nav{
-			display: none;
-			padding-top: 5px;
+    .nav{
+      display: none;
+      padding-top: 5px;
 
-			a{
-				font-size: 0.8em;
-				border: none;
-			}
-		}
+      a{
+        font-size: 0.8em;
+        border: none;
+      }
+    }
 
-		&:hover{
-			height: 140px;
-			width: 100px;
-			@include transition(all, 0.2s, ease-in);
+    &:hover{
+      height: 140px;
+      width: 100px;
+      @include transition(all, 0.2s, ease-in);
 
-			.nav{
-				display: block;
-			}
-		}
-	}
+      .nav{
+        display: block;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 767px){
-	.navigation{
-		position: absolute;
-		right: 20px;
-		top: -10px;
-		left: initial;
-	}
+  .navigation{
+    position: absolute;
+    right: 20px;
+    top: -10px;
+    left: initial;
+  }
 
-	.projects .navigation {
-		top: 10px;
-	}
+  .projects .navigation {
+    top: 10px;
+  }
 }
 
 

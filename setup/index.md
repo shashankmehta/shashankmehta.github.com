@@ -17,6 +17,7 @@ _Things that I use. Last updated on 26th July, 2015._
 
 **Mobile**:
 
+1. [One Plus 2](https://oneplus.net/2). I absolutely love it. It has a great camera and performance, at par with the flagships, if not better.
 1. [Yu Yureka](http://www.yuplaygod.com/), a Cyanogen OS phone. Bonus point: OTA updates from Cyanogen directly.
 1. A dumb samsung phone for when I'm travelling and need the week long battery life.
 
@@ -64,7 +65,7 @@ A5 ruled notebook and Stabilo fine tip pens for sketching when I am working on a
 - [Workflowy](http://workflowy.com) for offline note taking
 
 
-**Web Apps**: I prefer using web applications over desktop ones
+**Web Apps**:
 
 - Most of Google stuff
 - Google Drive for document management. Special mention because it helped me move away from Windows environment. Linux still doesn't have a half decent document suite
@@ -78,14 +79,14 @@ A5 ruled notebook and Stabilo fine tip pens for sketching when I am working on a
 - [Slack](https://slack.com/) for team chat
 - [Rdio](https://rdio.com) for music
 - [Flux](https://justgetflux.com/) for it slowly warms the colors of your screen based on the time of day. This helps me work late in the nights without straining my eyes.
-- Sublime Text for those few times when I feel like moving out of vim
-- Ulysses for writing long form stuff. It has an absolutely brilliant interface
-- DayOne for journalling. It's like personal Twitter
+- [Atom](https://atom.io/) for those few times when I feel like moving out of vim
+- [Ulysses](http://www.ulyssesapp.com/mac) for writing long form stuff. It has an absolutely brilliant interface
 - VLC. Because if not this then what else
 - Adobe Illustrator and Sketch for creating mockups
-- Alfred for quick switching and general productivity
+- [Alfred](https://www.alfredapp.com/)for quick switching and general productivity
+- [Rdio](https://rdio.com) for music streaming. Have a paid subscription.
 
-**Nexus 7** and **Yu Yureka**: I do a lot on my mobile and tablet now a days. Some apps that I use multiple times a day:
+**Nexus 7** and **One Plus 2**: I do a lot on my mobile and tablet now a days. Some apps that I use multiple times a day:
 
 Photos:
 
@@ -109,6 +110,7 @@ Social:
 Music:
 
 - Google Music
+- [Rdio](https://rdio.com). It allows downloading songs for offline listening in paid subscription which I have
 - [8tracks](http://8tracks.com/) for super awesome, human-curated, music playlists on the go
 - [SoundHound](www.soundhound.com/) for identifying music
 - [SoundCloud](https://soundcloud.com) for indie stuff
@@ -127,10 +129,14 @@ Tools:
 - [AirDroid](https://www.airdroid.com/) for moving files over WiFi
 
 ### Update Log
+5th September 2015
+- Moved to One Plus 2.
+- Added Rdio to various setups. Been using it for a month now
+- Switched Sublime to Atom
+
+28th June 2015
+- Removed [Sennheiser HD439](http://en-us.sennheiser.com/on-ear-headphones-audio-hd-439). Added ATH M50X.
 
 13th May 2015
 - Moved to MacBook Pro from the four years old Dell Inspiron 15R which was dual booting ElementaryOS Luna and Windows 8.
 - Removed ElementaryOS/Ubuntu specific apps like Banshee
-
-28th June 2015
-- Removed [Sennheiser HD439](http://en-us.sennheiser.com/on-ear-headphones-audio-hd-439). Added ATH M50X.

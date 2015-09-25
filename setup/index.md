@@ -2,18 +2,20 @@
 layout: post
 title: The Setup
 ---
-_Things that I use. Last updated on 26th July, 2015._
+_Things that I use. Last updated on 7th September, 2015._
 
 ![Hardware](/images/posts/setup/1.png)
 
 **Laptop Setup**:
 
-1. MacBook Pro (2015), 256GB SSD, 8GB RAM.
+1. MacBook Pro Retina (2015), 256GB SSD, 8GB RAM.
 1. [Dell U2414H](http://accessories.us.dell.com/sna/productdetail.aspx?c=us&cs=04&l=en&sku=860-BBCG) monitor
 1. [Logitech G300](http://gaming.logitech.com/en-au/product/g300-optical-gaming-mouse) mouse.
 1. 1TB Western Digital Passport Ultra, 1TB Seagate external HDD and 2TB Western Digital Passport.
 
-**Tablet**: Nexus 7 2012 3G 32GB running Android 5.0, Lollipop.
+**Tablet**: Nexus 7 2012 3G 32GB running downgraded Cyanogen Mod 10 for better performance on an ageing device.
+
+**E-Reader**: Amazon Kindle Paperwhite 2015 edition
 
 **Mobile**:
 
@@ -27,6 +29,9 @@ _Things that I use. Last updated on 26th July, 2015._
 1. Panasonic RP-TCM125E-K in-ear headphone. Top rated by The Verge. I agree.
 1. Roland Cube 20XL guitar amplifier that I use as speakers sometimes.
 1. Logitech UE Mini Boom bluetooth speakers. Decently priced. Loud enough for one room.
+1. Apple iPod Shuffle for music in gym 💪
+
+For listening to music I have a paid subscription of Rdio. I extensively use its listen offline feature on mobile. Apart from Rdio, I use iTunes on desktop and Google Music on mobile/tablet.
 
 **DIY Electronics**:
 
@@ -130,13 +135,16 @@ Tools:
 
 ### Update Log
 5th September 2015
+
 - Moved to One Plus 2.
 - Added Rdio to various setups. Been using it for a month now
 - Switched Sublime to Atom
 
 28th June 2015
+
 - Removed [Sennheiser HD439](http://en-us.sennheiser.com/on-ear-headphones-audio-hd-439). Added ATH M50X.
 
 13th May 2015
+
 - Moved to MacBook Pro from the four years old Dell Inspiron 15R which was dual booting ElementaryOS Luna and Windows 8.
 - Removed ElementaryOS/Ubuntu specific apps like Banshee

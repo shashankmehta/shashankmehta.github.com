@@ -36,6 +36,7 @@ For listening to music I have a paid subscription of Rdio. I extensively use its
 **DIY Electronics**:
 
 1. [Raspberry Pi 2 Mod B](https://www.raspberrypi.org/products/raspberry-pi-2-model-b/).
+1. [Photon](https://store.particle.io/collections/photon) by Particle.
 1. [Arduino Uno](http://arduino.cc/en/Main/arduinoBoardUno) rev3 board.
 1. [Cubieboard](http://cubieboard.org) that is running Android 4.1.
 1. [Intel Galileo board](http://arduino.cc/en/ArduinoCertified/IntelGalileo).

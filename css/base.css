@@ -171,9 +171,10 @@ p code {
       .blog .pure-g-r .content .post .meta .copy p {
         margin-top: 0px; }
   .blog .pure-g-r .content .post blockquote {
-    border-left: 5px solid #c0392b;
+    border-left: 5px solid #f39c12;
     margin-left: 0px;
-    padding-left: 20px; }
+    padding-left: 20px;
+    font-style: italic; }
   .blog .pure-g-r .content .post #disqus_thread {
     padding-top: 25px;
     border-top: 1px solid #eee; }

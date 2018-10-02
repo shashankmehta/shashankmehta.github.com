@@ -1,5 +1,5 @@
 markdown: rdiscount
-pygments: true
+highlighter: true
 permalink: /archive/:year/:title.html
 rdiscount:
   extensions: [smart]
@@ -15,3 +15,6 @@ googleplus_user: '109764126807838271120'
 googleplus_hidden: false
 
 google_analytics_tracking_id: UA-32545112-1
+
+plugins:
+  - jekyll-redirect-from

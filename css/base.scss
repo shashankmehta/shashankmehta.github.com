@@ -136,23 +136,10 @@ p code {
       bottom: 0px;
       left: 0px;
       opacity: 1;
-    }
-
-    #logo:before {
       background: #fff url('/images/dp.jpeg');
       background-size: cover;
       border-radius: 50%;
       z-index: 1;
-      @include transition(all, 0.2s, ease-in);
-    }
-
-    #logo:after {
-      background: url('/images/homelogo.png');
-      border-radius: 50%;
-    }
-
-    #logo:hover:before {
-        opacity: 0;
     }
 
     h1, h3{

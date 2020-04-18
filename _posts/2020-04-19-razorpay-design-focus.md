@@ -107,4 +107,4 @@ Our product is ever-evolving, as we are barely done with this field! And so is o
 
 [Join Razorpay](http://razorpay.com/jobs)
 
-*Thanks @chettyarun, @saurabhsoni for helping with reviewing the draft of this post, and for being the pillars of Razorpay's design team.*
+*Thanks [@chettyarun](https://twitter.com/ChettyArun), [@saurabhsoni](https://twitter.com/saurabhsoni_ss) for helping with reviewing the draft of this post, and for being the pillars of Razorpay's design team.*

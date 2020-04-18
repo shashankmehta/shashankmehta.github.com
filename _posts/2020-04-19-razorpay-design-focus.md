@@ -1,6 +1,8 @@
 ---
 layout: post
 title: How Razorpay Used Design as a Differentiator
+description: Design in B2B software can be a major differentiator, a way of building credibility and for standing out.
+og-image: rzp-design/og_image.jpg
 ---
 Payments is an interesting domain. When Razorpay launched in 2015, we were told that we are entering an extremely crowded space of payment gateways. And that there's not a lot to solve.
 

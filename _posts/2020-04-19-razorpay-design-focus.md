@@ -4,9 +4,11 @@ title: How Razorpay Used Design as a Differentiator
 description: Design in B2B software can be a major differentiator, a way of building credibility and for standing out. Here's how Razorpay used design to its advantage.
 og-image: rzp-design/og_image.jpg
 ---
-Payments is an interesting domain. When Razorpay launched in 2015, we were told that we are entering an extremely crowded space of payment gateways. And that there's not a lot to solve.
+Payments is an interesting domain. When [Razorpay](https://razorpay.com) launched in 2015, we were told that we are entering an extremely crowded space of payment gateways. And that there's not a lot to solve.
 
 When we looked at this space, somehow all that we found online was just complaints. Nobody was happy with any provider. And online payments was no where near as ubiquitous as it is now in 2020. People worried about fraud even when there wasn't much. We would often field questions like "how do I know your software is safe", "why should I trust a one year old company with money". All fair questions, to be honest.
+
+5 years since launch, Razorpay now processes $10Bn+ payments volume, $3Bn+ payouts, $2.5Bn+ loans (all annualised) with more than 800k businesses on the platform making it one of the top payment gateways in India.
 
 While lot of things contributed towards Razorpay's initial growth, some of which included:
 

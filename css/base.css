@@ -214,6 +214,10 @@ p code {
   text-align: center;
 }
 
+.archives h3 > time {
+  padding-right: 15px;
+}
+
 .projects {
   font-size: 12px;
   position: relative;

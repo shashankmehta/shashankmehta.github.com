@@ -16,7 +16,7 @@ While a lot of things contributed towards Razorpay's initial growth, some of whi
 - KYC verification and approval in 2-3 days *vs weeks with others*
 - Incredibly simpler integration
 
-It's really to understand why these were the differentiators. All of these helped us stand out in a space that people back in 2015 said was "crowded" with too much competition. But one differentiator that people have a difficult time wrapping their head around is **design**.
+It's really easy to understand why these were the differentiators. All of these helped us stand out in a space that people back in 2015 said was "crowded" with too much competition. But one differentiator that people have a difficult time wrapping their head around is **design**.
 
 Yep, the design has been a major differentiator for Razorpay.
 

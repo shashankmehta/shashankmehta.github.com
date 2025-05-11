@@ -15,14 +15,14 @@ I'm using Go basically as an alternative to a bash script. Apart from the fact t
 
 ![Gopher](/images/posts/golang/gopher.jpg)
 
-##What is a goroutine?
+## What is a goroutine?
 If you want to directly jump to code, take a look at Go by examples' page on [goroutines](https://gobyexample.com/goroutines). Basically, goroutines are lightweight thread of execution. Translated to layman terms, goroutine allows you to run multiple functions concurrently. Go also provides `channels` to deal with goroutines. A practical example of where this is highly useful:
 
 In Captain, there's a command `capt grant shashankmehta 218 210 212`. I'm trying to give a particular user access to multiple systems. In a naive implementation of this feature, the 3 systems would have been handled sequentially. With goroutines, all three are handled concurrently. The three instances of a single function output their results to a common channel which handles displaying the results to the user who ran the command. So now running granting access to 10 systems is nearly as fast as granting access to 1 system.
 
 The ease of writing `goroutines` was the most impressive thing for me in Go.
 
-##Getting Started With Go
+## Getting Started With Go
 In case the above intrigued you enough to think about learning Go, here are a few pointers from my personal experience.
 
 How did Go come about? Sorry, I'm not your history teacher. You'll have to hit Google/Wikipedia for that. I'll just say that as far as programming languages are concerned, Go is very new. Pssst, it's hip

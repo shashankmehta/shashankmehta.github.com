@@ -1,3 +1,7 @@
 .sass-cache
 _site
 .DS_Store
+file_tree.txt
+migration-chatgpt.md
+migration-cursor.md
+README.md

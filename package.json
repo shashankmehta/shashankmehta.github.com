@@ -1,0 +1,19 @@
+{
+  "name": "shashankmehta.in",
+  "version": "1.0.0",
+  "description": "Personal website & blog, built using 11ty",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-img": "^6.0.3",
+    "@11ty/eleventy-plugin-rss": "^2.0.4",
+    "@jgarber/eleventy-plugin-sass": "^2.1.0",
+    "@quasibit/eleventy-plugin-sitemap": "^2.2.0",
+    "eleventy-plugin-redirects": "^1.0.0"
+  }
+}

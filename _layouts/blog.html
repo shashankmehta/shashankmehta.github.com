@@ -1,17 +1,13 @@
-{% include head.html %}
-
+{% include "head.liquid" %}
 <body ontouchstart="" class="blog">
-  
   <section class="pure-g-r">
     <div class='pure-u-1-2 content'>
-
-      {% include nav.html %}
+      {% include "navigation.liquid" %}
 
       {{ content }}
     </div>
   </section>
   
-  {% include footer.html %}
+  {% include "footer.liquid" %}
 </body>
-
 </html>

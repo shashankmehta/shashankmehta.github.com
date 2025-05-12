@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Backup plan on Ubuntu"
-date: 2012-12-28 15:30
 comments: true
 categories: [ubuntu, backup]
 published: false
@@ -40,8 +39,6 @@ Phoenix_backup is used for backing up /home. I had to use ext4 for *nix permissi
 I also do not really need multiple snapshot system. However this is possible with simple bash script, cron and rsync. Refer to [this article](http://www.mikerubel.org/computers/rsync_snapshots/) if you want to setup one. What I have now is a very primitive backup system that satisfies my needs. My only gripe is that I have to deal with two different filesystems, ext4 and ntfs. 
 
 <div style="clear:both">&nbsp;</div>
-
-{% include_code Daily Backup bash file backup_daily.sh %}
 
 
 ### References

@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "What if they quit"
-date: 2013-05-28 11:47
 comments: true
 categories: 
 published: false

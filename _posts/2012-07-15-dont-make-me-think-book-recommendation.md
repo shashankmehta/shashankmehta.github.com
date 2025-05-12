@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Dont Make Me Think - Book Recommendation"
-date: 2012-07-15 16:30
 comments: true
 categories: [book recommendation]
 ---

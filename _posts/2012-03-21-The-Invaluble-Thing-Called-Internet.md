@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "The Invaluable Thing Called Internet"
-date: 2012-03-21 20:58
 comments: true
 categories: [internet, reddit]
 published: true

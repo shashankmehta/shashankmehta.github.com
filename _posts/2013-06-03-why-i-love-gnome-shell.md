@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Why I love Gnome Shell"
-date: 2013-06-03 13:42
 comments: true
 categories: [gnome-shell, ubuntu]
 ---

@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Fetching Google Spreadsheet in JSON"
-date: 2012-08-31 16:22
 comments: true
 categories: [google drive, JSON, hubot]
 ---

@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Working at SDSLabs"
-date: 2012-12-11 21:38
 comments: true
 categories: sdslabs
 published: true

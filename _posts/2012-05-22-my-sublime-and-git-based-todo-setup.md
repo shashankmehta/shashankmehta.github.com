@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Sublime Text, Dropbox and Git based ToDo setup"
-date: 2012-05-22 16:35
 comments: true
 categories: [github, dropbox, todo, sublime text]
 published: true

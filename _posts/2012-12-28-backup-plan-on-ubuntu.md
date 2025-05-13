@@ -3,7 +3,7 @@ layout: post
 title: "Backup plan on Ubuntu"
 comments: true
 categories: [ubuntu, backup]
-published: false
+draft: true
 ---
 
 I hate to use backup applications. There, I said it. This is because:

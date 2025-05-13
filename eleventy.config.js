@@ -7,6 +7,9 @@ export default async function(eleventyConfig) {
     const syntaxHighlight = await import("@11ty/eleventy-plugin-syntaxhighlight");
     eleventyConfig.addPlugin(syntaxHighlight.default);
     
+    // Enable drafts in development mode if ELEVENTY_ENV is set to "development"
+    const isDevelopment = process.env.ENVIRONMENT === "dev";
+
     // Copy static assets directly to the output folder
     eleventyConfig.addPassthroughCopy("images");
     eleventyConfig.addPassthroughCopy("js");
@@ -21,8 +24,21 @@ export default async function(eleventyConfig) {
     // Create a collection for all blog posts
     // This makes it available as `collections.posts` in templates
     eleventyConfig.addCollection("posts", function(collectionApi) {
+        const posts = collectionApi
+            .getFilteredByGlob("_posts/**/*.{md,markdown}")
+            .filter(item => isDevelopment || !item.data.draft) // Include drafts in development mode
+            .sort((a, b) => b.date - a.date); // Sort newest first
+
+        // console.log("Posts file paths:", posts.map(post => post.inputPath));
+
+        return posts;
+    });
+
+    // Create a collection for draft posts (useful for development)
+    eleventyConfig.addCollection("drafts", function(collectionApi) {
         return collectionApi
             .getFilteredByGlob("_posts/**/*.{md,markdown}")
+            .filter(item => item.data.draft) // Only include posts with draft: true
             .sort((a, b) => b.date - a.date); // Sort newest first
     });
     

@@ -7,6 +7,11 @@ layout: blog
     <a href="/blog">&larr; Back</a>
   </div>
 
+  {% if draft %}
+  <div class="draft-notice">
+    <strong>⚠️ DRAFT</strong> - This post will not be published in production
+  </div>
+  {% endif %}
 
   <h1 class="title">
     <a href="{{ page.url }}">{{ title }}</a>

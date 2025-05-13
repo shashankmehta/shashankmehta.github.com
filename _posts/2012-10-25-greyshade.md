@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Introducing an Octopress theme, Greyshade!"
-date: 2012-10-25 15:16
 comments: true
 categories: [octopress, theme, github]
 ---

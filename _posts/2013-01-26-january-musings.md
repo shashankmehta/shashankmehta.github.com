@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "January musings"
-date: 2013-01-26 03:38
 comments: false
 categories: 
 published: true

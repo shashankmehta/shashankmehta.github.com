@@ -1,0 +1,29 @@
+---
+layout: blog
+title: Draft Posts
+permalink: /drafts/
+---
+
+<div class="draft-notice">
+  <h3>⚠️ Development Only Page</h3>
+  <p>This page only displays draft posts and is intended for development purposes only. These posts will not be published in production.</p>
+</div>
+
+<div class="blog-index">
+  <h1 class="entry-title">Draft Posts</h1>
+  
+  {% if collections.drafts.length == 0 %}
+    <p>No draft posts found. Create a post with <code>draft: true</code> in the frontmatter to see it here.</p>
+  {% endif %}
+  
+  {% for post in collections.drafts %}
+    <article>
+      <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+      <time datetime="{{ post.date | datetime }}">{{ post.date | formatDate }}</time>
+      <div class="entry-content">
+        {{ post.data.description }}
+      </div>
+    </article>
+    {% if forloop.last == false %}<hr>{% endif %}
+  {% endfor %}
+</div> 

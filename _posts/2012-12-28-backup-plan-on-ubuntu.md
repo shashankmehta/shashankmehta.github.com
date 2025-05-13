@@ -1,10 +1,9 @@
 ---
 layout: post
 title: "Backup plan on Ubuntu"
-date: 2012-12-28 15:30
 comments: true
 categories: [ubuntu, backup]
-published: false
+draft: true
 ---
 
 I hate to use backup applications. There, I said it. This is because:
@@ -19,8 +18,8 @@ Since I use Ubuntu on daily basis, I tried Deja Dup. As advertised, the backup p
 
 Any experienced Linux guy would have realised by now what I'm getting at. When you do remove the cruft what you get is `rsync` and `cron`. A bash script is enough to take care of my backing up needs.
 
-#Partition setup
-###Internal (640 GB HDD)
+# Partition setup
+### Internal (640 GB HDD)
 
 - 60 GB Windows (ntfs)
 - 20 GB Ubuntu (ext4)
@@ -28,7 +27,7 @@ Any experienced Linux guy would have realised by now what I'm getting at. When y
 - 8 GB swap space
 - 410 GB Media drive (ntfs)
 
-###External (1TB HDD)
+### External (1TB HDD)
 
 - 840 GB Exthdd (ntfs)
 - 100 GB Phoenix_backup (encrypted ext4)
@@ -41,10 +40,8 @@ I also do not really need multiple snapshot system. However this is possible wit
 
 <div style="clear:both">&nbsp;</div>
 
-{% include_code Daily Backup bash file backup_daily.sh %}
 
-
-###References
+### References
 
 1. Rsync Snapshots by Mike Rubel [[link]](http://www.mikerubel.org/computers/rsync_snapshots/)
 2. Linux Hard Disk Encryption With LUKS. [[link]](http://www.cyberciti.biz/hardware/howto-linux-hard-disk-encryption-with-luks-cryptsetup-command/)

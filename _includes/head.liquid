@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <title>
-    {% if page.title %}
-      {{ page.title }} &ndash;
+    {% if title %}
+      {{ title }} &ndash;
     {% endif %}
     {{ site.name }}
   </title>
@@ -15,20 +15,20 @@
   <link href="/favicon.png" rel="shortcut icon">
   <link rel="alternate" type="application/rss+xml" href="/atom.xml" />
 
-  {% if page.title %}
-    <meta property="og:title" content="{{ page.title }}" />
-    <meta name="twitter:title" content="{{ page.title }}">
+  {% if title %}
+    <meta property="og:title" content="{{ title }}" />
+    <meta name="twitter:title" content="{{ title }}">
   {% endif %}
 
-  {% if page.description %}
-    <meta property="og:description" content="{{ page.description }}" />
-    <meta property="twitter:description" content="{{ page.description }}" />
+  {% if description %}
+    <meta property="og:description" content="{{ description }}" />
+    <meta property="twitter:description" content="{{ description }}" />
   {% endif %}
 
-  {% if page.og-image %}
-    <meta property="og:image" content="{{site.url}}/images/posts/{{ page.og-image }}" />
+  {% if og_image %}
+    <meta property="og:image" content="{{site.url}}/images/posts/{{ og_image }}" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="{{site.url}}/images/posts/{{ page.og-image}}" />
+    <meta name="twitter:image" content="{{site.url}}/images/posts/{{ og_image}}" />
     
   {% endif %}
 

@@ -172,7 +172,33 @@ h1, h2, h3, h4, h5, h6 {
       position: relative;
 
       max-width: $body-max-width;
-      padding: 0 1.5rem;  // side padding so text doesn’t hug the edge
+      padding: 0 1.5rem;  // side padding so text doesn't hug the edge
+
+      .draft-notice {
+        background-color: #ffecb3;
+        padding: 1rem 1rem;
+        margin-top: 1rem;
+        border-left: 4px solid #f57f17;
+        display: inline-block;
+
+        h3 {
+          margin-top: 0;
+        }
+      }
+
+
+      span.draft-badge {
+        font-size: 0.7em;
+        border: 1px solid;
+        padding: 0.2em;
+        border-radius: 5px;
+        background-color: #ffecb3;
+        margin: 0 0 0px 5px;
+      }
+
+      .blog-index {
+        margin-top: 2rem;
+      }
 
       .archives{
 

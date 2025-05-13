@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "7 Segment Display using Shift Register and Arduino"
-date: 2012-06-24 20:27
 comments: true
 categories: [arduino]
 ---

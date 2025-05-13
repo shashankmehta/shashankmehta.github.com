@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Why I love Gnome Shell"
-date: 2013-06-03 13:42
 comments: true
 categories: [gnome-shell, ubuntu]
 ---
@@ -10,9 +9,9 @@ I have been using Ubuntu full time since January 2012 and I love it, *in general
 
 <!-- more -->
 
-###WHY?
+### WHY?
 
-####1. Just the topbar is enough
+#### 1. Just the topbar is enough
 
 <img src="/images/posts/gnome/1.png"/>
 
@@ -25,7 +24,7 @@ This is the screenshot of my workspace. Google Chrome takes majority of the spac
  
 Everything else is out my sight, out of my way. I use `alt+tab` to switch apps. I don't *need* to use touchpad to select an app from some taskbar! But for those times when I have many apps open and `alt+tab` just doesn't cut it, I have the brilliant 'Activities' view in Gnome. 
 
-####2. Activities View
+#### 2. Activities View
 
 <img src="/images/posts/gnome/2.png" />
 

@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Github, Octopress and Blogging"
-date: 2012-05-21 22:52
 comments: true
 categories: [blogging, octopress, github]
 ---

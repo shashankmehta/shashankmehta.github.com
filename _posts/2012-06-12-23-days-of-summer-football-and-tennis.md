@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "23 days of summer, Football and Tennis"
-date: 2012-06-12 16:52
 comments: true
 categories:
 published: true

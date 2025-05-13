@@ -1,0 +1,25 @@
+{
+  "name": "shashankmehta.in",
+  "version": "1.0.0",
+  "description": "Personal website & blog, built using 11ty",
+  "type": "module",
+  "scripts": {
+    "build": "cross-env ENVIRONMENT=prod npm run sass && npx @11ty/eleventy",
+    "serve": "cross-env ENVIRONMENT=prod npm run sass && npx @11ty/eleventy --serve --quiet",
+    "sass": "sass css/base.scss css/base.css --source-map",
+    "dev": "npm run sass && cross-env ENVIRONMENT=dev npx @11ty/eleventy --serve --quiet"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-img": "^6.0.3",
+    "@11ty/eleventy-plugin-rss": "^2.0.4",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.1",
+    "@jgarber/eleventy-plugin-sass": "^2.1.0",
+    "@quasibit/eleventy-plugin-sitemap": "^2.2.0",
+    "cross-env": "^7.0.3",
+    "eleventy-plugin-redirects": "^1.0.0"
+  }
+}

@@ -168,6 +168,27 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 45rem;
   padding: 0 1.5rem;
 }
+.blog .pure-g-r .content .draft-notice {
+  background-color: #ffecb3;
+  padding: 1rem 1rem;
+  margin-top: 1rem;
+  border-left: 4px solid #f57f17;
+  display: inline-block;
+}
+.blog .pure-g-r .content .draft-notice h3 {
+  margin-top: 0;
+}
+.blog .pure-g-r .content span.draft-badge {
+  font-size: 0.7em;
+  border: 1px solid;
+  padding: 0.2em;
+  border-radius: 5px;
+  background-color: #ffecb3;
+  margin: 0 0 0px 5px;
+}
+.blog .pure-g-r .content .blog-index {
+  margin-top: 2rem;
+}
 .blog .pure-g-r .content .archives .meta h3 {
   font-weight: 500;
   font-size: 1em;

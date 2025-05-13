@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Flipkart and How Customer Care Could Be"
-date: 2013-03-28 14:22
 comments: true
 categories: 
 ---

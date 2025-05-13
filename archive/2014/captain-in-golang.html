@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <title>
+    
+      Making Captain in Golang &ndash;
+    
+    Shashank Mehta
+  </title>
+
+  <meta name="author" content="Shashank Mehta" />
+  <meta name="description" content="Heading product for RazorpayX, building the future of business banking. Early bird (#7) at @Razorpay. Forever hoarse throat thanks to ManUtd." />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link href="/favicon.png" rel="shortcut icon">
+  <link rel="alternate" type="application/rss+xml" href="/atom.xml" />
+
+  
+    <meta property="og:title" content="Making Captain in Golang" />
+    <meta name="twitter:title" content="Making Captain in Golang">
+  
+
+  
+
+  
+
+    <meta property="og:type" content="article" />
+    <meta name="twitter:site" content="@shashankmehta05">
+    <meta name="twitter:creator" content="@shashankmehta05">
+    <meta name="twitter:url" content="http://shashankmehta.in/archive/2014/captain-in-golang.html">
+
+  <link rel="stylesheet" href="/css/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="/css/pure.css" type="text/css" media="screen, projection" />
+  <link rel="stylesheet" href="/css/base.css" type="text/css" media="screen, projection" />
+  <script type="text/javascript" src="/js/application.js"></script>
+  <meta name="google-site-verification" content="re_t7ja4IZq6BYH_gOXHam-1xYP0BMy5qiUygvzYW6U" />
+</head>
+<body ontouchstart="" class="blog">
+  <section class="pure-g-r">
+    <div class='pure-u-1-2 content'>
+      <section class="navigation">
+  <div class="holder">
+    SM
+    <div class="nav">
+      <a href="/">Home</a> <br>
+      <a href="/blog">Blog</a> <br>
+      <a href="https://www.linkedin.com/in/mehta-shashank/">About</a> <br>
+    </div>
+  </div>
+</section>
+
+
+      
+<section class="post">
+  <div class="back">
+    <a href="/blog">&larr; Back</a>
+  </div>
+
+  
+
+  <h1 class="title">
+    <a href="/archive/2014/captain-in-golang.html">Making Captain in Golang</a>
+  </h1>
+
+  <section class="byline">
+    September  1, 2014
+  </section>
+
+  <p>I recently had an idea for a small project for <a href="http://github.com/sdslabs">SDSLabs</a> and Go seemed like the perfect choice for it.</p>
+<p><strong>Problem</strong>: We have VMs through Xen Server for our applications. So when a developer needed to access the VMs, he'd use a password. Just typing this makes me cringe. This is highly insecure. We haven't had much problem with this setup but that doesn't make it less insecure.</p>
+<p><strong>Solution</strong>: Use key based authorization. But manually managing this would be a headache. Hence, I wanted to create a tool that would help me and other admins in SDSLabs to manage permissions via keys. This still isn't super secure. A better way would be create a new user and handle file permissions via groups. We might go for that, maybe later.</p>
+<p>The basic premise of the tool is that admins can run commands to add a person's public key to a deployment server's <code>.ssh/authorized_keys</code> file instead of having to manually do this. The tool, called captain, is tightly bound to our git server, Gitolite. Gitolite already has all our developer's public keys and it also has a list of admins. So we keep Gitolite as the <em>single source</em> of truth. Thanks to all of this, an admin only has to run <code>capt grant shashankmehta 218</code> to give <code>shashankmehta</code> access to <code>x.x.x.218</code> <em>(The first three parts are common for all our servers)</em>. Captain ensures that the person running the command is an admin, it picks up <code>shashankmehta</code>'s keys from Gitolite, sshs to <code>x.x.x.218</code> and adds the key to <code>.ssh/authorized_keys</code> if it isn't present already.</p>
+<p>I'm using Go basically as an alternative to a bash script. Apart from the fact that string handling is much easier in Go when compared to Bash, the biggest advantage is thanks to Go routines.</p>
+<p><img src="/images/posts/golang/gopher.jpg" alt="Gopher"></p>
+<h2>What is a goroutine?</h2>
+<p>If you want to directly jump to code, take a look at Go by examples' page on <a href="https://gobyexample.com/goroutines">goroutines</a>. Basically, goroutines are lightweight thread of execution. Translated to layman terms, goroutine allows you to run multiple functions concurrently. Go also provides <code>channels</code> to deal with goroutines. A practical example of where this is highly useful:</p>
+<p>In Captain, there's a command <code>capt grant shashankmehta 218 210 212</code>. I'm trying to give a particular user access to multiple systems. In a naive implementation of this feature, the 3 systems would have been handled sequentially. With goroutines, all three are handled concurrently. The three instances of a single function output their results to a common channel which handles displaying the results to the user who ran the command. So now running granting access to 10 systems is nearly as fast as granting access to 1 system.</p>
+<p>The ease of writing <code>goroutines</code> was the most impressive thing for me in Go.</p>
+<h2>Getting Started With Go</h2>
+<p>In case the above intrigued you enough to think about learning Go, here are a few pointers from my personal experience.</p>
+<p>How did Go come about? Sorry, I'm not your history teacher. You'll have to hit Google/Wikipedia for that. I'll just say that as far as programming languages are concerned, Go is very new. Pssst, it's hip</p>
+<p>The first thing that you will realize about Go is that when searching for something Go related on Google, you need to use Golang instead of Go.</p>
+<p>The second thing that you'll want to do is go through the <a href="http://tour.golang.org/">Go Tour</a>. If you are like me, you'll be yawning after the first few chapters, not because Go is boring but because doing anything apart from writing code is boring. But my suggestion would be to finish at least till the slices chapter otherwise you are going to be googling every thing. Actually, you still will, but let's assume I didn't say that.</p>
+<p>Done with Go Tour? So now you know that in the Go land, variable types come after variable name, unlike most of the programming languages that you must be familiar with. You know about functions and multiple returns etc. Just checking, don't get mad. Moving on...</p>
+<p>If you stopped right at the slices chapter in Go tour, you'll have missed out on range operator. Go back and read about range. No, seriously. Inflict this upon yourself because this is something that you will come across a lot.</p>
+<p>Now that you know about range, you will be using it in for loops a lot. One thing that stumped me initially was the fact that <code>if...else</code> has its own scope in Go. In a lot of languages, a variable defined inside the <code>if</code> scope is available outside it too, as long as you remain inside the parent function scope. This is not the case in Go. So you've got to define your variable before the <code>if...else</code> statement. Same thing for <code>for</code> loops. Get over it and enjoy the  language.</p>
+<p>In case you are interested in reading the source of Captain, let me know and I'll post it. At SDSLabs, we try to open source most of our works but Captain is tightly bound to Gitolite.</p>
+
+
+  <div class="twitter">
+    <a href="http://twitter.com/share" class="twitter-share-button" data-count="none" data-via="shashankmehta05">Tweet</a>
+    <a href="http://twitter.com/shashankmehta05" class="twitter-follow-button" data-show-count="false">Follow @shashankmehta05</a>
+  </div>
+
+  <section class="meta">
+    <section class="copy">
+      <p>
+        About Shashank Mehta: <br>
+      </p>
+      <p>
+        Heading product for RazorpayX, building the future of business banking. Early bird (#7) at @Razorpay. Forever hoarse throat thanks to ManUtd.
+      </p>
+      <p>
+        Follow me on <a href='http://twitter.com/shashankmehta05'>twitter</a>. I don't tweet a lot though. Bummer, right?
+      </p>
+
+      <script src="//platform.twitter.com/widgets.js" type="text/javascript"></script>
+    </section>
+  </section>
+</section>
+
+    </div>
+  </section>
+  
+  
+  <a class="google" href="https://plus.google.com/109764126807838271120?rel=author" title="Google+" style="display: none;">Google+</a>
+
+
+
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-32545112-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+</body>
+</html>

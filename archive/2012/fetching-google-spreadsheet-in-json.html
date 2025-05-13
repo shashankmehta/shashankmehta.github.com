@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <title>
+    
+      Fetching Google Spreadsheet in JSON &ndash;
+    
+    Shashank Mehta
+  </title>
+
+  <meta name="author" content="Shashank Mehta" />
+  <meta name="description" content="Heading product for RazorpayX, building the future of business banking. Early bird (#7) at @Razorpay. Forever hoarse throat thanks to ManUtd." />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link href="/favicon.png" rel="shortcut icon">
+  <link rel="alternate" type="application/rss+xml" href="/atom.xml" />
+
+  
+    <meta property="og:title" content="Fetching Google Spreadsheet in JSON" />
+    <meta name="twitter:title" content="Fetching Google Spreadsheet in JSON">
+  
+
+  
+
+  
+
+    <meta property="og:type" content="article" />
+    <meta name="twitter:site" content="@shashankmehta05">
+    <meta name="twitter:creator" content="@shashankmehta05">
+    <meta name="twitter:url" content="http://shashankmehta.in/archive/2012/fetching-google-spreadsheet-in-json.html">
+
+  <link rel="stylesheet" href="/css/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="/css/pure.css" type="text/css" media="screen, projection" />
+  <link rel="stylesheet" href="/css/base.css" type="text/css" media="screen, projection" />
+  <script type="text/javascript" src="/js/application.js"></script>
+  <meta name="google-site-verification" content="re_t7ja4IZq6BYH_gOXHam-1xYP0BMy5qiUygvzYW6U" />
+</head>
+<body ontouchstart="" class="blog">
+  <section class="pure-g-r">
+    <div class='pure-u-1-2 content'>
+      <section class="navigation">
+  <div class="holder">
+    SM
+    <div class="nav">
+      <a href="/">Home</a> <br>
+      <a href="/blog">Blog</a> <br>
+      <a href="https://www.linkedin.com/in/mehta-shashank/">About</a> <br>
+    </div>
+  </div>
+</section>
+
+
+      
+<section class="post">
+  <div class="back">
+    <a href="/blog">&larr; Back</a>
+  </div>
+
+  
+
+  <h1 class="title">
+    <a href="/archive/2012/fetching-google-spreadsheet-in-json.html">Fetching Google Spreadsheet in JSON</a>
+  </h1>
+
+  <section class="byline">
+    August 31, 2012
+  </section>
+
+  <p>Recently I was working on using data from a Google Drive spreadsheet in a <a href="http://hubot.github.com/" title="Hubot">Hubot</a> script. I needed to fetch the sheet in JSON format in order to easily parse it using <a href="http://coffeescript.org" title="coffeescript">coffeescript</a>. But it turned out that Google doesn't provide an easy way of getting this done. Here's the indirect method:</p>
+<script src="https://gist.github.com/3551495.js?file=gspjson.txt"></script> 
+<p>Since this option doesn't exist in the dropdown it may not be supported by Google in the future. Safer solution would be to output to csv and convert it to json.</p>
+
+
+  <div class="twitter">
+    <a href="http://twitter.com/share" class="twitter-share-button" data-count="none" data-via="shashankmehta05">Tweet</a>
+    <a href="http://twitter.com/shashankmehta05" class="twitter-follow-button" data-show-count="false">Follow @shashankmehta05</a>
+  </div>
+
+  <section class="meta">
+    <section class="copy">
+      <p>
+        About Shashank Mehta: <br>
+      </p>
+      <p>
+        Heading product for RazorpayX, building the future of business banking. Early bird (#7) at @Razorpay. Forever hoarse throat thanks to ManUtd.
+      </p>
+      <p>
+        Follow me on <a href='http://twitter.com/shashankmehta05'>twitter</a>. I don't tweet a lot though. Bummer, right?
+      </p>
+
+      <script src="//platform.twitter.com/widgets.js" type="text/javascript"></script>
+    </section>
+  </section>
+</section>
+
+    </div>
+  </section>
+  
+  
+  <a class="google" href="https://plus.google.com/109764126807838271120?rel=author" title="Google+" style="display: none;">Google+</a>
+
+
+
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-32545112-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+</body>
+</html>

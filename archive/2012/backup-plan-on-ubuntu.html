@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <title>
+    
+      Backup plan on Ubuntu &ndash;
+    
+    Shashank Mehta
+  </title>
+
+  <meta name="author" content="Shashank Mehta" />
+  <meta name="description" content="Heading product for RazorpayX, building the future of business banking. Early bird (#7) at @Razorpay. Forever hoarse throat thanks to ManUtd." />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link href="/favicon.png" rel="shortcut icon">
+  <link rel="alternate" type="application/rss+xml" href="/atom.xml" />
+
+  
+    <meta property="og:title" content="Backup plan on Ubuntu" />
+    <meta name="twitter:title" content="Backup plan on Ubuntu">
+  
+
+  
+
+  
+
+    <meta property="og:type" content="article" />
+    <meta name="twitter:site" content="@shashankmehta05">
+    <meta name="twitter:creator" content="@shashankmehta05">
+    <meta name="twitter:url" content="http://shashankmehta.in/archive/2012/backup-plan-on-ubuntu.html">
+
+  <link rel="stylesheet" href="/css/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="/css/pure.css" type="text/css" media="screen, projection" />
+  <link rel="stylesheet" href="/css/base.css" type="text/css" media="screen, projection" />
+  <script type="text/javascript" src="/js/application.js"></script>
+  <meta name="google-site-verification" content="re_t7ja4IZq6BYH_gOXHam-1xYP0BMy5qiUygvzYW6U" />
+</head>
+<body ontouchstart="" class="blog">
+  <section class="pure-g-r">
+    <div class='pure-u-1-2 content'>
+      <section class="navigation">
+  <div class="holder">
+    SM
+    <div class="nav">
+      <a href="/">Home</a> <br>
+      <a href="/blog">Blog</a> <br>
+      <a href="https://www.linkedin.com/in/mehta-shashank/">About</a> <br>
+    </div>
+  </div>
+</section>
+
+
+      
+<section class="post">
+  <div class="back">
+    <a href="/blog">&larr; Back</a>
+  </div>
+
+  
+  <div class="draft-notice">
+    <strong>⚠️ DRAFT</strong> - This post will not be published in production
+  </div>
+  
+
+  <h1 class="title">
+    <a href="/archive/2012/backup-plan-on-ubuntu.html">Backup plan on Ubuntu</a>
+  </h1>
+
+  <section class="byline">
+    December 28, 2012
+  </section>
+
+  <p>I hate to use backup applications. There, I said it. This is because:</p>
+<ol>
+<li>Many use proprietary/weird formats for backing up data.</li>
+<li>Backing up is <em>always</em> easy and this ease is advertised but recovery has never been easy.</li>
+<li>I don't really want to handle the overload of applications settings/features/tools/services whatnots just for a simple backup.</li>
+</ol>
+<p>Since I use Ubuntu on daily basis, I tried Deja Dup. As advertised, the backup process is painless. Soon I had snapshots of files for last 7 days. But one day when I tried to revert a file to a three day old snapshot the experience turned out to be horrible. It took insane amount of time to revert a 10kB file. If Deja Dup was not using its own format recovery would have been as easy as <code>cp /path/to/backed/up/file /path/to/actual/file</code>. Even when backup softwares don't use their own format, the number of options/settings that they provide are useless for me. I don't need the cruft.</p>
+<!-- more -->
+<p>Any experienced Linux guy would have realised by now what I'm getting at. When you do remove the cruft what you get is <code>rsync</code> and <code>cron</code>. A bash script is enough to take care of my backing up needs.</p>
+<h1>Partition setup</h1>
+<h3>Internal (640 GB HDD)</h3>
+<ul>
+<li>60 GB Windows (ntfs)</li>
+<li>20 GB Ubuntu (ext4)</li>
+<li>100 GB /home (ext4)</li>
+<li>8 GB swap space</li>
+<li>410 GB Media drive (ntfs)</li>
+</ul>
+<h3>External (1TB HDD)</h3>
+<ul>
+<li>840 GB Exthdd (ntfs)</li>
+<li>100 GB Phoenix_backup (encrypted ext4)</li>
+</ul>
+<img src="/images/posts/backup.png" style="float:right; margin: 0px 5px 10px 20px">
+<p>Phoenix_backup is used for backing up /home. I had to use ext4 for *nix permissions which are not supported on ntfs, giving up the option of having this partition accesible on any PC. Documents and Downloads are copied to ntfs partition because I might need these files on a different system also. I'm not backing up TV Series, Movies etc because I don't really care if I lose them. Most of the other files like Photographs, College Study Material etc are stored in the internal 410GB partition and backed up to 840GB Exthdd partition. The very important documents and files are also stored on Dropbox where I have ~20GB free space thanks to referrals and Spacerace!</p>
+<p>I also do not really need multiple snapshot system. However this is possible with simple bash script, cron and rsync. Refer to <a href="http://www.mikerubel.org/computers/rsync_snapshots/">this article</a> if you want to setup one. What I have now is a very primitive backup system that satisfies my needs. My only gripe is that I have to deal with two different filesystems, ext4 and ntfs.</p>
+<div style="clear:both">&nbsp;</div>
+<h3>References</h3>
+<ol>
+<li>Rsync Snapshots by Mike Rubel <a href="http://www.mikerubel.org/computers/rsync_snapshots/">[link]</a></li>
+<li>Linux Hard Disk Encryption With LUKS. <a href="http://www.cyberciti.biz/hardware/howto-linux-hard-disk-encryption-with-luks-cryptsetup-command/">[link]</a></li>
+</ol>
+
+
+  <div class="twitter">
+    <a href="http://twitter.com/share" class="twitter-share-button" data-count="none" data-via="shashankmehta05">Tweet</a>
+    <a href="http://twitter.com/shashankmehta05" class="twitter-follow-button" data-show-count="false">Follow @shashankmehta05</a>
+  </div>
+
+  <section class="meta">
+    <section class="copy">
+      <p>
+        About Shashank Mehta: <br>
+      </p>
+      <p>
+        Heading product for RazorpayX, building the future of business banking. Early bird (#7) at @Razorpay. Forever hoarse throat thanks to ManUtd.
+      </p>
+      <p>
+        Follow me on <a href='http://twitter.com/shashankmehta05'>twitter</a>. I don't tweet a lot though. Bummer, right?
+      </p>
+
+      <script src="//platform.twitter.com/widgets.js" type="text/javascript"></script>
+    </section>
+  </section>
+</section>
+
+    </div>
+  </section>
+  
+  
+  <a class="google" href="https://plus.google.com/109764126807838271120?rel=author" title="Google+" style="display: none;">Google+</a>
+
+
+
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-32545112-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+</body>
+</html>

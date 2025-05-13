@@ -2,9 +2,9 @@ name: Build and Deploy
 
 on:
   push:
-    branches: [ 11ty ]
+    branches: [ master ]
   pull_request:
-    branches: [ 11ty ]
+    branches: [ master ]
   # Allow manual triggering
   workflow_dispatch:
 

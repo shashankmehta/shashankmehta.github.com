@@ -16,7 +16,7 @@ export default async function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("fonts");
     eleventyConfig.addPassthroughCopy("favicon.png");
     eleventyConfig.addPassthroughCopy("css");
-    // eleventyConfig.addPassthroughCopy("CNAME");
+    eleventyConfig.addPassthroughCopy("CNAME");
     
     // Skip problematic files that would cause build errors
     eleventyConfig.ignores.add("_posts/2013-12-19-slickjs.md");

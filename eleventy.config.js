@@ -12,6 +12,7 @@ export default async function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("js");
     eleventyConfig.addPassthroughCopy("fonts");
     eleventyConfig.addPassthroughCopy("favicon.png");
+    eleventyConfig.addPassthroughCopy("css");
     // eleventyConfig.addPassthroughCopy("CNAME");
     
     // Skip problematic files that would cause build errors

@@ -2,8 +2,10 @@
 // Main variables
 :root {
   --font-primary: 'Lato', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-  
-  // Light mode colors
+}
+
+// Light mode colors
+html.light-mode {
   --color-bg: #ffffff;
   --color-text: #000000;
   --color-link: #0066cc;
@@ -14,8 +16,52 @@
 }
 
 // Dark mode colors
+html.dark-mode {
+  --color-bg: #121212;
+  --color-text: #f0f0f0;
+  --color-link: #3399ff;
+  --color-link-hover: #66b3ff;
+  --color-date: #999999;
+  --color-heading: #ffffff;
+  --color-border: rgba(255, 255, 255, 0.1);
+}
+
+// System mode - light appearance
+html.system-mode.light-appearance {
+  --color-bg: #ffffff;
+  --color-text: #000000;
+  --color-link: #0066cc;
+  --color-link-hover: #004499;
+  --color-date: #666666;
+  --color-heading: #000000;
+  --color-border: rgba(0, 0, 0, 0.1);
+}
+
+// System mode - dark appearance
+html.system-mode.dark-appearance {
+  --color-bg: #121212;
+  --color-text: #f0f0f0;
+  --color-link: #3399ff;
+  --color-link-hover: #66b3ff;
+  --color-date: #999999;
+  --color-heading: #ffffff;
+  --color-border: rgba(255, 255, 255, 0.1);
+}
+
+// Default light mode if no class is present
+html:not(.light-mode):not(.dark-mode):not(.system-mode) {
+  --color-bg: #ffffff;
+  --color-text: #000000;
+  --color-link: #0066cc;
+  --color-link-hover: #004499;
+  --color-date: #666666;
+  --color-heading: #000000;
+  --color-border: rgba(0, 0, 0, 0.1);
+}
+
+// Auto-detect preferred color scheme
 @media (prefers-color-scheme: dark) {
-  :root {
+  html:not(.light-mode):not(.dark-mode) {
     --color-bg: #121212;
     --color-text: #f0f0f0;
     --color-link: #3399ff;
@@ -24,16 +70,6 @@
     --color-heading: #ffffff;
     --color-border: rgba(255, 255, 255, 0.1);
   }
-}
-
-body.dark-mode {
-  --color-bg: #121212;
-  --color-text: #f0f0f0;
-  --color-link: #3399ff;
-  --color-link-hover: #66b3ff;
-  --color-date: #999999;
-  --color-heading: #ffffff;
-  --color-border: rgba(255, 255, 255, 0.1);
 }
 
 // Base styles
@@ -68,6 +104,7 @@ a {
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem 1rem;
+  position: relative;
   
   @media (max-width: 600px) {
     padding: 1.5rem 1.5rem;
@@ -234,4 +271,74 @@ a {
 .layout25-more-link {
   display: inline-block;
   font-weight: 500;
+}
+
+.layout25-name-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.layout25-theme-toggle {
+  position: absolute;
+  top: 2rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+  outline: none;
+  z-index: 10;
+  
+  &:hover {
+    background-color: var(--color-border);
+  }
+  
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  
+  @media (max-width: 600px) {
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+}
+
+.layout25-theme-toggle-icon {
+  color: var(--color-text);
+}
+
+// Theme toggle icons display
+.light-icon {
+  display: none;
+}
+
+.dark-icon {
+  display: none;
+}
+
+.system-icon {
+  display: none;
+}
+
+html.light-mode .light-icon {
+  display: block;
+}
+
+html.dark-mode .dark-icon {
+  display: block;
+}
+
+html.system-mode .system-icon {
+  display: block;
 } 

@@ -1,5 +1,48 @@
 :root {
   --font-primary: "Lato", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+}
+
+html.light-mode {
+  --color-bg: #ffffff;
+  --color-text: #000000;
+  --color-link: #0066cc;
+  --color-link-hover: #004499;
+  --color-date: #666666;
+  --color-heading: #000000;
+  --color-border: rgba(0, 0, 0, 0.1);
+}
+
+html.dark-mode {
+  --color-bg: #121212;
+  --color-text: #f0f0f0;
+  --color-link: #3399ff;
+  --color-link-hover: #66b3ff;
+  --color-date: #999999;
+  --color-heading: #ffffff;
+  --color-border: rgba(255, 255, 255, 0.1);
+}
+
+html.system-mode.light-appearance {
+  --color-bg: #ffffff;
+  --color-text: #000000;
+  --color-link: #0066cc;
+  --color-link-hover: #004499;
+  --color-date: #666666;
+  --color-heading: #000000;
+  --color-border: rgba(0, 0, 0, 0.1);
+}
+
+html.system-mode.dark-appearance {
+  --color-bg: #121212;
+  --color-text: #f0f0f0;
+  --color-link: #3399ff;
+  --color-link-hover: #66b3ff;
+  --color-date: #999999;
+  --color-heading: #ffffff;
+  --color-border: rgba(255, 255, 255, 0.1);
+}
+
+html:not(.light-mode):not(.dark-mode):not(.system-mode) {
   --color-bg: #ffffff;
   --color-text: #000000;
   --color-link: #0066cc;
@@ -10,7 +53,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  html:not(.light-mode):not(.dark-mode) {
     --color-bg: #121212;
     --color-text: #f0f0f0;
     --color-link: #3399ff;
@@ -20,16 +63,6 @@
     --color-border: rgba(255, 255, 255, 0.1);
   }
 }
-body.dark-mode {
-  --color-bg: #121212;
-  --color-text: #f0f0f0;
-  --color-link: #3399ff;
-  --color-link-hover: #66b3ff;
-  --color-date: #999999;
-  --color-heading: #ffffff;
-  --color-border: rgba(255, 255, 255, 0.1);
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -59,6 +92,7 @@ a:hover {
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem 1rem;
+  position: relative;
 }
 @media (max-width: 600px) {
   .layout25-container {
@@ -211,6 +245,74 @@ a:hover {
 .layout25-more-link {
   display: inline-block;
   font-weight: 500;
+}
+
+.layout25-name-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.layout25-theme-toggle {
+  position: absolute;
+  top: 2rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+  outline: none;
+  z-index: 10;
+}
+.layout25-theme-toggle:hover {
+  background-color: var(--color-border);
+}
+.layout25-theme-toggle:focus {
+  outline: none;
+  box-shadow: none;
+}
+@media (max-width: 600px) {
+  .layout25-theme-toggle {
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+}
+
+.layout25-theme-toggle-icon {
+  color: var(--color-text);
+}
+
+.light-icon {
+  display: none;
+}
+
+.dark-icon {
+  display: none;
+}
+
+.system-icon {
+  display: none;
+}
+
+html.light-mode .light-icon {
+  display: block;
+}
+
+html.dark-mode .dark-icon {
+  display: block;
+}
+
+html.system-mode .system-icon {
+  display: block;
 }
 
 /*# sourceMappingURL=layout25.css.map */

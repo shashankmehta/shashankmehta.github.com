@@ -11,12 +11,14 @@ export default async function(eleventyConfig) {
     const isDevelopment = process.env.ENVIRONMENT === "dev";
 
     // Copy static assets directly to the output folder
-    eleventyConfig.addPassthroughCopy("images");
-    eleventyConfig.addPassthroughCopy("js");
-    eleventyConfig.addPassthroughCopy("fonts");
-    eleventyConfig.addPassthroughCopy("favicon.png");
-    eleventyConfig.addPassthroughCopy("css");
-    eleventyConfig.addPassthroughCopy("CNAME");
+    eleventyConfig.addPassthroughCopy({
+        "_assets/css": "css",
+        "_assets/images": "images",
+        "_assets/js": "js",
+        "_assets/fonts": "fonts",
+        "_assets/favicon.png": "favicon.png",
+        "_assets/CNAME": "CNAME"
+    });
     
     // Skip problematic files that would cause build errors
     eleventyConfig.ignores.add("_posts/2013-12-19-slickjs.md");

@@ -1,127 +1,17 @@
-<!DOCTYPE html>
-<html lang="{{ site.language | default: 'en' }}">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ site.title }}</title>
-  <meta name="description" content="{{ site.description }}">
-  <!-- Set theme immediately to prevent flash -->
-  <script>
-    // Immediately set the theme before any content renders
-    (function() {
-      const storedTheme = localStorage.getItem('theme');
-      const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-      
-      // Remove any existing theme classes
-      document.documentElement.classList.remove('light-mode', 'dark-mode', 'system-mode', 'light-appearance', 'dark-appearance');
-      
-      if (storedTheme === 'dark') {
-        document.documentElement.classList.add('dark-mode');
-      } else if (storedTheme === 'light') {
-        document.documentElement.classList.add('light-mode');
-      } else {
-        // System preference
-        document.documentElement.classList.add('system-mode');
-        if (prefersDarkScheme.matches) {
-          document.documentElement.classList.add('dark-appearance');
-        } else {
-          document.documentElement.classList.add('light-appearance');
-        }
-      }
-    })();
-  </script>
-  <link rel="stylesheet" href="/css/layout25.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-</head>
+{% include "head.liquid" %}
 <body>
   <div class="layout25-container">
-    <button id="theme-toggle" class="layout25-theme-toggle" aria-label="Toggle dark/light mode" onclick="toggleTheme()">
-      <svg class="layout25-theme-toggle-icon light-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-      <svg class="layout25-theme-toggle-icon dark-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-      <svg class="layout25-theme-toggle-icon system-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
-    </button>
+    {% include "theme.liquid" %}
     
     <header class="layout25-header">
-      <div class="layout25-profile">
-        <img src="/images/dp.jpeg" alt="{{ site.author.name }}" class="layout25-avatar">
-        <div class="layout25-profile-content">
-          <h1 class="layout25-name">{{ site.author.name }}</h1>
-          <nav class="layout25-nav">
-            <a href="/about">About</a>
-            <a href="{{ site.author.x}}">X/Twitter</a>
-            <a href="{{ site.author.linkedin}}">LinkedIn</a>
-          </nav>
-        </div>
-      </div>
+      {% include "navigation.liquid" %}
     </header>
 
     <main class="layout25-main">
-      <section class="layout25-intro">
-        <p class="layout25-pronunciation">I'm {{ site.author.name }}.</p>
-        <p class="layout25-bio">I'm a founder, writer, creator, investor, MTG player, collector, runner, partner, and parent.</p>
-        <p class="layout25-tagline">I write about ideas across life, work, and culture.</p>
-      </section>
-
-      <section class="layout25-writings">
-        <h2>Writings</h2>
-        <ul class="layout25-posts">
-          {% assign posts = collections.posts %}
-          {% for post in posts limit:10 %}
-          <li class="layout25-post-item">
-            <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%b %Y' }}</time>
-            <a href="{{ post.url }}" class="layout25-post-link">{{ post.data.title }}</a>
-          </li>
-          {% endfor %}
-        </ul>
-        <a href="/blog" class="layout25-more-link">More Posts →</a>
-      </section>
+      {{ content }}
     </main>
   </div>
 
-  <script>
-    // Toggle theme when button is clicked - cycle between light, dark, and system
-    function toggleTheme() {
-      const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-      const html = document.documentElement;
-      const currentTheme = localStorage.getItem('theme') || 'system';
-      
-      // First clear all classes
-      html.classList.remove('light-mode', 'dark-mode', 'system-mode', 'light-appearance', 'dark-appearance');
-      
-      // Then set the new theme
-      if (currentTheme === 'light') {
-        // Light → Dark
-        html.classList.add('dark-mode');
-        localStorage.setItem('theme', 'dark');
-      } else if (currentTheme === 'dark') {
-        // Dark → System
-        html.classList.add('system-mode');
-        if (prefersDarkScheme.matches) {
-          html.classList.add('dark-appearance');
-        } else {
-          html.classList.add('light-appearance');
-        }
-        localStorage.setItem('theme', 'system');
-      } else {
-        // System → Light
-        html.classList.add('light-mode');
-        localStorage.setItem('theme', 'light');
-      }
-    }
-    
-    // Listen for system preference changes
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
-      if (document.documentElement.classList.contains('system-mode')) {
-        document.documentElement.classList.remove('light-appearance', 'dark-appearance');
-        if (event.matches) {
-          document.documentElement.classList.add('dark-appearance');
-        } else {
-          document.documentElement.classList.add('light-appearance');
-        }
-      }
-    });
-  </script>
+  {% include "footer.liquid" %}
 </body>
 </html> 

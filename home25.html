@@ -1,3 +1,13 @@
 ---
 layout: layout25
 ---
+
+<section class="layout25-intro">
+  <p class="layout25-pronunciation">I'm {{ site.author.name }}.</p>
+  <p class="layout25-bio">I'm a founder, writer, creator, investor, MTG player, collector, runner, partner, and parent.</p>
+  <p class="layout25-tagline">I write about ideas across life, work, and culture.</p>
+</section>
+
+{% assign post_count = 10 %}
+{% assign bold_year = false %}
+{% include "posts-list.liquid" %}

@@ -1,46 +1,41 @@
 ---
-layout: blog
+layout: layout25
 ---
 
-<section class="post">
-  <div class="back">
+<section class="layout25-post">
+  <div class="layout25-back">
     <a href="/blog">&larr; Back</a>
   </div>
 
   {% if draft %}
-  <div class="draft-notice">
+  <div class="layout25-draft-notice">
     <strong>⚠️ DRAFT</strong> - This post will not be published in production
   </div>
   {% endif %}
 
-  <h1 class="title">
-    <a href="{{ page.url }}">{{ title }}</a>
+  <h1 class="layout25-post-title">
+    {{ title }}
   </h1>
 
-  <section class="byline">
+  <section class="layout25-post-date">
     {{ page.date | date: "%B %e, %Y" }}
   </section>
 
-  {{ content }}
-
-  <div class="twitter">
-    <a href="http://twitter.com/share" class="twitter-share-button" data-count="none" data-via="{{ site.twitter }}">Tweet</a>
-    <a href="http://twitter.com/{{ site.twitter }}" class="twitter-follow-button" data-show-count="false">Follow @{{ site.twitter }}</a>
+  <div class="layout25-post-content">
+    {{ content }}
   </div>
 
-  <section class="meta">
-    <section class="copy">
-      <p>
-        About Shashank Mehta: <br>
-      </p>
-      <p>
-        {{ site.description }}
-      </p>
-      <p>
-        Follow me on <a href='http://twitter.com/{{ site.twitter }}'>twitter</a>. I don't tweet a lot though. Bummer, right?
-      </p>
+  <div class="layout25-social">
+    <a href="http://twitter.com/share" class="twitter-share-button" data-count="none" data-via="{{ site.twitter }}">Tweet</a>
+    <a href="http://twitter.com/{{ site.twitter }}" class="twitter-follow-button" data-show-count="false">Follow @{{ site.twitter }}</a>
+    <script src="//platform.twitter.com/widgets.js" type="text/javascript"></script>
+  </div>
 
-      <script src="//platform.twitter.com/widgets.js" type="text/javascript"></script>
-    </section>
+  <section class="layout25-author">
+    <h3>About {{ site.author.name }}</h3>
+    <p>{{ site.description }}</p>
+    <p>
+      Follow me on <a href='http://twitter.com/{{ site.twitter }}'>X/Twitter</a>
+    </p>
   </section>
 </section>

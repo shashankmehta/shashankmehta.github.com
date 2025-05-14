@@ -1,19 +1,50 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<html lang="{{ site.language | default: 'en' }}">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>
     {% if title %}
       {{ title }} &ndash;
     {% endif %}
-    {{ site.name }}
+    {{ site.title }}
   </title>
-
-  <meta name="author" content="{{ site.name }}" />
-  <meta name="description" content="{{ site.description }}" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <link href="/favicon.png" rel="shortcut icon">
-  <link rel="alternate" type="application/rss+xml" href="/atom.xml" />
+  <meta name="description" content="{{ site.description }}">
+  <!-- Set theme immediately to prevent flash -->
+  <script>
+    // Immediately set the theme before any content renders
+    (function() {
+      const storedTheme = localStorage.getItem('theme');
+      const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+      
+      // Remove any existing theme classes
+      document.documentElement.classList.remove('light-mode', 'dark-mode', 'system-mode', 'light-appearance', 'dark-appearance');
+      
+      if (storedTheme === 'dark') {
+        document.documentElement.classList.add('dark-mode');
+      } else if (storedTheme === 'light') {
+        document.documentElement.classList.add('light-mode');
+      } else {
+        // System preference
+        document.documentElement.classList.add('system-mode');
+        if (prefersDarkScheme.matches) {
+          document.documentElement.classList.add('dark-appearance');
+        } else {
+          document.documentElement.classList.add('light-appearance');
+        }
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="/css/layout25.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  
+  {% if og_image %}
+    <meta property="og:image" content="{{site.url}}/images/posts/{{ og_image }}" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="{{site.url}}/images/posts/{{ og_image}}" />
+  {% endif %}
 
   {% if title %}
     <meta property="og:title" content="{{ title }}" />
@@ -25,21 +56,8 @@
     <meta property="twitter:description" content="{{ description }}" />
   {% endif %}
 
-  {% if og_image %}
-    <meta property="og:image" content="{{site.url}}/images/posts/{{ og_image }}" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="{{site.url}}/images/posts/{{ og_image}}" />
-    
-  {% endif %}
-
-    <meta property="og:type" content="article" />
-    <meta name="twitter:site" content="@{{ site.twitter }}">
-    <meta name="twitter:creator" content="@{{ site.twitter }}">
-    <meta name="twitter:url" content="{{site.url}}{{page.url}}">
-
-  <link rel="stylesheet" href="/css/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="/css/pure.css" type="text/css" media="screen, projection" />
-  <link rel="stylesheet" href="/css/base.css" type="text/css" media="screen, projection" />
-  <script type="text/javascript" src="/js/application.js"></script>
-  <meta name="google-site-verification" content="re_t7ja4IZq6BYH_gOXHam-1xYP0BMy5qiUygvzYW6U" />
+  <meta property="og:type" content="article" />
+  <meta name="twitter:site" content="@{{ site.twitter }}">
+  <meta name="twitter:creator" content="@{{ site.twitter }}">
+  <meta name="twitter:url" content="{{site.url}}{{page.url}}">
 </head>

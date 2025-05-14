@@ -1,34 +1,10 @@
 ---
-layout: blog
+layout: layout25
 title: "Blog Archives"
 permalink: /blog/
 ---
 
-{% for post in collections.posts %}
-	
-	{% capture date %}{{ post.date }}{% endcapture %}
-	{% capture this_year %}{{ date | date: "%Y" }}{% endcapture %}
-	{% unless year == this_year %}
-		{% assign year = this_year %}
-		{% unless forloop.first %}
-			</section>
-		{% endunless %}
-		<section class="archives">
-			<h1 class="year">
-				{{ date | date: "%Y" }}
-			</h1>
-	{% endunless %}
-		<article class="pure-g" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-			<div class="meta pure-u-1-8">
-				<h3 class="date"><time datetime="{{ date | datetime | date_to_xmlschema }}" itemprop="datePublished">{{ date | date: "%b %e" }}</time></h3>
-			</div>
-			<div class="title pure-u-7-8">
-				<h1 class="title" itemprop="name">
-					<a href="{{ post.url }}">{{post.data.title}}</a>
-					{% if post.data.draft %}
-						<span class="draft-badge">Draft</span>
-					{% endif %}
-				</h1>
-			</div>
-		</article>
-{% endfor %}
+{% assign all_posts = true %}
+{% assign show_more_link = false %}
+{% assign bold_year = true %}
+{% include "posts-list.liquid" %}

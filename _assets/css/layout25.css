@@ -213,33 +213,67 @@ a:hover {
 .layout25-posts {
   list-style: none;
   margin-bottom: 1.5rem;
+  padding: 0;
 }
 
 .layout25-post-item {
-  display: flex;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  column-gap: 16px;
+  row-gap: 0;
   margin-bottom: 1rem;
-}
-.layout25-post-item time {
-  width: 75px;
-  color: var(--color-date);
-  font-size: 0.9rem;
-  flex-shrink: 0;
+  align-items: baseline;
 }
 @media (max-width: 480px) {
   .layout25-post-item {
-    flex-direction: row;
-    align-items: baseline;
-    gap: 8px;
-  }
-  .layout25-post-item time {
-    margin-bottom: 0;
-    width: auto;
-    min-width: 65px;
+    grid-template-columns: 85px 1fr;
+    column-gap: 8px;
   }
 }
 
+.layout25-post-date {
+  color: var(--color-date);
+  font-size: 0.9rem;
+  text-align: right;
+  justify-self: end;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+  white-space: nowrap;
+}
+
+.layout25-post-month {
+  margin-right: 0.2em;
+}
+
+.layout25-post-year {
+  /* Default styling for year */
+}
+
+.layout25-post-year-bold {
+  font-weight: 700;
+}
+
+.layout25-post-title-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
 .layout25-post-link {
-  font-weight: 500;
+  font-size: 1.05rem;
+}
+
+.layout25-draft-badge {
+  display: inline-block;
+  background-color: rgba(255, 165, 0, 0.2);
+  color: orange;
+  font-size: 0.7rem;
+  padding: 0.1rem 0.4rem;
+  border-radius: 3px;
+  vertical-align: middle;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .layout25-more-link {

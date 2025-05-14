@@ -7,7 +7,7 @@
     "clean": "rm -rf _site",
     "build": "npm run clean && cross-env ENVIRONMENT=prod npm run sass && npx @11ty/eleventy",
     "serve": "npm run clean && cross-env ENVIRONMENT=prod npm run sass && npx @11ty/eleventy --serve --quiet",
-    "sass": "sass css/base.scss css/base.css --source-map",
+    "sass": "sass _assets/css/base.scss _assets/css/base.css --source-map",
     "dev": "npm run clean && npm run sass && cross-env ENVIRONMENT=dev npx @11ty/eleventy --serve --quiet"
   },
   "keywords": [],

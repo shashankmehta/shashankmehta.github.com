@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The Setup
+permalink: /setup/
 ---
 _Things that I use. Last updated on 7th September, 2015._
 

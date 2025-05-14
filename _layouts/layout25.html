@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="{{ site.language | default: 'en' }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="stylesheet" href="/css/layout25.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="layout25-container">
+    <header class="layout25-header">
+      <div class="layout25-profile">
+        <img src="/images/dp.jpeg" alt="{{ site.author.name }}" class="layout25-avatar">
+        <div class="layout25-profile-content">
+          <h1 class="layout25-name">{{ site.author.name }}</h1>
+          <nav class="layout25-nav">
+            <a href="/about">About</a>
+            <a href="{{ site.author.x}}">X/Twitter</a>
+            <a href="{{ site.author.linkedin}}">LinkedIn</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main class="layout25-main">
+      <section class="layout25-intro">
+        <p class="layout25-pronunciation">I'm {{ site.author.name }}.</p>
+        <p class="layout25-bio">I'm a founder, writer, creator, investor, MTG player, collector, runner, partner, and parent.</p>
+        <p class="layout25-tagline">I write about ideas across life, work, and culture.</p>
+      </section>
+
+      <section class="layout25-writings">
+        <h2>Writings</h2>
+        <ul class="layout25-posts">
+          {% assign posts = collections.posts %}
+          {% for post in posts limit:10 %}
+          <li class="layout25-post-item">
+            <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%b %Y' }}</time>
+            <a href="{{ post.url }}" class="layout25-post-link">{{ post.data.title }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+        <a href="/blog" class="layout25-more-link">More Posts →</a>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    // Check for dark mode preference
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.body.classList.add('dark-mode');
+    }
+    
+    // Listen for changes in color scheme preference
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+      if (event.matches) {
+        document.body.classList.add('dark-mode');
+      } else {
+        document.body.classList.remove('dark-mode');
+      }
+    });
+  </script>
+</body>
+</html> 

@@ -4,71 +4,90 @@
   --font-primary: 'Lato', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
 }
 
-// Light mode colors
+// Light theme vars
+$light-bg: #ffffff;
+$light-text: #000000;
+$light-link: #0066cc;
+$light-link-hover: #004499;
+$light-date: #666666;
+$light-heading: #000000;
+$light-border: rgba(0, 0, 0, 0.1);
+
+// Dark theme vars
+$dark-bg: #121212;
+$dark-text: #f0f0f0;
+$dark-link: #3399ff;
+$dark-link-hover: #66b3ff;
+$dark-date: #999999;
+$dark-heading: #ffffff;
+$dark-border: rgba(255, 255, 255, 0.1);
+
+
+// Light mode
 html.light-mode {
-  --color-bg: #ffffff;
-  --color-text: #000000;
-  --color-link: #0066cc;
-  --color-link-hover: #004499;
-  --color-date: #666666;
-  --color-heading: #000000;
-  --color-border: rgba(0, 0, 0, 0.1);
+  --color-bg: #{$light-bg};
+  --color-text: #{$light-text};
+  --color-link: #{$light-link};
+  --color-link-hover: #{$light-link-hover};
+  --color-date: #{$light-date};
+  --color-heading: #{$light-heading};
+  --color-border: #{$light-border};
 }
 
-// Dark mode colors
+// Dark mode
 html.dark-mode {
-  --color-bg: #121212;
-  --color-text: #f0f0f0;
-  --color-link: #3399ff;
-  --color-link-hover: #66b3ff;
-  --color-date: #999999;
-  --color-heading: #ffffff;
-  --color-border: rgba(255, 255, 255, 0.1);
+  --color-bg: #{$dark-bg};
+  --color-text: #{$dark-text};
+  --color-link: #{$dark-link};
+  --color-link-hover: #{$dark-link-hover};
+  --color-date: #{$dark-date};
+  --color-heading: #{$dark-heading};
+  --color-border: #{$dark-border};
 }
 
 // System mode - light appearance
 html.system-mode.light-appearance {
-  --color-bg: #ffffff;
-  --color-text: #000000;
-  --color-link: #0066cc;
-  --color-link-hover: #004499;
-  --color-date: #666666;
-  --color-heading: #000000;
-  --color-border: rgba(0, 0, 0, 0.1);
+  --color-bg: #{$light-bg};
+  --color-text: #{$light-text};
+  --color-link: #{$light-link};
+  --color-link-hover: #{$light-link-hover};
+  --color-date: #{$light-date};
+  --color-heading: #{$light-heading};
+  --color-border: #{$light-border};
 }
 
 // System mode - dark appearance
 html.system-mode.dark-appearance {
-  --color-bg: #121212;
-  --color-text: #f0f0f0;
-  --color-link: #3399ff;
-  --color-link-hover: #66b3ff;
-  --color-date: #999999;
-  --color-heading: #ffffff;
-  --color-border: rgba(255, 255, 255, 0.1);
+  --color-bg: #{$dark-bg};
+  --color-text: #{$dark-text};
+  --color-link: #{$dark-link};
+  --color-link-hover: #{$dark-link-hover};
+  --color-date: #{$dark-date};
+  --color-heading: #{$dark-heading};
+  --color-border: #{$dark-border};
 }
 
 // Default light mode if no class is present
 html:not(.light-mode):not(.dark-mode):not(.system-mode) {
-  --color-bg: #ffffff;
-  --color-text: #000000;
-  --color-link: #0066cc;
-  --color-link-hover: #004499;
-  --color-date: #666666;
-  --color-heading: #000000;
-  --color-border: rgba(0, 0, 0, 0.1);
+  --color-bg: #{$light-bg};
+  --color-text: #{$light-text};
+  --color-link: #{$light-link};
+  --color-link-hover: #{$light-link-hover};
+  --color-date: #{$light-date};
+  --color-heading: #{$light-heading};
+  --color-border: #{$light-border};
 }
 
 // Auto-detect preferred color scheme
 @media (prefers-color-scheme: dark) {
-  html:not(.light-mode):not(.dark-mode) {
-    --color-bg: #121212;
-    --color-text: #f0f0f0;
-    --color-link: #3399ff;
-    --color-link-hover: #66b3ff;
-    --color-date: #999999;
-    --color-heading: #ffffff;
-    --color-border: rgba(255, 255, 255, 0.1);
+  html:not(.light-mode):not(.dark-mode):not(.system-mode) {
+    --color-bg: #{$dark-bg};
+    --color-text: #{$dark-text};
+    --color-link: #{$dark-link};
+    --color-link-hover: #{$dark-link-hover};
+    --color-date: #{$dark-date};
+    --color-heading: #{$dark-heading};
+    --color-border: #{$dark-border};
   }
 }
 
@@ -286,6 +305,15 @@ a {
 
 .layout25-post-link {
   font-size: 1.05rem;
+  font-weight: 500;
+}
+
+html.dark-mode .layout25-post-link {
+  color: var(--color-link)  ;
+}
+
+.layout25-post-item:active .layout25-post-link {
+  color: var(--color-link);
 }
 
 .layout25-draft-badge {

@@ -53,7 +53,7 @@ html:not(.light-mode):not(.dark-mode):not(.system-mode) {
 }
 
 @media (prefers-color-scheme: dark) {
-  html:not(.light-mode):not(.dark-mode) {
+  html:not(.light-mode):not(.dark-mode):not(.system-mode) {
     --color-bg: #121212;
     --color-text: #f0f0f0;
     --color-link: #3399ff;
@@ -262,6 +262,15 @@ a:hover {
 
 .layout25-post-link {
   font-size: 1.05rem;
+  font-weight: 500;
+}
+
+html.dark-mode .layout25-post-link {
+  color: var(--color-link);
+}
+
+.layout25-post-item:active .layout25-post-link {
+  color: var(--color-link);
 }
 
 .layout25-draft-badge {

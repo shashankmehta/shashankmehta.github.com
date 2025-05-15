@@ -208,6 +208,7 @@ a:hover {
   font-size: 1.75rem;
   margin-bottom: 1.5rem;
   color: var(--color-heading);
+  text-align: left;
 }
 
 .layout25-posts {
@@ -218,7 +219,7 @@ a:hover {
 
 .layout25-post-item {
   display: grid;
-  grid-template-columns: 100px 1fr;
+  grid-template-columns: 70px 1fr;
   column-gap: 16px;
   row-gap: 0;
   margin-bottom: 1rem;
@@ -234,15 +235,16 @@ a:hover {
 .layout25-post-date {
   color: var(--color-date);
   font-size: 0.9rem;
-  text-align: right;
-  justify-self: end;
+  text-align: left;
+  justify-self: start;
   font-variant-numeric: tabular-nums;
   font-feature-settings: "tnum";
   white-space: nowrap;
+  font-family: "Sometype Mono", monospace;
 }
 
 .layout25-post-month {
-  margin-right: 0.2em;
+  margin-right: 0;
 }
 
 .layout25-post-year {
@@ -288,6 +290,7 @@ html.dark-mode .layout25-post-link {
 .layout25-more-link {
   display: inline-block;
   font-weight: 500;
+  text-align: left;
 }
 
 .layout25-name-row {

@@ -1,0 +1,149 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Site Architecture Documentation
+
+## Overview
+This is a personal website with a blog built using Eleventy (11ty), a modern static site generator. The site features a responsive design with light/dark mode support and is deployed on GitHub Pages.
+
+## Technology Stack
+- **Static Site Generator**: Eleventy (11ty)
+- **Templating**: Liquid
+- **Styling**: SCSS (compiled to CSS)
+- **Deployment**: GitHub Pages
+
+## Directory Structure
+
+### Core Directories
+- `_layouts/`: Contains HTML layout templates with Liquid templating
+- `_includes/`: Contains reusable UI components as Liquid files
+- `_posts/`: Contains blog posts in Markdown format
+- `pages/`: Contains public pages like /, /blog, /setup, etc.
+- `_assets/`: Contains all static assets (CSS, JS, images, fonts)
+- `_site/`: Output directory (generated during build, not in source control)
+
+### Key Files
+- `package.json`: Node dependencies and build scripts
+- `eleventy.config.js`: Eleventy configuration
+- `_data/site.json`: Site metadata and author information
+
+## Build System
+
+### Build Process
+The build process is defined in `package.json` scripts:
+```
+"clean": "rm -rf _site",
+"build": "npm run clean && cross-env ENVIRONMENT=prod npm run sass && npx @11ty/eleventy",
+"serve": "npm run clean && cross-env ENVIRONMENT=prod npm run sass && npx @11ty/eleventy --serve --quiet",
+"sass": "sass _assets/css/base.scss _assets/css/base.css --source-map",
+"dev": "npm run clean && run-p d:*"
+```
+
+Important notes:
+- `_site` is deleted before each build to ensure consistency with GitHub Pages builds
+- During development, Eleventy runs in watch mode and SASS conversion also runs in watch mode
+
+### Deployment
+Deployment is handled automatically through GitHub Actions as defined in `.github/workflows/build-deploy.yml`. The site is built and deployed to the `gh-pages` branch.
+
+## Content Structure
+
+### Pages
+- Located in the `pages/` directory
+- Have public URLs like /, /blog, /setup, /about
+- Use HTML files with Liquid templating
+
+### Blog Posts
+- Located in the `_posts/` directory
+- Written in Markdown format
+- File naming format: `YYYY-MM-DD-title.md`
+- Have URLs in the format `/archive/YYYY/title.html`
+
+### Special Content Properties
+- `draft: true`: When added to a post's front matter, the post will only appear in development mode
+
+## Template System
+
+### Layouts
+- Located in `_layouts/` directory
+- Main layout: `layout25.html` (custom layout system)
+- Post layout: `post.html` (extends layout25.html)
+
+### Components
+- Located in `_includes/` directory
+- File extension: `.liquid`
+- Examples: `navigation.liquid`, `posts-list.liquid`, `footer.liquid`
+
+### Navigation
+- Navigation is manually defined in `_includes/navigation.liquid`
+- Links to main pages and external profiles
+
+## Collections
+
+### Posts Collection
+- Defined in `eleventy.config.js`
+- Includes all blog posts from the `_posts/` directory
+- Sorted by date (newest first)
+- Draft posts are filtered out in production builds
+
+## Styling System
+
+### CSS Architecture
+- SCSS is used for styling (`_assets/css/` directory)
+- Main files:
+  - `base.scss`: Core styles
+  - `layout25.scss`: Layout-specific styles
+- Always edit the SCSS files only, never the generated CSS files
+
+### Theme System
+The site implements a theme toggle system allowing users to switch between:
+- Light mode
+- Dark mode
+- System preference
+
+Implementation:
+- Theme variables are defined in SCSS
+- Theme state is stored in localStorage
+- Toggle button is included in `_includes/theme.liquid`
+- Theme is applied through CSS variables and HTML classes
+
+### Responsive Design
+- Mobile-first approach to CSS
+- Breakpoints defined in media queries within SCSS files
+- Fluid layouts that adapt to different screen sizes
+
+## Asset Handling
+
+### Images
+- Handled by Eleventy's official image plugin (@11ty/eleventy-img)
+- Optimized during build process
+
+### Static Assets
+- CSS, JS, images, and fonts are in the `_assets/` directory
+- Passthrough copy is configured in `eleventy.config.js`
+
+## Performance Considerations
+- Mobile-first build optimization
+- Semantically correct HTML (e.g., using proper list elements)
+- Page load time optimization
+- Cross-browser compatibility (modern browsers)
+- Cross-platform compatibility (mobile devices)
+
+## Development Guidelines
+
+### General Principles
+- Only use Eleventy (no Jekyll compatibility)
+- Keep CSS scoped and specific to avoid conflicts
+- Use semantic HTML elements
+
+### Component Creation
+- Follow existing naming conventions
+- Support both light and dark themes
+- Implement responsive behavior as needed
+
+### Style Guidelines
+- CSS is written using SCSS
+- Keep styles scoped to specific components
+- Always edit the SCSS files, never edit generated CSS directly

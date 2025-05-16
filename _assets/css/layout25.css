@@ -210,14 +210,12 @@ a:hover {
   color: var(--color-heading);
   text-align: left;
 }
-
-.layout25-posts {
+.layout25-writings .layout25-posts {
   list-style: none;
   margin-bottom: 1.5rem;
   padding: 0;
 }
-
-.layout25-post-item {
+.layout25-writings .layout25-post-item {
   display: grid;
   grid-template-columns: 70px 1fr;
   column-gap: 16px;
@@ -226,13 +224,12 @@ a:hover {
   align-items: baseline;
 }
 @media (max-width: 480px) {
-  .layout25-post-item {
+  .layout25-writings .layout25-post-item {
     grid-template-columns: 85px 1fr;
     column-gap: 8px;
   }
 }
-
-.layout25-post-date {
+.layout25-writings .layout25-post-date {
   color: var(--color-date);
   font-size: 0.9rem;
   text-align: left;
@@ -242,40 +239,32 @@ a:hover {
   white-space: nowrap;
   font-family: "Sometype Mono", monospace;
 }
-
-.layout25-post-month {
+.layout25-writings .layout25-post-month {
   margin-right: 0;
 }
-
-.layout25-post-year {
+.layout25-writings .layout25-post-year {
   /* Default styling for year */
 }
-
-.layout25-post-year-bold {
+.layout25-writings .layout25-post-year-bold {
   font-weight: 700;
 }
-
-.layout25-post-title-wrapper {
+.layout25-writings .layout25-post-title-wrapper {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
   gap: 0.5rem;
 }
-
-.layout25-post-link {
+.layout25-writings .layout25-post-link {
   font-size: 1.05rem;
   font-weight: 500;
 }
-
-html.dark-mode .layout25-post-link {
+html.dark-mode .layout25-writings .layout25-post-link {
   color: var(--color-link);
 }
-
-.layout25-post-item:active .layout25-post-link {
+.layout25-writings .layout25-post-item:active .layout25-post-link {
   color: var(--color-link);
 }
-
-.layout25-draft-badge {
+.layout25-writings .layout25-draft-badge {
   display: inline-block;
   background-color: rgba(255, 165, 0, 0.2);
   color: orange;
@@ -286,19 +275,10 @@ html.dark-mode .layout25-post-link {
   font-weight: bold;
   text-transform: uppercase;
 }
-
-.layout25-more-link {
+.layout25-writings .layout25-more-link {
   display: inline-block;
   font-weight: 500;
   text-align: left;
-}
-
-.layout25-name-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  margin-bottom: 0.5rem;
 }
 
 .layout25-theme-toggle {
@@ -384,3 +364,5 @@ html.dark-mode .dark-icon {
 html.system-mode .system-icon {
   display: block;
 }
+
+/*# sourceMappingURL=layout25.css.map */

@@ -361,4 +361,26 @@ html.system-mode .system-icon {
   display: block;
 }
 
-/*# sourceMappingURL=layout25.css.map */
+.light-icon {
+  display: none;
+}
+
+.dark-icon {
+  display: none;
+}
+
+.system-icon {
+  display: none;
+}
+
+html.light-mode .light-icon {
+  display: block;
+}
+
+html.dark-mode .dark-icon {
+  display: block;
+}
+
+html.system-mode .system-icon {
+  display: block;
+}

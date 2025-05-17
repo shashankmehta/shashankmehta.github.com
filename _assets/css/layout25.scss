@@ -138,57 +138,65 @@ a {
   border-bottom: 1px solid var(--color-border);
   padding-bottom: 1.5rem;
   margin-bottom: 1rem;
-}
 
-.layout25-avatar {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-right: 1.5rem;
-  flex-shrink: 0;
-}
+  .layout25-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1.5rem;
+    flex-shrink: 0;
+  }
 
-.layout25-profile-content {
-  display: flex;
-  flex-direction: column;
-}
+  .layout25-profile-content {
+    display: flex;
+    flex-direction: column;
+  }
 
-.layout25-name {
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--color-heading);
-  margin: 0 0 0.5rem 0;
-}
+  .layout25-name {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-heading);
+    margin: 0 0 0.5rem 0;
+  }
 
-.layout25-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  
-  a {
-    position: relative;
-    color: var(--color-link);
+  .layout25-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
     
-    &:after {
-      content: '';
-      position: absolute;
-      bottom: -2px;
-      left: 0;
-      width: 0;
-      height: 1px;
-      background-color: var(--color-link);
-      transition: width 0.2s ease;
+    a {
+      position: relative;
+      color: var(--color-link);
+      
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background-color: var(--color-link);
+        transition: width 0.2s ease;
+      }
+      
+      &:hover:after {
+        width: 100%;
+      }
     }
     
-    &:hover:after {
-      width: 100%;
+    @media (max-width: 600px) {
+      gap: 0.75rem;
+      font-size: 0.9rem;
     }
   }
-  
-  @media (max-width: 600px) {
-    gap: 0.75rem;
-    font-size: 0.9rem;
+
+  .layout25-name-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 0.5rem;
   }
 }
 
@@ -197,19 +205,17 @@ a {
     flex-direction: column;
     align-items: center;
     text-align: center;
-  }
-  
-  .layout25-avatar {
-    margin-bottom: 1rem;
-    margin-right: 0;
-  }
-  
-  .layout25-profile-content {
-    align-items: center;
-  }
-  
-  .layout25-nav {
-    justify-content: center;
+
+    .layout25-avatar {
+      margin-bottom: 1rem;
+      margin-right: 0;
+    }
+    .layout25-profile-content {
+      align-items: center;
+    }
+    .layout25-nav {
+      justify-content: center;
+    }
   }
 }
 
@@ -224,23 +230,21 @@ a {
 .layout25-intro {
   border-bottom: 1px solid var(--color-border);
   padding: 2rem 0;
-  
+
+  .layout25-pronunciation {
+    font-size: 1.1rem;
+  }
+  .layout25-bio,
+  .layout25-tagline {
+    font-size: 1.1rem;
+  }
+
   p {
     margin-bottom: 1rem;
-    
     &:last-child {
       margin-bottom: 0;
     }
   }
-}
-
-.layout25-pronunciation {
-  font-size: 1.1rem;
-}
-
-.layout25-bio,
-.layout25-tagline {
-  font-size: 1.1rem;
 }
 
 // Writings section

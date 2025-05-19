@@ -114,6 +114,7 @@ header.grid {
   time {
     font-variant-numeric: tabular-nums;
     color: var(--pico-muted-color);
+    font-family: "Sometype Mono", monospace;
 
     .bold {
       font-weight: 500;

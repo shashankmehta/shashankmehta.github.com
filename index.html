@@ -1,83 +1,519 @@
-
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>
-    Shashank Mehta
+    Shashank MehtaShashank Mehta
   </title>
+  <meta name="description" content="Personal website & blog of Shashank Mehta">
+  <!-- Set theme immediately to prevent flash -->
+  <script>
+    // Immediately set the theme before any content renders
+    (function() {
+      const storedTheme = localStorage.getItem('theme');
+      const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+      
+      if (storedTheme === 'dark') {
+        document.documentElement.dataset.theme = 'dark';
+      } else if (storedTheme === 'light') {
+        document.documentElement.dataset.theme = 'light';
+      } else {
+        // System preference
+        document.documentElement.dataset.theme = prefersDarkScheme.matches ? 'dark' : 'light';
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="/css/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Sometype+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  
 
-  <meta name="author" content="Shashank Mehta" />
-  <meta name="description" content="Heading product for RazorpayX, building the future of business banking. Early bird (#7) at @Razorpay. Forever hoarse throat thanks to ManUtd." />
-  <meta name="twitter:description" content="Heading product for RazorpayX, building the future of business banking. Early bird (#7) at @Razorpay. Forever hoarse throat thanks to ManUtd." />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <link href="/favicon.png" rel="shortcut icon">
+  
 
-  <link rel="alternate" type="application/rss+xml" href="/atom.xml" />
+  
 
-  <link rel="stylesheet" href="/css/pure.css" type="text/css" />
-  <link rel="stylesheet" href="/css/base.css" type="text/css" media="screen, projection" />
-  <meta name="google-site-verification" content="re_t7ja4IZq6BYH_gOXHam-1xYP0BMy5qiUygvzYW6U" />
-
-  <meta property="og:image" content="http://shashankmehta.in/images/dp.jpeg" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:image" content="http://shashankmehta.in/images/dp.jpeg" />
-
-  <meta property="og:type" content="website" />
-  <meta name="twitter:title" content="Shashank Mehta" /> 
+  <meta property="og:type" content="article" />
   <meta name="twitter:site" content="@shashankmehta05">
   <meta name="twitter:creator" content="@shashankmehta05">
-  <meta name="twitter:url" content="http://shashankmehta.in/">
+  <meta name="twitter:url" content="https://shashankmehta.in/">
 </head>
-
 <body>
+  <div class="container">
+    <header class="grid">
+  <figure class="profile-image">
+    <img src="/images/dp.jpeg" alt="Shashank Mehta">
+  </figure>
+  <div>
+    <h1>
+      Shashank Mehta
+      <button id="theme-toggle" aria-label="Toggle dark/light mode" onclick="toggleTheme()">
+  <svg class="light-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+  <svg class="dark-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+  <svg class="system-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+</button>
 
-  <section id="homepage">
+<script>
+  // Helper function to update the button icon based on current theme
+  function updateThemeIcon(theme) {
+    const themeToggle = document.getElementById('theme-toggle');
+    themeToggle.setAttribute('data-mode', theme);
+  }
 
-    <section class="main">
-      <div id="logo"></div>
-      <h1 class="name">
-        Shashank Mehta
-      </h1>
-      <h3>
-        Building the Future of Business Banking <br> @<a href="https://razorpay.com/x" class="rzp-link">RazorpayX</a>
-      </h3>
-    </section>
+  // Initialize theme on page load
+  document.addEventListener('DOMContentLoaded', function() {
+    const html = document.documentElement;
+    const savedTheme = localStorage.getItem('theme');
+    
+    if (savedTheme) {
+      // If user has a saved preference, use it
+      if (savedTheme !== 'system') {
+        html.dataset.theme = savedTheme;
+        updateThemeIcon(savedTheme);
+      } else {
+        // Using system preference
+        updateThemeIcon('system');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        html.dataset.theme = prefersDark ? 'dark' : 'light';
+      }
+    } else {
+      // Default to system
+      // localStorage.setItem('theme', 'system');
+      updateThemeIcon('system');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      html.dataset.theme = prefersDark ? 'dark' : 'light';
+    }
+  });
 
-    <section class="meta">
-      <div class="row">
-          <a href="/blog">BLOG</a>
-          <a href="https://twitter.com/shashankmehta05">TWITTER</a>
-          <a href="https://www.linkedin.com/in/mehta-shashank/">ABOUT</a>
+  // Toggle theme when button is clicked - cycle between light, dark, and system
+  function toggleTheme() {
+    const html = document.documentElement;
+
+    // Determine current state. We persist it in localStorage (default = "system")
+    const current = localStorage.getItem('theme') || 'system';
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    // Compute next state based on current state and system preference
+    let next;
+    
+    if (current === 'system') {
+      // If in system mode, go to the opposite of what system currently shows
+      next = systemPrefersDark ? 'light' : 'dark';
+    } else if (current === 'dark') {
+      next = 'light';
+    } else { // current === 'light'
+      next = 'system';
+    }
+
+    // Update button icon
+    updateThemeIcon(next);
+
+    // Apply the next state
+    if (next === 'system') {
+      // Follow OS preference – remove manual override
+      delete html.dataset.theme;
+      // Apply current system preference
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      html.dataset.theme = prefersDark ? 'dark' : 'light';
+    } else {
+      html.dataset.theme = next;
+    }
+
+    // Persist the choice for future visits
+    localStorage.setItem('theme', next);
+  }
+  
+  // Listen for system preference changes
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+    if (!localStorage.getItem('theme') || localStorage.getItem('theme') === 'system') {
+      document.documentElement.dataset.theme = event.matches ? 'dark' : 'light';
+    }
+  });
+</script> 
+    </h1>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        
+        
+        <li><a href="https://x.com/shashankmehta05" target="_blank">X/Twitter</a></li>
+        <li><a href="https://www.linkedin.com/in/mehta-shashank/" target="_blank">LinkedIn</a></li>
+      </ul>
+    </nav>
+  </div>
+  
+</header>
+<hr />
+
+
+    <main>
+      
+<section class="intro">
+  <h2>About</h2>
+  <p>I'm Shashank Mehta and this is my corner of the internet.</p>
+  <p>I'm currently tinkering with ideas in the intersection of tech and AI, and investing in early stage startups via <a href="https://marsshot.vc" target="_blank">Mars Shot VC</a>.</p>
+  <p>
+    <b>Past:</b> Employee #7 at <a href="https://razorpay.com" target="_blank">Razorpay</a>; 
+    spent 9 years building payments, banking & lending products; 
+    across tech, product & business leadership roles.
+  </p>
+  <p>
+    <b>Connect:</b> DM on X/Twitter: <a href="https://x.com/https://x.com/shashankmehta05" target="_blank">@shashankmehta05</a>
+  </p>
+</section>
+<hr />
+
+
+<section class="posts-list">
+  <h2>Posts</h2>
+  
+  
+  
+  <div class="posts-list">
+    
+      
+      <div class="post-item grid">
+        <time datetime="2020-04-19">
+          Apr
+          <span class="bold">2020</span>
+        </time>
+        <div>
+          <a href="/archive/2020/razorpay-design-focus.html">How Razorpay Used Design as a Differentiator</a>
+          
+        </div>
       </div>
-    </section>
-
-  </section>
-
-  <section class='ig'>
-  </section>
-
+    
+      
+      <div class="post-item grid">
+        <time datetime="2016-02-28">
+          Feb
+          <span class="bold">2016</span>
+        </time>
+        <div>
+          <a href="/archive/2016/when-do-you-stop-being-a-startup-and-become-a-company-instead.html">When do you stop being a startup and become a company instead?</a>
+          
+        </div>
+      </div>
+    
+      
+      <div class="post-item grid">
+        <time datetime="2015-08-16">
+          Aug
+          <span class="bold">2015</span>
+        </time>
+        <div>
+          <a href="/archive/2015/change-can-make-change-easy.html">Change Can Make Change Easy</a>
+          
+        </div>
+      </div>
+    
+      
+      <div class="post-item grid">
+        <time datetime="2015-07-09">
+          Jul
+          <span class="bold">2015</span>
+        </time>
+        <div>
+          <a href="/archive/2015/joining-razorpay.html">"Hello, World!" at Razorpay</a>
+          
+        </div>
+      </div>
+    
+      
+      <div class="post-item grid">
+        <time datetime="2014-12-15">
+          Dec
+          <span class="bold">2014</span>
+        </time>
+        <div>
+          <a href="/archive/2014/iit-roorkee-placements-twitter.html">IIT Roorkee, Placements, Twitter and Automation</a>
+          
+        </div>
+      </div>
+    
+      
+      <div class="post-item grid">
+        <time datetime="2014-09-01">
+          Sep
+          <span class="bold">2014</span>
+        </time>
+        <div>
+          <a href="/archive/2014/captain-in-golang.html">Making Captain in Golang</a>
+          
+        </div>
+      </div>
+    
+      
+      <div class="post-item grid">
+        <time datetime="2014-06-04">
+          Jun
+          <span class="bold">2014</span>
+        </time>
+        <div>
+          <a href="/archive/2014/vim.html">Cycle of Vim</a>
+          
+        </div>
+      </div>
+    
+      
+      <div class="post-item grid">
+        <time datetime="2014-04-07">
+          Apr
+          <span class="bold">2014</span>
+        </time>
+        <div>
+          <a href="/archive/2014/sdslabs-moved-to-slack.html">SDSLabs moved to Slack for communication</a>
+          
+        </div>
+      </div>
+    
+      
+      <div class="post-item grid">
+        <time datetime="2014-01-14">
+          Jan
+          <span class="bold">2014</span>
+        </time>
+        <div>
+          <a href="/archive/2014/hasjobs-infographic.html">Indian Startup Jobs Infographic</a>
+          
+        </div>
+      </div>
+    
+      
+      <div class="post-item grid">
+        <time datetime="2013-12-25">
+          Dec
+          <span class="bold">2013</span>
+        </time>
+        <div>
+          <a href="/archive/2013/twitter.html">Dear Twitter</a>
+          
+        </div>
+      </div>
+    
+      
+      <div class="post-item grid">
+        <time datetime="2013-12-17">
+          Dec
+          <span class="bold">2013</span>
+        </time>
+        <div>
+          <a href="/archive/2013/studyportal.html">Study Portal, IITR's knowledge hub</a>
+          
+        </div>
+      </div>
+    
+      
+      <div class="post-item grid">
+        <time datetime="2013-10-26">
+          Oct
+          <span class="bold">2013</span>
+        </time>
+        <div>
+          <a href="/archive/2013/the-setup.html">The Setup</a>
+          
+        </div>
+      </div>
+    
+      
+      <div class="post-item grid">
+        <time datetime="2013-10-06">
+          Oct
+          <span class="bold">2013</span>
+        </time>
+        <div>
+          <a href="/archive/2013/summer-13.html">Summer Intern 2013</a>
+          
+        </div>
+      </div>
+    
+      
+      <div class="post-item grid">
+        <time datetime="2013-06-03">
+          Jun
+          <span class="bold">2013</span>
+        </time>
+        <div>
+          <a href="/archive/2013/why-i-love-gnome-shell.html">Why I love Gnome Shell</a>
+          
+        </div>
+      </div>
+    
+      
+      <div class="post-item grid">
+        <time datetime="2013-05-28">
+          May
+          <span class="bold">2013</span>
+        </time>
+        <div>
+          <a href="/archive/2013/what-if-they-quit.html">What if they quit</a>
+          
+        </div>
+      </div>
+    
+      
+      <div class="post-item grid">
+        <time datetime="2013-03-28">
+          Mar
+          <span class="bold">2013</span>
+        </time>
+        <div>
+          <a href="/archive/2013/flipkart-and-how-customer-care-could-be.html">Flipkart and How Customer Care Could Be</a>
+          
+        </div>
+      </div>
+    
+      
+      <div class="post-item grid">
+        <time datetime="2013-01-26">
+          Jan
+          <span class="bold">2013</span>
+        </time>
+        <div>
+          <a href="/archive/2013/january-musings.html">January musings</a>
+          
+        </div>
+      </div>
+    
+      
+      <div class="post-item grid">
+        <time datetime="2012-12-11">
+          Dec
+          <span class="bold">2012</span>
+        </time>
+        <div>
+          <a href="/archive/2012/working-at-sdslabs.html">Working at SDSLabs</a>
+          
+        </div>
+      </div>
+    
+      
+      <div class="post-item grid">
+        <time datetime="2012-10-25">
+          Oct
+          <span class="bold">2012</span>
+        </time>
+        <div>
+          <a href="/archive/2012/greyshade.html">Introducing an Octopress theme, Greyshade!</a>
+          
+        </div>
+      </div>
+    
+      
+      <div class="post-item grid">
+        <time datetime="2012-09-26">
+          Sep
+          <span class="bold">2012</span>
+        </time>
+        <div>
+          <a href="/archive/2012/hacku.html">Team SDSLabs wins Yahoo! HackU</a>
+          
+        </div>
+      </div>
+    
+      
+      <div class="post-item grid">
+        <time datetime="2012-08-31">
+          Aug
+          <span class="bold">2012</span>
+        </time>
+        <div>
+          <a href="/archive/2012/fetching-google-spreadsheet-in-json.html">Fetching Google Spreadsheet in JSON</a>
+          
+        </div>
+      </div>
+    
+      
+      <div class="post-item grid">
+        <time datetime="2012-07-15">
+          Jul
+          <span class="bold">2012</span>
+        </time>
+        <div>
+          <a href="/archive/2012/dont-make-me-think-book-recommendation.html">Dont Make Me Think - Book Recommendation</a>
+          
+        </div>
+      </div>
+    
+      
+      <div class="post-item grid">
+        <time datetime="2012-06-24">
+          Jun
+          <span class="bold">2012</span>
+        </time>
+        <div>
+          <a href="/archive/2012/7-segment-display-using-shift-register-and-arduino.html">7 Segment Display using Shift Register and Arduino</a>
+          
+        </div>
+      </div>
+    
+      
+      <div class="post-item grid">
+        <time datetime="2012-06-12">
+          Jun
+          <span class="bold">2012</span>
+        </time>
+        <div>
+          <a href="/archive/2012/23-days-of-summer-football-and-tennis.html">23 days of summer, Football and Tennis</a>
+          
+        </div>
+      </div>
+    
+      
+      <div class="post-item grid">
+        <time datetime="2012-05-22">
+          May
+          <span class="bold">2012</span>
+        </time>
+        <div>
+          <a href="/archive/2012/my-sublime-and-git-based-todo-setup.html">Sublime Text, Dropbox and Git based ToDo setup</a>
+          
+        </div>
+      </div>
+    
+      
+      <div class="post-item grid">
+        <time datetime="2012-05-21">
+          May
+          <span class="bold">2012</span>
+        </time>
+        <div>
+          <a href="/archive/2012/github-octopress-and-blogging.html">Github, Octopress and Blogging</a>
+          
+        </div>
+      </div>
+    
+      
+      <div class="post-item grid">
+        <time datetime="2012-03-21">
+          Mar
+          <span class="bold">2012</span>
+        </time>
+        <div>
+          <a href="/archive/2012/The-Invaluble-Thing-Called-Internet.html">The Invaluable Thing Called Internet</a>
+          
+        </div>
+      </div>
+    
+  </div>
   
-    <a class="google" href="https://plus.google.com/109764126807838271120?rel=author" title="Google+" style="display: none;">Google+</a>
   
+</section>  
+    </main>
 
-  <script type="text/javascript" src="/js/jquery.min.js"></script>
-  <script type="text/javascript" src="/js/application.js"></script>
+    
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-32545112-1']);
+    _gaq.push(['_trackPageview']);
 
-  
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-32545112-1']);
-      _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
 
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
-  
-
+  </div>
 </body>
-
-</html>
+</html> 

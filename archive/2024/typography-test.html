@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>
-    IIT Roorkee, Placements, Twitter and Automation
+    Typography Test for Blog Posts
   </title>
   <meta name="description" content="Personal website & blog of Shashank Mehta">
   <!-- Set theme immediately to prevent flash -->
@@ -30,8 +30,8 @@
   
 
   
-    <meta property="og:title" content="IIT Roorkee, Placements, Twitter and Automation" />
-    <meta name="twitter:title" content="IIT Roorkee, Placements, Twitter and Automation">
+    <meta property="og:title" content="Typography Test for Blog Posts" />
+    <meta name="twitter:title" content="Typography Test for Blog Posts">
   
 
   
@@ -39,7 +39,7 @@
   <meta property="og:type" content="article" />
   <meta name="twitter:site" content="@shashankmehta05">
   <meta name="twitter:creator" content="@shashankmehta05">
-  <meta name="twitter:url" content="https://shashankmehta.in/archive/2014/iit-roorkee-placements-twitter.html">
+  <meta name="twitter:url" content="https://shashankmehta.in/archive/2024/typography-test.html">
 </head>
 <body>
   <div class="container">
@@ -157,36 +157,81 @@
   </nav>
 
   
+  <header class="alert alert-warning">
+    <strong>⚠️ DRAFT</strong> - This post will not be published in production
+  </header>
+  
 
   <header>
-    <h1>IIT Roorkee, Placements, Twitter and Automation</h1>
-    <time datetime="2014-12-15">December 15, 2014</time>
+    <h1>Typography Test for Blog Posts</h1>
+    <time datetime="2024-05-01">May  1, 2024</time>
   </header>
 
   <div>
-    <p>December. A very bitter sweet time in IITs, at least for final year students. It's the placement season, you see. For the last 3 years my involvement included finding out which senior got placed where so that I could extract that grand treat out of him / her. I awaited my own 4th year December for as long as I can remember but, luckily, I didn't have to go through the rigmarole of suiting up and answering questions like &quot;Where do you see yourself in 5 years?&quot; for the sake of pleasing the other side of the table in a quest to land a job, something that is considered to be the ultimate aim of college, engineering and life. I was lucky enough to have a few offers that allowed me to skip the circus. So when the ringmaster started releasing results on a cold December 1st morning, I had been away from the process long enough to not realize that the main event had begun. There I was, sitting in my room, working hard for Intel India Embedded Challenge, while my friends were getting placed.</p>
-<p>Initially, I took up to scanning my Facebook feed to see who got placed where. Then I switched to refreshing the placement's results page for the same. And after pressing F5 a few times, I got bored of it enough to think of automating it. And that is what I did. I wrote a Node.JS script that utilized <a href="https://www.npmjs.org/package/request"><code>request</code></a> and <a href="https://github.com/cheeriojs/cheerio"><code>cheerio</code></a> to fetch the results page every few minutes, parse it, see if any new results got announced and if they did then fire a desktop notification for it. A simple 15 minutes job.</p>
-<div class="center">
-    <img src="/images/posts/placements/desktop.png" alt="">
-</div>
-<p>I was satisfied with this but <a href="https://twitter.com/rushil92">Rushil</a>, who was at home and hence couldn't access the placement portal, wanted me to push the data to him too. And he wasn't the only one interested. So I could have created a receive endpoint on a server and a rendering endpoint for these folks. But I didn't want to make this data available publicly. I'd have to add a simple login page. Also, these people would have to manually check for new results, kind of beating the initial automation purpose. I can do better, right? So I used Twitter.</p>
-<p>I created a protected Twitter account for the script. Each time new results were announce, the script would tweet the number of people selected by a company and who are they. For notification purposes, I enabled push notification for tweets from this account on the Twitter android app.</p>
-<p>All the publicity that I did for this was a post on Facebook and a similar one on Twitter.</p>
-<div class="center">
-    <img src="/images/posts/placements/fb.png" alt="">
-</div>
-<p>Every now and then I would approve followers who are IIT Roorkee alumni or current students. And through this super simple setup I was able to broadcast results and also have push notifications. The Twitter account currently has around 60 followers at the time of writing. Not too bad for a 30 minute job which was supposed to be for only myself and a few friends.</p>
-<div class="center">
-    <img src="/images/posts/placements/twitter.png" alt="">
-</div>
-<h2>Why the need for privacy?</h2>
-<p>Some people asked me why did I have to make the account protected? I had multiple reasons for this. One, while this data is open to everyone inside the campus, this isn't my data to make public. Two, the Indian Media goes crazy over the placement results. They give importance to the wrong stuff. I have very strong opinions on this but a senior has written about this issue very well. Read it <a href="http://buff.ly/1CHIlmG">here</a>. I did not want to hand over the entire Roorkee placement data to these people on a platter.</p>
-<h2>Show me the code</h2>
-<p>Quite a few people asked me how did I make this thing, which was also the initial trigger for writing this post. I have posted the code as a GitHub gist.</p>
-<p>Link: <a href="https://gist.github.com/shashankmehta/d7d0233d8e919aaa5c35">GitHub Gist</a></p>
-<p>For posting to a Twitter account, you will need to create an account on twitter and get the oauth keys to post as that account. Look in <code>twitter.js</code> for the set of functions that will help you in getting these. You will also need your Channeli <code>PHPSESSID</code> since the results page is behind a login wall. This, along with twitter creds, is all that is needed to run the main script, <code>placements.js</code>.</p>
-<p>For desktop notifications, you need <code>notify-osd</code> setup, which is normally pre-installed on Ubuntu systems. Otherwise, you can utilize <a href="https://github.com/mikaelbr/node-notifier">node-notifier</a> for other systems.</p>
-<p>Just comment on the gist in case something isn't clear.</p>
+    <p>This is an introductory paragraph that sets the stage for the content to follow. It should be long enough to span multiple lines so we can see how the line height and paragraph spacing work in practice. Good typography creates rhythm and flow that guides the reader through the content effortlessly.</p>
+<p>Here's a second paragraph to test the spacing between paragraphs. The right amount of spacing helps separate ideas while maintaining the overall flow of the document. Too little spacing makes content feel cramped, while too much can make it feel disconnected.</p>
+<h2>Heading Level 2</h2>
+<p>This paragraph follows a level 2 heading. Headings should stand out from the content while still feeling part of the overall hierarchy. They should have enough space above them to separate from previous content, but be visually connected to the content that follows.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
+<h3>Heading Level 3</h3>
+<p>Level 3 headings might be used for subsections within a larger section. They should be smaller than level 2 headings but still prominent enough to stand out from the body text.</p>
+<p>Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
+<h4>Heading Level 4</h4>
+<p>Level 4 headings might be used for the smallest subsections or for highlighting specific points. They should be only slightly larger or different from body text.</p>
+<p><strong>Bold text</strong> can be used for emphasis within paragraphs, as can <em>italic text</em> for slightly less emphasis or for introducing new terms. You might also use <em><strong>bold italic text</strong></em> for particularly important points.</p>
+<h2>Lists and Other Elements</h2>
+<p>Lists are essential for presenting information in an organized way:</p>
+<h3>Unordered List</h3>
+<ul>
+<li>This is the first item in an unordered list</li>
+<li>This is the second item in an unordered list
+<ul>
+<li>This is a nested item</li>
+<li>Another nested item</li>
+</ul>
+</li>
+<li>This is the third item in an unordered list with a longer line of text that will wrap to multiple lines so we can see how the line height and indentation work together</li>
+</ul>
+<h3>Ordered List</h3>
+<ol>
+<li>This is the first item in an ordered list</li>
+<li>This is the second item in an ordered list
+<ol>
+<li>This is a nested ordered item</li>
+<li>Another nested ordered item</li>
+</ol>
+</li>
+<li>This is the third item in an ordered list</li>
+</ol>
+<h2>Blockquotes</h2>
+<p>Blockquotes are useful for highlighting quoted text or important notes:</p>
+<blockquote>
+<p>This is a blockquote. It should stand out from the rest of the text to indicate that it's a quote or a note that deserves special attention. The styling should make it clear that this content is set apart from the main flow.</p>
+<p>This is a second paragraph in the same blockquote to see how multi-paragraph quotes look.</p>
+</blockquote>
+<h2>Code Samples</h2>
+<p>Code samples should be easy to read with proper spacing and monospace font:</p>
+<p>Inline code like <code>const example = &quot;Hello World&quot;;</code> should be distinguishable from regular text.</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token comment">// This is a code block</span>
+<span class="token keyword">function</span> <span class="token function">greet</span><span class="token punctuation">(</span><span class="token parameter">name</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Hello, </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">!</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Call the function</span>
+<span class="token function">greet</span><span class="token punctuation">(</span><span class="token string">"World"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<h2>Links and References</h2>
+<p><a href="https://example.com">Links to other content</a> should be clearly distinguishable from regular text but not so obtrusive as to disrupt reading flow.</p>
+<h2>Images</h2>
+<p>Images should be properly sized and spaced:</p>
+<p><img src="https://placehold.co/800x400" alt="Example image"></p>
+<h2>Horizontal Rule</h2>
+<p>Sometimes you need a visual separator:</p>
+<hr>
+<h2>Testing Line Length</h2>
+<p>This paragraph is meant to test how comfortable the line length is for reading. The ideal line length for comfortable reading is generally considered to be between 50-75 characters per line. Lines that are too long make it difficult for the eyes to track from the end of one line to the beginning of the next. Lines that are too short break up the reading flow too frequently.</p>
+<h2>Final Thoughts</h2>
+<p>This is a concluding paragraph that wraps up the content. Typography is about more than just making text look good—it's about making content readable, accessible, and enjoyable. Good typography respects the reader's time and attention by making the reading experience as frictionless as possible.</p>
 
   </div>
 

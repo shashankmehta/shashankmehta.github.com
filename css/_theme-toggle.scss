@@ -1,0 +1,47 @@
+/* Copied from theme-toggle.scss, now renamed to underscore partial */
+/**
+  Theme-toggle button
+*/
+
+#theme-toggle {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0px 10px;
+    margin-top: -10px;
+    color: var(--pico-primary);
+    cursor: pointer;
+    align-items: center;
+    line-height: 0; /* remove inline gap */
+  }
+  #theme-toggle:hover {
+    color: var(--primary-hover);
+  }
+  
+  #theme-toggle svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  /* Theme toggle icons */
+  .light-icon { display: none; }
+  .dark-icon { display: none; }
+  .system-icon { display: none; }
+  
+  #theme-toggle .light-icon,
+  #theme-toggle .dark-icon,
+  #theme-toggle .system-icon {
+    display: none;
+  }
+  
+  #theme-toggle[data-mode="light"] .light-icon,
+  #theme-toggle[data-mode="dark"] .dark-icon,
+  #theme-toggle[data-mode="system"] .system-icon {
+    display: block;
+  }
+
+// header {
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+// } 

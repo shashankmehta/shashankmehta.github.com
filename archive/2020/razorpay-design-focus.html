@@ -1,19 +1,33 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>
-    
-      How Razorpay Used Design as a Differentiator &ndash;
-    
-    Shashank Mehta
+    How Razorpay Used Design as a Differentiator
   </title>
-
-  <meta name="author" content="Shashank Mehta" />
-  <meta name="description" content="Heading product for RazorpayX, building the future of business banking. Early bird (#7) at @Razorpay. Forever hoarse throat thanks to ManUtd." />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <link href="/favicon.png" rel="shortcut icon">
-  <link rel="alternate" type="application/rss+xml" href="/atom.xml" />
+  <meta name="description" content="Personal website & blog of Shashank Mehta">
+  <!-- Set theme immediately to prevent flash -->
+  <script>
+    // Immediately set the theme before any content renders
+    (function() {
+      const storedTheme = localStorage.getItem('theme');
+      const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+      
+      if (storedTheme === 'dark') {
+        document.documentElement.dataset.theme = 'dark';
+      } else if (storedTheme === 'light') {
+        document.documentElement.dataset.theme = 'light';
+      } else {
+        // System preference
+        document.documentElement.dataset.theme = prefersDarkScheme.matches ? 'dark' : 'light';
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="/css/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Sometype+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  
 
   
     <meta property="og:title" content="How Razorpay Used Design as a Differentiator" />
@@ -25,51 +39,135 @@
     <meta property="twitter:description" content="Design in B2B software can be a major differentiator, a way of building credibility and for standing out. Here's how Razorpay used design to its advantage" />
   
 
-  
-
-    <meta property="og:type" content="article" />
-    <meta name="twitter:site" content="@shashankmehta05">
-    <meta name="twitter:creator" content="@shashankmehta05">
-    <meta name="twitter:url" content="http://shashankmehta.in/archive/2020/razorpay-design-focus.html">
-
-  <link rel="stylesheet" href="/css/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="/css/pure.css" type="text/css" media="screen, projection" />
-  <link rel="stylesheet" href="/css/base.css" type="text/css" media="screen, projection" />
-  <script type="text/javascript" src="/js/application.js"></script>
-  <meta name="google-site-verification" content="re_t7ja4IZq6BYH_gOXHam-1xYP0BMy5qiUygvzYW6U" />
+  <meta property="og:type" content="article" />
+  <meta name="twitter:site" content="@shashankmehta05">
+  <meta name="twitter:creator" content="@shashankmehta05">
+  <meta name="twitter:url" content="https://shashankmehta.in/archive/2020/razorpay-design-focus.html">
 </head>
-<body ontouchstart="" class="blog">
-  <section class="pure-g-r">
-    <div class='pure-u-1-2 content'>
-      <section class="navigation">
-  <div class="holder">
-    SM
-    <div class="nav">
-      <a href="/">Home</a> <br>
-      <a href="/blog">Blog</a> <br>
-      <a href="https://www.linkedin.com/in/mehta-shashank/">About</a> <br>
-    </div>
+<body>
+  <div class="container">
+    <header class="grid">
+  <figure class="profile-image">
+    <img src="/images/dp.jpeg" alt="Shashank Mehta">
+  </figure>
+  <div>
+    <h1>
+      Shashank Mehta
+      <button id="theme-toggle" aria-label="Toggle dark/light mode" onclick="toggleTheme()">
+  <svg class="light-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+  <svg class="dark-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+  <svg class="system-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+</button>
+
+<script>
+  // Helper function to update the button icon based on current theme
+  function updateThemeIcon(theme) {
+    const themeToggle = document.getElementById('theme-toggle');
+    themeToggle.setAttribute('data-mode', theme);
+  }
+
+  // Initialize theme on page load
+  document.addEventListener('DOMContentLoaded', function() {
+    const html = document.documentElement;
+    const savedTheme = localStorage.getItem('theme');
+    
+    if (savedTheme) {
+      // If user has a saved preference, use it
+      if (savedTheme !== 'system') {
+        html.dataset.theme = savedTheme;
+        updateThemeIcon(savedTheme);
+      } else {
+        // Using system preference
+        updateThemeIcon('system');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        html.dataset.theme = prefersDark ? 'dark' : 'light';
+      }
+    } else {
+      // Default to system
+      // localStorage.setItem('theme', 'system');
+      updateThemeIcon('system');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      html.dataset.theme = prefersDark ? 'dark' : 'light';
+    }
+  });
+
+  // Toggle theme when button is clicked - cycle between light, dark, and system
+  function toggleTheme() {
+    const html = document.documentElement;
+
+    // Determine current state. We persist it in localStorage (default = "system")
+    const current = localStorage.getItem('theme') || 'system';
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    // Compute next state based on current state and system preference
+    let next;
+    
+    if (current === 'system') {
+      // If in system mode, go to the opposite of what system currently shows
+      next = systemPrefersDark ? 'light' : 'dark';
+    } else if (current === 'dark') {
+      next = 'light';
+    } else { // current === 'light'
+      next = 'system';
+    }
+
+    // Update button icon
+    updateThemeIcon(next);
+
+    // Apply the next state
+    if (next === 'system') {
+      // Follow OS preference – remove manual override
+      delete html.dataset.theme;
+      // Apply current system preference
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      html.dataset.theme = prefersDark ? 'dark' : 'light';
+    } else {
+      html.dataset.theme = next;
+    }
+
+    // Persist the choice for future visits
+    localStorage.setItem('theme', next);
+  }
+  
+  // Listen for system preference changes
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+    if (!localStorage.getItem('theme') || localStorage.getItem('theme') === 'system') {
+      document.documentElement.dataset.theme = event.matches ? 'dark' : 'light';
+    }
+  });
+</script> 
+    </h1>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        
+        
+        <li><a href="https://x.com/shashankmehta05" target="_blank">X/Twitter</a></li>
+        <li><a href="https://www.linkedin.com/in/mehta-shashank/" target="_blank">LinkedIn</a></li>
+      </ul>
+    </nav>
   </div>
-</section>
+  
+</header>
+<hr />
 
 
+    <main>
       
-<section class="post">
-  <div class="back">
-    <a href="/blog">&larr; Back</a>
-  </div>
+<article>
+  <nav>
+    <a id="back-button" href="/blog" class="secondary">&larr; Back</a>
+  </nav>
 
   
 
-  <h1 class="title">
-    <a href="/archive/2020/razorpay-design-focus.html">How Razorpay Used Design as a Differentiator</a>
-  </h1>
+  <header>
+    <h1>How Razorpay Used Design as a Differentiator</h1>
+    <time datetime="2020-04-19">April 19, 2020</time>
+  </header>
 
-  <section class="byline">
-    April 19, 2020
-  </section>
-
-  <p>Payments is an interesting domain. When <a href="https://razorpay.com">Razorpay</a> launched in 2015, we were told that we are entering an extremely crowded space of payment gateways. And that there's not a lot to solve.</p>
+  <div>
+    <p>Payments is an interesting domain. When <a href="https://razorpay.com">Razorpay</a> launched in 2015, we were told that we are entering an extremely crowded space of payment gateways. And that there's not a lot to solve.</p>
 <p>When we looked at this space, somehow all that we found online was just complaints. Nobody was happy with any provider. And online payments were nowhere near as ubiquitous as it is now in 2020. People worried about fraud even when there wasn't much. We would often field questions like &quot;how do I know your software is safe&quot;, &quot;why should I trust a one-year-old company with money&quot;. All fair questions, to be honest.</p>
 <p>5 years since launch, Razorpay now processes $10Bn+ payments volume, $3Bn+ payouts, $2.5Bn+ loans (all annualized) with more than 800k businesses on the platform making it one of the top payment gateways in India.</p>
 <p>While a lot of things contributed towards Razorpay's initial growth, some of which included:</p>
@@ -134,37 +232,23 @@
 <p><em>Thanks, <a href="https://twitter.com/ChettyArun">@chettyarun</a>, <a href="https://twitter.com/saurabhsoni_ss">@saurabhsoni_ss</a> for helping with reviewing the draft of this post, and for being the pillars of Razorpay's design team.</em></p>
 <p><em>And thanks <a href="https://twitter.com/kshipra_sharma">@kshipra_sharma</a> for suggesting a better way to add the images in this post</em></p>
 
-
-  <div class="twitter">
-    <a href="http://twitter.com/share" class="twitter-share-button" data-count="none" data-via="shashankmehta05">Tweet</a>
-    <a href="http://twitter.com/shashankmehta05" class="twitter-follow-button" data-show-count="false">Follow @shashankmehta05</a>
   </div>
 
-  <section class="meta">
-    <section class="copy">
-      <p>
-        About Shashank Mehta: <br>
-      </p>
-      <p>
-        Heading product for RazorpayX, building the future of business banking. Early bird (#7) at @Razorpay. Forever hoarse throat thanks to ManUtd.
-      </p>
-      <p>
-        Follow me on <a href='http://twitter.com/shashankmehta05'>twitter</a>. I don't tweet a lot though. Bummer, right?
-      </p>
+  <footer>
+    <hr />
+    <!-- <div class="grid">
+      <div class="col">
+        <a href="http://twitter.com/share" class="twitter-share-button" data-count="none" data-via="">Tweet</a>
+        <a href="http://twitter.com/" class="twitter-follow-button" data-show-count="false">Follow @</a>
+        <script src="//platform.twitter.com/widgets.js" type="text/javascript"></script>
+      </div>
+    </div> -->
+  </footer>
+</article>
 
-      <script src="//platform.twitter.com/widgets.js" type="text/javascript"></script>
-    </section>
-  </section>
-</section>
+    </main>
 
-    </div>
-  </section>
-  
-  
-  <a class="google" href="https://plus.google.com/109764126807838271120?rel=author" title="Google+" style="display: none;">Google+</a>
-
-
-
+    
   <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-32545112-1']);
@@ -177,5 +261,6 @@
     })();
   </script>
 
+  </div>
 </body>
-</html>
+</html> 

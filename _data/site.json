@@ -6,7 +6,10 @@
 	"author": {
 		"name": "Shashank Mehta",
 		"email": "blog@smehta.io",
-		"x": "https://x.com/shashankmehta05",
+		"x": {
+			"link": "https://x.com/shashankmehta05",
+			"handle": "shashankmehta05"
+		},
 		"linkedin": "https://www.linkedin.com/in/mehta-shashank/"
 	}
 }

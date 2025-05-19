@@ -10,9 +10,9 @@
     <nav>
       <ul>
         <li><a href="/">Home</a></li>
-        <li><a href="/blog">Blog</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="{{ site.author.x}}">X/Twitter</a></li>
+        {% comment %} <li><a href="/blog">Blog</a></li> {% endcomment %}
+        {% comment %} <li><a href="/about">About</a></li> {% endcomment %}
+        <li><a href="{{ site.author.x.link}}">X/Twitter</a></li>
         <li><a href="{{ site.author.linkedin}}">LinkedIn</a></li>
       </ul>
     </nav>

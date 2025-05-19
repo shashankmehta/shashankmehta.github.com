@@ -99,7 +99,7 @@
     }
   });
 
-  // Toggle theme when button is clicked - cycle between light, dark, and system
+  // Toggle theme when button is clicked - alternate between system and opposite manual mode
   function toggleTheme() {
     const html = document.documentElement;
 
@@ -107,15 +107,13 @@
     const current = localStorage.getItem('theme') || 'system';
     const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     
-    // Compute next state based on current state and system preference
     let next;
     
     if (current === 'system') {
-      // If in system mode, go to the opposite of what system currently shows
+      // If in system mode, switch to manual opposite
       next = systemPrefersDark ? 'light' : 'dark';
-    } else if (current === 'dark') {
-      next = 'light';
-    } else { // current === 'light'
+    } else {
+      // If in any manual mode, switch back to system
       next = 'system';
     }
 

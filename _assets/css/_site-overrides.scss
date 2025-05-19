@@ -95,6 +95,11 @@ header.grid {
 /**
  * Posts list customisation
  */
+
+.posts-list {
+  padding: var(--pico-block-spacing-vertical) 0;
+}
+
 .post-item {
   grid-template-columns: 90px 1fr;
   margin-bottom: var(--pico-block-spacing-vertical);

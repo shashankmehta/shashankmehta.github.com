@@ -20,7 +20,7 @@ It's really easy to understand why these were the differentiators. All of these 
 
 Yep, the design has been a major differentiator for Razorpay.
 
-# Why does Razorpay need a design team?
+## Why does Razorpay need a design team?
 
 One of my roles until 2019 was heading the design team of Razorpay. And one of the most repeated questions that I would get in the early days was:
 
@@ -32,7 +32,7 @@ But for us, design was about how things looked and how things worked. Every sing
 
 So our design team handled everything: all product flows, checkout, website, dashboard, brochures, decks, ads etc.
 
-# Building Credibility Through Design
+## Building Credibility Through Design
 
 With two designers, we couldn't pick every single thing at the same time. So the first set of things fortunate to see design love were the most visible parts of Razorpay: Website and Checkout.
 
@@ -69,7 +69,7 @@ Let me tell you they story of this startup. They wanted to enable payments in th
 
 While this story can fit many companies, this is **an actual story of a PM working with [Cure.fit](http://cure.fit)**, a company which was an organic lead for Razorpay. A salesperson didn't chase to close them. When we later spoke with the PM (she ended up joining Razorpay later), this was the story recounted to us.
 
-# B2B? B2C? It's all about the customer
+## B2B? B2C? It's all about the customer
 
 B2B software has rarely focussed on design and usability, with the reasoning given that it's not part of the decision making criteria for a business. So it's just a distraction.
 
@@ -89,7 +89,7 @@ And the rest is history.
 
 Our brand and design helped us stand out and it benefitted us in ways we had not planned for when we decided to build a payment gateway in 2015.
 
-# State of Design Now
+## State of Design Now
 
 From the initial count of 2, we are now a 23 people strong design team. In the last year, Razorpay's design won the Nasscom Design4India 2019 award. 
 

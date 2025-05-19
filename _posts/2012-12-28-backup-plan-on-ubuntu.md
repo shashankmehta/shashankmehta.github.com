@@ -18,7 +18,7 @@ Since I use Ubuntu on daily basis, I tried Deja Dup. As advertised, the backup p
 
 Any experienced Linux guy would have realised by now what I'm getting at. When you do remove the cruft what you get is `rsync` and `cron`. A bash script is enough to take care of my backing up needs.
 
-# Partition setup
+## Partition setup
 ### Internal (640 GB HDD)
 
 - 60 GB Windows (ntfs)

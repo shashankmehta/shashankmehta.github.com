@@ -1,14 +1,15 @@
 ---
-layout: layout25
+layout: base
 permalink: /
 ---
 
-<section class="layout25-intro">
-  <p class="layout25-pronunciation">I'm {{ site.author.name }}.</p>
-  <p class="layout25-bio">I'm a founder, writer, creator, investor, MTG player, collector, runner, partner, and parent.</p>
-  <p class="layout25-tagline">I write about ideas across life, work, and culture.</p>
+<section class="intro">
+  <h2>About</h2>
+  <p>I'm {{ site.author.name }}.</p>
+  <p>I'm a founder, writer, creator, investor, MTG player, collector, runner, partner, and parent.</p>
+  <p>I write about ideas across life, work, and culture.</p>
 </section>
-
+<hr />
 {% assign post_count = 10 %}
 {% assign bold_year = true %}
 {% include "posts-list.liquid" %} 

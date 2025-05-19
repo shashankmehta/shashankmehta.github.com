@@ -1,0 +1,7 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+- Before running any SASS commands, note that the user is running a `sass --watch` command.
+- Before running any npm scripts from package.json, note that the user is running `npm run dev` generally by default

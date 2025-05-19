@@ -1,28 +1,29 @@
-<section class="layout25-writings">
+<section>
   <h2>Posts</h2>
-  <ul class="layout25-posts">
-    {% assign posts = collections.posts %}
-    {% assign max_posts = post_count | default: 10 %}
-    
+  {% assign posts = collections.posts %}
+  {% assign max_posts = post_count | default: 10 %}
+  
+  <div class="posts-list">
     {% for post in posts %}
       {% if all_posts != true and forloop.index > max_posts %}
         {% break %}
       {% endif %}
-      <li class="layout25-post-item">
-        <time datetime="{{ post.date | date: '%Y-%m-%d' }}" class="layout25-post-date">
-          <span class="layout25-post-month">{{ post.date | date: '%b' }}</span>
-          <span class="layout25-post-year {% if bold_year %}layout25-post-year-bold{% endif %}">{{ post.date | date: '%Y' }}</span>
+      <div class="post-item grid">
+        <time datetime="{{ post.date | date: '%Y-%m-%d' }}">
+          {{ post.date | date: '%b' }}
+          <span {% if bold_year %}class="bold"{% endif %}>{{ post.date | date: '%Y' }}</span>
         </time>
-        <div class="layout25-post-title-wrapper">
-          <a href="{{ post.url }}" class="layout25-post-link">{{ post.data.title }}</a>
+        <div>
+          <a href="{{ post.url }}">{{ post.data.title }}</a>
           {% if post.data.draft %}
-            <span class="layout25-draft-badge">Draft</span>
+            <span class="badge draft">Draft</span>
           {% endif %}
         </div>
-      </li>
+      </div>
     {% endfor %}
-  </ul>
+  </div>
+  
   {% if show_more_link != false and all_posts != true %}
-  <a href="/blog" class="layout25-more-link">More Posts →</a>
+    <a href="/blog" class="more-posts">More Posts →</a>
   {% endif %}
 </section> 

@@ -1,13 +1,22 @@
-<div class="layout25-profile">
-  <img src="/images/dp.jpeg" alt="{{ site.author.name }}" class="layout25-avatar">
-  <div class="layout25-profile-content">
-    <h1 class="layout25-name">{{ site.author.name }}</h1>
-    <nav class="layout25-nav">
-      <a href="/">Home</a>
-      <a href="/blog">Blog</a>
-      <a href="/about">About</a>
-      <a href="{{ site.author.x}}">X/Twitter</a>
-      <a href="{{ site.author.linkedin}}">LinkedIn</a>
+<header class="grid">
+  <figure class="profile-image">
+    <img src="/images/dp.jpeg" alt="{{ site.author.name }}">
+  </figure>
+  <div>
+    <h1>
+      {{ site.author.name }}
+      {% include "theme-toggle.liquid" %}
+    </h1>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="{{ site.author.x}}">X/Twitter</a></li>
+        <li><a href="{{ site.author.linkedin}}">LinkedIn</a></li>
+      </ul>
     </nav>
   </div>
-</div>
+  
+</header>
+<hr />

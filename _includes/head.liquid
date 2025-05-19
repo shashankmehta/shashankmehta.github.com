@@ -17,28 +17,17 @@
       const storedTheme = localStorage.getItem('theme');
       const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
       
-      // Remove any existing theme classes
-      document.documentElement.classList.remove('light-mode', 'dark-mode', 'system-mode', 'light-appearance', 'dark-appearance');
-      
       if (storedTheme === 'dark') {
-        document.documentElement.classList.add('dark-mode');
+        document.documentElement.dataset.theme = 'dark';
       } else if (storedTheme === 'light') {
-        document.documentElement.classList.add('light-mode');
+        document.documentElement.dataset.theme = 'light';
       } else {
         // System preference
-        document.documentElement.classList.add('system-mode');
-        if (prefersDarkScheme.matches) {
-          document.documentElement.classList.add('dark-appearance');
-        } else {
-          document.documentElement.classList.add('light-appearance');
-        }
+        document.documentElement.dataset.theme = prefersDarkScheme.matches ? 'dark' : 'light';
       }
     })();
   </script>
-  <link rel="stylesheet" href="/css/layout25.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
   
   {% if og_image %}
     <meta property="og:image" content="{{site.url}}/images/posts/{{ og_image }}" />

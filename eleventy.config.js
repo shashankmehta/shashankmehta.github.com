@@ -101,17 +101,9 @@ export default async function(eleventyConfig) {
     });
     
     // Add site-wide data (equivalent to Jekyll's _config.yml settings)
-    eleventyConfig.addGlobalData("site", {
-        name: "Shashank Mehta",
-        url: "http://shashankmehta.in",
-        description: "Heading product for RazorpayX, building the future of business banking. Early bird (#7) at @Razorpay. Forever hoarse throat thanks to ManUtd.",
-        twitter: "shashankmehta05",
-        github: "leostatic",
-        gravatar_url: "http://www.gravatar.com/avatar/91d05b8aab2671b4abc8a8c76435bf5a",
-        googleplus_user: '109764126807838271120',
-        googleplus_hidden: false,
-        google_analytics_tracking_id: "UA-32545112-1"
-    });
+    // eleventyConfig.addGlobalData("site", {
+        
+    // });
     
     // Configure Markdown parsing options
     eleventyConfig.setFrontMatterParsingOptions({

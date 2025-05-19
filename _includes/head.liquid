@@ -4,10 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>
-    {% if title %}
-      {{ title }} &ndash;
-    {% endif %}
-    {{ site.title }}
+    {% if title %}{{ title }}{% else %}Shashank Mehta{{ site.title }}{% endif %}
   </title>
   <meta name="description" content="{{ site.description }}">
   <!-- Set theme immediately to prevent flash -->
@@ -47,7 +44,7 @@
   {% endif %}
 
   <meta property="og:type" content="article" />
-  <meta name="twitter:site" content="@{{ site.twitter }}">
-  <meta name="twitter:creator" content="@{{ site.twitter }}">
+  <meta name="twitter:site" content="@{{ site.author.x.handle }}">
+  <meta name="twitter:creator" content="@{{ site.author.x.handle }}">
   <meta name="twitter:url" content="{{site.url}}{{page.url}}">
 </head>

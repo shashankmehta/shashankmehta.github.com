@@ -5,22 +5,67 @@
 </button>
 
 <script>
+  // Helper function to update the button icon based on current theme
+  function updateThemeIcon(theme) {
+    const themeToggle = document.getElementById('theme-toggle');
+    themeToggle.setAttribute('data-mode', theme);
+  }
+
+  // Initialize theme on page load
+  document.addEventListener('DOMContentLoaded', function() {
+    const html = document.documentElement;
+    const savedTheme = localStorage.getItem('theme');
+    
+    if (savedTheme) {
+      // If user has a saved preference, use it
+      if (savedTheme !== 'system') {
+        html.dataset.theme = savedTheme;
+        updateThemeIcon(savedTheme);
+      } else {
+        // Using system preference
+        updateThemeIcon('system');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        html.dataset.theme = prefersDark ? 'dark' : 'light';
+      }
+    } else {
+      // Default to system
+      // localStorage.setItem('theme', 'system');
+      updateThemeIcon('system');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      html.dataset.theme = prefersDark ? 'dark' : 'light';
+    }
+  });
+
   // Toggle theme when button is clicked - cycle between light, dark, and system
   function toggleTheme() {
     const html = document.documentElement;
 
     // Determine current state. We persist it in localStorage (default = "system")
     const current = localStorage.getItem('theme') || 'system';
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    // Compute next state based on current state and system preference
+    let next;
+    
+    if (current === 'system') {
+      // If in system mode, go to the opposite of what system currently shows
+      next = systemPrefersDark ? 'light' : 'dark';
+    } else if (current === 'dark') {
+      next = 'light';
+    } else { // current === 'light'
+      next = 'system';
+    }
 
-    // Compute next state in the cycle: light → dark → system → light …
-    const next = current === 'light' ? 'dark'
-               : current === 'dark'  ? 'system'
-               :                       'light'; // current === 'system'
+    // Update button icon
+    updateThemeIcon(next);
 
     // Apply the next state
     if (next === 'system') {
       // Follow OS preference – remove manual override
       delete html.dataset.theme;
+      // Apply current system preference
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      html.dataset.theme = prefersDark ? 'dark' : 'light';
     } else {
       html.dataset.theme = next;
     }

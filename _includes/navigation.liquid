@@ -1,10 +1,22 @@
-<section class="navigation">
-  <div class="holder">
-    SM
-    <div class="nav">
-      <a href="/">Home</a> <br>
-      <a href="/blog">Blog</a> <br>
-      <a href="https://www.linkedin.com/in/mehta-shashank/">About</a> <br>
-    </div>
+<header class="grid">
+  <figure class="profile-image">
+    <img src="/images/dp.jpeg" alt="{{ site.author.name }}">
+  </figure>
+  <div>
+    <h1>
+      {{ site.author.name }}
+      {% include "theme-toggle.liquid" %}
+    </h1>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        {% comment %} <li><a href="/blog">Blog</a></li> {% endcomment %}
+        {% comment %} <li><a href="/about">About</a></li> {% endcomment %}
+        <li><a href="{{ site.author.x.link}}" target="_blank">X/Twitter</a></li>
+        <li><a href="{{ site.author.linkedin}}" target="_blank">LinkedIn</a></li>
+      </ul>
+    </nav>
   </div>
-</section>
+  
+</header>
+<hr />

@@ -1,106 +1,151 @@
 ---
-description: This file covers the overall architecture of the project
+description: 
 globs: 
 alwaysApply: false
 ---
-# Jekyll to Eleventy Migration Architecture
+# Site Architecture Documentation
 
-This document outlines the architecture of the blog after migrating from Jekyll to Eleventy.
+## Overview
+This is a personal website with a blog built using Eleventy (11ty), a modern static site generator. The site features a responsive design with light/dark mode support and is deployed on GitHub Pages.
 
-## Overall Structure
-
-The site maintains the same URL structure and visual appearance as the original Jekyll site while modernizing the build system with Eleventy. The migration strategy focused on preserving content and design while updating the underlying technology.
+## Technology Stack
+- **Static Site Generator**: Eleventy (11ty)
+- **Templating**: Liquid
+- **Styling**: SCSS (compiled to CSS)
+- **Deployment**: GitHub Pages
 
 ## Directory Structure
 
-- **Root** - Contains main pages and configuration files
-  - `index.html` - Homepage
-  - `blog/index.html` - Blog listing page
-  - `eleventy.config.js` - Eleventy configuration
-  - `package.json` - NPM package configuration
-  
-- **_posts/** - Contains all blog posts as Markdown files with frontmatter
-  - Format: `YYYY-MM-DD-title.md`
-  
-- **_layouts/** - Template layouts for different page types
-  - `layout.html` - Base layout for most pages
-  - `blog.html` - Layout for blog listing
-  - `post.html` - Layout for individual blog posts
-  - `slickjs.html` - Special layout for slick.js showcase
-  
-- **_includes/** - Reusable components
-  - `head.liquid` - HTML head with metadata, styles, and scripts
-  - `navigation.liquid` - Site navigation component
-  - `footer.liquid` - Site footer with analytics scripts
-  
-- **css/** - Stylesheets
-  - `base.css` - Main stylesheet
-  - `pure.css` - Pure CSS framework
-  - `pygments.css` - Code highlighting styles
-  
-- **_site/** - Generated static site (output)
+### Core Directories
+- `_layouts/`: Contains HTML layout templates with Liquid templating
+- `_includes/`: Contains reusable UI components as Liquid files
+- `_posts/`: Contains blog posts in Markdown format
+- `pages/`: Contains public pages like /, /blog, /setup, etc.
+- `_assets/`: Contains all static assets (CSS, JS, images, fonts)
+- `_site/`: Output directory (generated during build, not in source control)
 
-## Template Engine
+### Key Files
+- `package.json`: Node dependencies and build scripts
+- `eleventy.config.js`: Eleventy configuration
+- `_data/site.json`: Site metadata and author information
 
-The site uses Liquid as the primary templating language, maintaining compatibility with the original Jekyll templates while leveraging Eleventy's flexibility.
+## Build System
 
-## Data Structure
+### Build Process
+The build process is defined in `package.json` scripts:
+```
+"clean": "rm -rf _site",
+"build": "npm run clean && cross-env ENVIRONMENT=prod npm run sass && npx @11ty/eleventy",
+"serve": "npm run clean && cross-env ENVIRONMENT=prod npm run sass && npx @11ty/eleventy --serve --quiet",
+"sass": "sass _assets/css/base.scss _assets/css/base.css --source-map",
+"dev": "npm run clean && run-p d:*"
+```
 
-- `site` - Global site data (equivalent to Jekyll's _config.yml)
-  - `name` - Site name
-  - `description` - Site description
-  - `twitter` - Twitter handle
-  - `url` - Site URL
-  - `github` - GitHub username
-  - etc.
+Important notes:
+- `_site` is deleted before each build to ensure consistency with GitHub Pages builds
+- During development, Eleventy runs in watch mode and SASS conversion also runs in watch mode
+
+### Deployment
+Deployment is handled automatically through GitHub Actions as defined in `.github/workflows/build-deploy.yml`. The site is built and deployed to the `gh-pages` branch.
+
+## Content Structure
+
+### Pages
+- Located in the `pages/` directory
+- Have public URLs like /, /blog, /setup, /about
+- Use HTML files with Liquid templating
+
+### Blog Posts
+- Located in the `_posts/` directory
+- Written in Markdown format
+- File naming format: `YYYY-MM-DD-title.md`
+- Have URLs in the format `/archive/YYYY/title.html`
+
+### Special Content Properties
+- `draft: true`: When added to a post's front matter, the post will only appear in development mode
+
+## Template System
+
+### Layouts
+- Located in `_layouts/` directory
+- Main layout: `layout25.html` (custom layout system)
+- Post layout: `post.html` (extends layout25.html)
+
+### Components
+- Located in `_includes/` directory
+- File extension: `.liquid`
+- Examples: `navigation.liquid`, `posts-list.liquid`, `footer.liquid`
+
+### Navigation
+- Navigation is manually defined in `_includes/navigation.liquid`
+- Links to main pages and external profiles
 
 ## Collections
 
-- `collections.posts` - All blog posts, sorted by date (newest first)
-  - Generated from files in the `_posts/` directory
+### Posts Collection
+- Defined in `eleventy.config.js`
+- Includes all blog posts from the `_posts/` directory
+- Sorted by date (newest first)
+- Draft posts are filtered out in production builds
 
-## URL Structure
+## Styling System
 
-- `/` - Homepage
-- `/blog` - Blog listing
-- `/archive/:year/:title.html` - Individual blog posts (maintaining Jekyll URL format)
-- `/setup`, `/about`, etc. - Other static pages
+### CSS Architecture
+- SCSS is used for styling (`_assets/css/` directory)
+- Main files:
+  - `pico.css` framework being used through its sass module
+  - `main.scss`: Main file. @use pico and @use site-override
+  - `site-overrides.scss`: custom css to override pico
+- Only main.css file is built and included in html
+- Always edit the SCSS files only, never the generated CSS files
 
-## Components
+### Theme System
+The site implements a theme toggle system allowing users to switch between:
+- Light mode
+- Dark mode
+- System preference
 
-### Navigation (`navigation.liquid`)
-The site navigation is implemented as a reusable component, providing consistent navigation across all pages.
+Implementation:
+- Theme variables are defined in SCSS
+- Theme state is stored in localStorage
+- Toggle button is included in `_includes/theme.liquid`
+- Theme is applied through CSS variables and HTML classes
 
-### Head (`head.liquid`)
-Contains common meta tags, stylesheets, Open Graph data, and other elements needed in the HTML `<head>` section.
+### Responsive Design
+- Mobile-first approach to CSS
+- Breakpoints defined in media queries within SCSS files
+- Fluid layouts that adapt to different screen sizes
 
-### Footer (`footer.liquid`)
-Contains analytics scripts and other footer elements that should be included on all pages.
+## Asset Handling
 
-## Build Process
+### Images
+- Handled by Eleventy's official image plugin (@11ty/eleventy-img)
+- Optimized during build process
 
-1. Eleventy processes all templates and Markdown files
-2. Assets like CSS, JavaScript, and images are copied to the output directory
-3. Blog posts are organized into the `/archive/:year/:title.html` structure
-4. The site is generated in the `_site/` directory
+### Static Assets
+- CSS, JS, images, and fonts are in the `_assets/` directory
+- Passthrough copy is configured in `eleventy.config.js`
 
-## Key Configuration
+## Performance Considerations
+- Mobile-first build optimization
+- Semantically correct HTML (e.g., using proper list elements)
+- Page load time optimization
+- Cross-browser compatibility (modern browsers)
+- Cross-platform compatibility (mobile devices)
 
-The `eleventy.config.js` file is the central configuration that:
+## Development Guidelines
 
-1. Sets up collections for blog posts
-2. Configures permalinks to match the original Jekyll URL structure
-3. Adds syntax highlighting for code blocks
-4. Defines filters for date formatting
-5. Provides global site data
-6. Configures Markdown parsing options
+### General Principles
+- Only use Eleventy (no Jekyll compatibility)
+- Keep CSS scoped and specific to avoid conflicts
+- Use semantic HTML elements
 
-## Migration Differences
+### Component Creation
+- Follow existing naming conventions
+- Support both light and dark themes
+- Implement responsive behavior as needed
 
-1. **Data References**: Jekyll's `site.variable` references are maintained in Eleventy using the same structure
-2. **Template Extensions**: Files use `.liquid` extension for clearer identification of template type
-3. **Component Structure**: The site was reorganized to use a more component-based approach, with navigation, head, and footer as separate components
-
-## Generated Output
-
-The static site output in the `_site/` directory maintains the same structure and URLs as the original Jekyll site, ensuring a seamless transition for users and preserving SEO benefits. 
+### Style Guidelines
+- CSS is written using SCSS
+- Keep styles scoped to specific components
+- Always edit the SCSS files, never edit generated CSS directly

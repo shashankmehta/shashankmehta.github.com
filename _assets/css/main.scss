@@ -1,0 +1,33 @@
+/* 
+ * Main SCSS file using Sass @use import
+ */
+
+// Configure Pico variables before importing
+$theme-color: "red";
+
+// Import Pico CSS from node_modules
+@use "@picocss/pico/scss/pico.scss" with (
+  $theme-color: "orange",
+  $enable-semantic-container: true,
+  $enable-classes: true,
+  $modules: (
+    "forms/input-color": false,
+    "forms/input-date": false,
+    "forms/input-file": false,
+    "forms/input-range": false,
+    "forms/input-search": false,
+    "components/accordion": false,
+    "components/card": false,
+    "components/dropdown": false,
+    "components/loading": false,
+    "components/modal": false,
+    "components/nav": false,
+    "components/progress": false,
+    "components/tooltip": false
+  )
+);
+
+@use '_theme-toggle';
+
+// Import site overrides with the custom CSS variables
+@use '_site-overrides'; 

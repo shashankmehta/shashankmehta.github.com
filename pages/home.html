@@ -1,0 +1,22 @@
+---
+layout: base
+permalink: /
+---
+
+<section class="intro">
+  <h2>About</h2>
+  <p>I'm {{ site.author.name }} and this is my corner of the internet.</p>
+  <p>I'm currently tinkering with ideas in the intersection of tech and AI, and investing in early stage startups via <a href="https://marsshot.vc" target="_blank">Mars Shot VC</a>.</p>
+  <p>
+    <b>Past:</b> Employee #7 at <a href="https://razorpay.com" target="_blank">Razorpay</a>; 
+    spent 9 years building payments, banking & lending products; 
+    across tech, product & business leadership roles.
+  </p>
+  <p>
+    <b>Connect:</b> DM on X/Twitter: <a href="https://x.com/{{ site.author.x.link }}" target="_blank">@{{ site.author.x.handle }}</a>
+  </p>
+</section>
+<hr />
+{% assign all_posts = true %}
+{% assign bold_year = true %}
+{% include "posts-list.liquid" %} 

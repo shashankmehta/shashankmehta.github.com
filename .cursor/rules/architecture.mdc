@@ -93,8 +93,10 @@ Deployment is handled automatically through GitHub Actions as defined in `.githu
 ### CSS Architecture
 - SCSS is used for styling (`_assets/css/` directory)
 - Main files:
-  - `base.scss`: Core styles
-  - `layout25.scss`: Layout-specific styles
+  - `pico.css` framework being used through its sass module
+  - `main.scss`: Main file. @use pico and @use site-override
+  - `site-overrides.scss`: custom css to override pico
+- Only main.css file is built and included in html
 - Always edit the SCSS files only, never the generated CSS files
 
 ### Theme System

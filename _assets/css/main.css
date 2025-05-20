@@ -1937,7 +1937,7 @@ header.grid nav ul li {
 }
 
 .post-item {
-  grid-template-columns: 90px 1fr;
+  grid-template-columns: 100px 1fr;
   margin-bottom: var(--pico-block-spacing-vertical);
   --grid-spacing-horizontal: var(--pico-spacing);
 }

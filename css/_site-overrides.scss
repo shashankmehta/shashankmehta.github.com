@@ -4,9 +4,66 @@
  * Custom styles and modifications go here
  */ 
 
-/* Set custom primary color (overriding Pico's red theme) */
+/*
+ * Calculations for custom font sizes:
+ * xs < 576 px → 18 px → 112.5% (16 px · 1.125 = 18 px)
+ * sm ≥ 576 px → ≈19 px → 118.75%
+ * md ≥ 768 px → 20 px → 125%
+ * lg ≥ 1024 px → 21 px → 131.25%
+ * xl ≥ 1280 px → 22 px → 137.5%
+ * xxl ≥ 1536 px → 23 px → 143.75%
+ */
 :root {
   --pico-font-family: "Lato", sans-serif;
+  --pico-line-height: 1.6;         /* Adjust line height for better readability */
+  
+  --pico-font-size: 112.5%;
+
+  /* Custom heading sizes - these will scale with the base font size */
+  --pico-font-size-h1: 1.5rem;
+  --pico-font-size-h2: 1.25rem;
+  --pico-font-size-h3: 1.15rem;
+  --pico-font-size-h4: 1rem;
+  --pico-font-size-h5: 1rem;
+  --pico-font-size-h6: 1rem;
+}
+
+/* Override the actual heading styles */
+h1 { font-size: var(--pico-font-size-h1); }
+h2 { font-size: var(--pico-font-size-h2); }
+h3 { font-size: var(--pico-font-size-h3); }
+h4 { font-size: var(--pico-font-size-h4); }
+h5 { font-size: var(--pico-font-size-h5); }
+h6 { font-size: var(--pico-font-size-h6); }
+
+@media (min-width: 576px) {
+  :root {
+    --pico-font-size: 112.5%;
+  }
+}
+@media (min-width: 768px) {
+  :root {
+    --pico-font-size: 112.5%;
+  }
+}
+@media (min-width: 1024px) {
+  :root {
+    --pico-font-size: 118.75%;
+  }
+}
+@media (min-width: 1280px) {
+  :root {
+    --pico-font-size: 125%;
+  }
+}
+@media (min-width: 1536px) {
+  :root {
+    --pico-font-size: 131.25%;
+  }
+}
+
+html {
+  // font-size: clamp(1.125rem, 1.125rem + 0.35vw, 1.3125rem);
 }
 
 /* Theme-specific style overrides */
@@ -60,7 +117,7 @@ header {
  * Navigation customisation
  */
 header.grid {
-  grid-template-columns: 140px 1fr 24px;
+  grid-template-columns: 140px 1fr;
   align-items: center;
 
   .profile-image {
@@ -74,6 +131,11 @@ header.grid {
     }
   }
 
+  h1.grid {
+    grid-template-columns: 1fr 20px;
+    gap: calc(var(--pico-spacing) * 0.1);
+  }
+
   nav ul {
     display: flex;
     gap: var(--pico-spacing);
@@ -83,11 +145,23 @@ header.grid {
     li {
       list-style: none;
     }
+  }
 
-    @media (max-width: 600px) {
-      gap: calc(var(--pico-spacing) * 0.75);
+  @media (max-width: 600px) {
+    grid-template-columns: 100px 1fr;  /* Adjust grid columns for mobile */
+
+    .profile-image img {
+      width: 100px;
+      height: 100px;
+    }
+
+    nav ul {
+      gap: calc(var(--pico-spacing) * 0.5);
       flex-wrap: wrap;
-      justify-content: center;
+    }
+
+    h1 {
+      font-size: 1.7rem;
     }
   }
 }
@@ -186,4 +260,13 @@ article {
       margin-bottom: 0;
     }
   }
-} 
+}
+
+img {
+  display: block;
+  margin: auto;
+
+  &.img-limit-height {
+    max-height: 800px;
+  }
+}

@@ -6,6 +6,9 @@ export default async function(eleventyConfig) {
     // Import the syntax highlighting plugin for code blocks
     const syntaxHighlight = await import("@11ty/eleventy-plugin-syntaxhighlight");
     eleventyConfig.addPlugin(syntaxHighlight.default);
+
+    const markdownItAttrs = await import('markdown-it-attrs');
+    eleventyConfig.amendLibrary("md", (mdLib) => mdLib.use(markdownItAttrs.default));
     
     // Enable drafts in development mode if ELEVENTY_ENV is set to "development"
     const isDevelopment = process.env.ENVIRONMENT === "dev";

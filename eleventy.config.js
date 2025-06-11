@@ -10,8 +10,8 @@ export default async function(eleventyConfig) {
     const markdownItAttrs = await import('markdown-it-attrs');
     eleventyConfig.amendLibrary("md", (mdLib) => mdLib.use(markdownItAttrs.default));
     
-    // Enable drafts in development mode if ELEVENTY_ENV is set to "development"
-    const isDevelopment = process.env.ENVIRONMENT === "dev";
+    // Enable development features when ELEVENTY_ENV is set to "development" or "dev"
+    const isDevelopment = process.env.ELEVENTY_ENV === "development" || process.env.ENVIRONMENT === "dev";
 
     // Copy static assets directly to the output folder
     eleventyConfig.addPassthroughCopy({
@@ -104,9 +104,7 @@ export default async function(eleventyConfig) {
     });
     
     // Add site-wide data (equivalent to Jekyll's _config.yml settings)
-    // eleventyConfig.addGlobalData("site", {
-        
-    // });
+    eleventyConfig.addGlobalData("isDevelopment", isDevelopment);
     
     // Configure Markdown parsing options
     eleventyConfig.setFrontMatterParsingOptions({

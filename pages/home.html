@@ -17,6 +17,18 @@ permalink: /
   </p>
 </section>
 <hr />
+{% if isDevelopment %}
+<section class="evergreen-pages">
+  <h2>Evergreen Pages</h2>
+  <ul>
+    <li><a href="/now">Now</a>: What I am up to</li>
+    <li><a href="/health">Health</a>: What I do to stay healthy</li>
+    <li><a href="/setup">Setup</a>: How I setup for work</li>
+    <li><a href="/ai-prompts">AI Prompts</a>: Collection of prompts that work for me</li>
+  </ul>
+</section>
+<hr />
+{% endif %}
 {% assign all_posts = true %}
 {% assign bold_year = true %}
 {% include "posts-list.liquid" %} 

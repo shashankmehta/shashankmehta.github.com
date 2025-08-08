@@ -89,6 +89,14 @@ body > .container {
 /**
  * HTML Element overrides
  */
+section {
+  padding: var(--pico-block-spacing-vertical) 0;
+
+  ul:last-child {
+    margin-bottom: 0;
+  }
+}
+
 a {
   text-decoration: none;
 }
@@ -251,8 +259,6 @@ article {
 
 /* Home page */
 .intro {
-  padding: var(--pico-block-spacing-vertical) 0;
-  
   p {
     color: var(--pico-h2-color);
     

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    Making Sense of OpenAI’s ChatGPT With GPT-5
+  </title>
+  <meta name="description" content="Personal website & blog">
+  <!-- Set theme immediately to prevent flash -->
+  <script>
+    // Immediately set the theme before any content renders
+    (function() {
+      const storedTheme = localStorage.getItem('theme');
+      const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+      
+      if (storedTheme === 'dark') {
+        document.documentElement.dataset.theme = 'dark';
+      } else if (storedTheme === 'light') {
+        document.documentElement.dataset.theme = 'light';
+      } else {
+        // System preference
+        document.documentElement.dataset.theme = prefersDarkScheme.matches ? 'dark' : 'light';
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="/css/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Sometype+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="/images/dp.jpeg" type="image/jpeg">
+  <link rel="apple-touch-icon" href="/images/dp.jpeg">
+  
+  
+    <meta property="og:image" content="https://shashankmehta.in/images/posts/2025-08-08/post-header.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://shashankmehta.in/images/posts/2025-08-08/post-header.png" />
+  
+
+  
+    <meta property="og:title" content="Making Sense of OpenAI’s ChatGPT With GPT-5" />
+    <meta name="twitter:title" content="Making Sense of OpenAI’s ChatGPT With GPT-5">
+  
+
+  
+
+  <meta property="og:type" content="article" />
+  <meta name="twitter:site" content="@shashankmehta05">
+  <meta name="twitter:creator" content="@shashankmehta05">
+  <meta name="twitter:url" content="https://shashankmehta.in/archive/2025/gpt-5-chatgpt.html">
+</head>
+<body>
+  <div class="container">
+    <header class="grid">
+  <figure class="profile-image">
+    <img src="/images/dp.jpeg" alt="Shashank Mehta">
+  </figure>
+  <div>
+    <h1 class="grid">
+      Shashank Mehta
+      <button id="theme-toggle" aria-label="Toggle dark/light mode" onclick="toggleTheme()">
+  <svg class="light-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+  <svg class="dark-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+  <svg class="system-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+</button>
+
+<script>
+  // Helper function to update the button icon based on current theme
+  function updateThemeIcon(theme) {
+    const themeToggle = document.getElementById('theme-toggle');
+    themeToggle.setAttribute('data-mode', theme);
+  }
+
+  // Initialize theme on page load
+  document.addEventListener('DOMContentLoaded', function() {
+    const html = document.documentElement;
+    const savedTheme = localStorage.getItem('theme');
+    
+    if (savedTheme) {
+      // If user has a saved preference, use it
+      if (savedTheme !== 'system') {
+        html.dataset.theme = savedTheme;
+        updateThemeIcon(savedTheme);
+      } else {
+        // Using system preference
+        updateThemeIcon('system');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        html.dataset.theme = prefersDark ? 'dark' : 'light';
+      }
+    } else {
+      // Default to system
+      // localStorage.setItem('theme', 'system');
+      updateThemeIcon('system');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      html.dataset.theme = prefersDark ? 'dark' : 'light';
+    }
+  });
+
+  // Toggle theme when button is clicked - alternate between system and opposite manual mode
+  function toggleTheme() {
+    const html = document.documentElement;
+
+    // Determine current state. We persist it in localStorage (default = "system")
+    const current = localStorage.getItem('theme') || 'system';
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    let next;
+    
+    if (current === 'system') {
+      // If in system mode, switch to manual opposite
+      next = systemPrefersDark ? 'light' : 'dark';
+    } else {
+      // If in any manual mode, switch back to system
+      next = 'system';
+    }
+
+    // Update button icon
+    updateThemeIcon(next);
+
+    // Apply the next state
+    if (next === 'system') {
+      // Follow OS preference – remove manual override
+      delete html.dataset.theme;
+      // Apply current system preference
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      html.dataset.theme = prefersDark ? 'dark' : 'light';
+    } else {
+      html.dataset.theme = next;
+    }
+
+    // Persist the choice for future visits
+    localStorage.setItem('theme', next);
+  }
+  
+  // Listen for system preference changes
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+    if (!localStorage.getItem('theme') || localStorage.getItem('theme') === 'system') {
+      document.documentElement.dataset.theme = event.matches ? 'dark' : 'light';
+    }
+  });
+</script> 
+    </h1>
+    <nav class="grid">
+      <ul>
+        <li><a href="/">Home</a></li>
+        
+        
+        <li><a href="https://x.com/shashankmehta05" target="_blank">X/Twitter</a></li>
+        <li><a href="https://www.linkedin.com/in/mehta-shashank/" target="_blank">LinkedIn</a></li>
+      </ul>
+    </nav>
+  </div>
+  
+</header>
+<hr />
+
+
+    <main>
+      
+<article>
+  <nav>
+    <a id="back-button" href="/" class="secondary">&larr; Back</a>
+  </nav>
+
+  
+
+  <header>
+    <h1>Making Sense of OpenAI’s ChatGPT With GPT-5</h1>
+    <time datetime="2025-08-08">August  8, 2025</time>
+  </header>
+
+  <div>
+    <h2>Status Quo</h2>
+<hr>
+<p>Until yesterday, Free Plan users were on 4o, a decent model, but clearly inferior to o3 even on simple day-to-day queries. For any serious usage with real intelligence, you needed to use o3, which required at least the Plus Plan ($20/mo).</p>
+<p>Even with access to o3, you had to decide when to use 4o vs o3, first by figuring out which model to use (never obvious), then by managing limits (o3 had much lower limits).</p>
+<p>For true power users who needed <strong>high usage limits</strong>, the Pro Plan ($200/mo) was the way to go; it was essentially about getting more limits.</p>
+<h2>GPT-5 For Everyone: A New Baseline For AI Chat In The Market</h2>
+<hr>
+<p>With GPT-5, OpenAI has set a new baseline and a new way of interacting with models of different calibre.</p>
+<p>GPT-5 is now the default model, which is:</p>
+<ul>
+<li>Better than o3 (in GPT-5-Thinking mode)</li>
+<li>Vastly superior to 4o (even without thinking mode)</li>
+<li>Available for all users, even Free Plan, with thinking mode</li>
+</ul>
+<p>According to the benchmarks published, performance order is: <strong>GPT-5-Thinking &gt; o3 &gt; GPT-5 without thinking &gt; 4o</strong>.</p>
+<p>But even with GPT-5 without thinking being inferior to o3, OpenAI has a new trick up their sleeve.</p>
+<h3>A New Way Of Accessing More Reasoning</h3>
+<p>A key feature of GPT‑5 is a <strong>router</strong> that automatically upgrades your queries to GPT-5-Thinking mode without making you fiddle with a poorly understood model selector.</p>
+<blockquote>
+<p>GPT‑5 is a unified system with a <strong>smart, efficient model</strong> that answers most questions, a <strong>deeper reasoning model</strong> (GPT‑5 thinking) for harder problems, and a <strong>real‑time router</strong> that quickly decides which to use - <a href="https://openai.com/index/introducing-gpt-5/">OpenAI Blog</a></p>
+</blockquote>
+<p>If you don’t want to depend on the router (and early testing seems to indicate that router isn’t perfect yet), there’s an official, new interesting way of accessing more intelligence/reasoning: ask the model to “think longer”.</p>
+<p>For majority users, this is a better UX than the earlier model selector one. It is still quite clunky and not user friendly enough <em>(when should I ask it to think longer, why do I need to ask it to think longer??)</em>. But far better than the model selector UX.</p>
+<p>They have also added a dropdown toggle for “think longer”. But I feel we are still in super early days of UX interaction design for talking with AI. Neither of these are natural ways of thinking deeper in a human to human conversation.</p>
+<p>IMO we need a UX that more closely mimics this behavior in real human to human conversation. Something like:</p>
+<ul>
+<li>from top of my mind (when giving a quick, shallow answer)</li>
+<li>let me think deeper about this (when conveying that this is my deeper thought)</li>
+</ul>
+<p>For Paid Plans they do have GPT-5-Thinking model selector but OpenAI’s preferred way for paid plan users to get more reasoning is still via “think longer”.</p>
+<h2>Cost Economics</h2>
+<hr>
+<p>Why did OpenAI wait till GPT-5 before changing the default? They already had o3 which was great. The answer seems to lie in cost economics.</p>
+<p>On one hand OpenAI has made a far more powerful model available as <strong>default</strong> for <strong>Free Plan</strong> users. At the same time, they have harped about how GPT-5 is more token effective than o3:</p>
+<blockquote>
+<p>GPT-5 (with “thinking” mode) achieves similar or better accuracy than o3 while using 50–80% fewer output tokens across tasks like visual reasoning, agentic coding, and graduate-level scientific problem solving. - <a href="https://openai.com/index/introducing-gpt-5/">OpenAI Blog</a></p>
+</blockquote>
+<p>While I doubt OpenAI is too bothered with cost of running ChatGPT generally, it looks like o3 was still cost prohibitive enough to not become a default. It was only accessible in paid plans and wasn’t the default model on Plus/Pro Plans either. 4o was the default.</p>
+<p><strong>GPT-5 hence seems to be even more about setting a new baseline for the market. Better than o3 performance, for everyone, for free</strong>.</p>
+<h2>GPT-5 Experience vs Free/4o users vs Paid/o3 users</h2>
+<hr>
+<h3>GPT-5 vs 4o / Free Plan User’s Experience</h3>
+<p>For the free users, going from 4o to GPT-5 will feel like a massive upgrade. There’s no question that GPT-5 is significantly better than 4o in performance. And with the automatic router to GPT-5-Thinking, the performance difference will be even more significant.</p>
+<p>I think some people will debate if the personality/writing style of GPT-5 is better than 4o or not, but that’s an immaterial point imo, maybe even guided by aversion to change.</p>
+<p>If you need the <strong>bleeding edge of intelligence</strong>, you can also ask the model to “think longer”, which requests the router behind the scenes to use GPT-5-Thinking. Most importantly, this is <strong>available for free users</strong>.</p>
+<p>For free users, this is like going from a Prius to a Tesla Roadster.</p>
+<p><strong>IMO, the upgrade for free users of ChatGPT was the highlight of today’s announcement.</strong></p>
+<h3>GPT-5 &amp; Paid Plan User’s Experience</h3>
+<p>For users on o3, GPT-5 isn’t drastically better in reasoning. Heck, GPT-5 without the Thinking mode is actually inferior to o3, with all benchmarks showing so.</p>
+<p>Hence I believe that Paid Plan users who were manually selecting o3 will still continue to use GPT-5-Thinking mode over GPT-5. They won’t depend on the router. But there’s still a twist, one that changes the positioning of Plus Plan.</p>
+<p>Plus Plan used to be about access to better models primarily. To get o3, you needed the Plus Plan at least. It also had higher limits, but imo Plus Plan was justified for most users because of access to better models than limits. This seems to be changing.</p>
+<p>Free Plan users have access to both GPT-5 and GPT-5-Thinking but with low limits:</p>
+<ul>
+<li>GPT-5 with 10 messages every 5 hours</li>
+<li>GPT-5-Thinking with 1 thinking message per day</li>
+</ul>
+<p>Plus Plan users in addition to exact same models, now have:</p>
+<ul>
+<li>ability to directly select GPT-5-Thinking instead of using “thinking longer”</li>
+<li>GPT-5 with 80 messages every 3 hours</li>
+<li>GPT-5-Thinking with 200 messages per week</li>
+</ul>
+<p>_Source: <a href="https://help.openai.com/en/articles/11909943-gpt-5-in-chatgpt">OpenAI Help Article for GPT-5</a></p>
+<p>This is actually very similar to older Plus Plan:</p>
+<ul>
+<li>model selector for 4o vs o3</li>
+<li>4o with 80 messages every 3 hours</li>
+<li>o3 with 100 messages per week</li>
+</ul>
+<p>There is one major difference though: <strong>automatic upgrades of queries to GPT-5-Thinking through the router</strong> <strong>do not count towards the weekly limits</strong>. It’s a model control vs limits tradeoff, with key dependency on router’s efficiency. It's interesting, because OpenAI has put a limit on GPT-5-Thinking but also given unlimited access via the router!</p>
+<p>In my view, this is OpenAI literally saying that Plus Plans are now about more limits and not about access. If you want more usage or even better models (GPT-5-Pro), you need to upgrade to $200/mo Pro Plan. <strong>This is a major positioning difference for the Plus Plan.</strong></p>
+<h3>GPT-5 vs o3: Effectiveness via Proactiveness</h3>
+<p>Keeping access and limits aside, there’s a key, subtle difference that makes GPT-5 more <em>effective</em> than o3. For most people, the challenge with using ChatGPT is still that you need to ask it to do things but you don’t fully understand what can it do. <strong>GPT-5 is now smarter about <em>anticipating</em> what you may need, and <em>proactively suggests/does things</em> for you too.</strong></p>
+<p>Ethan Mollick has written a great article on this <a href="https://www.oneusefulthing.org/p/gpt-5-it-just-does-stuff?publication_id=1180644&amp;post_id=170319557&amp;isFreemail=true&amp;r=3o9&amp;triedRedirect=true">GPT-5: It Just Does Stuff</a>. I have felt quite similar in my own testing too. Where earlier I would have to ask the somewhat obvious follow up questions, now it seems to answer some of them proactively.</p>
+<p>It’s still not fully there but I think this is going to be the next phase of model improvements: <strong>getting them to practically read your mind</strong>.</p>
+<p>A quick example: A friend was prescribed a magnesium supplement due to low serum magnesium levels. I asked ChatGPT about the prescribed medication, with the intent behind my question being:</p>
+<ul>
+<li>Should she be taking a supplement given the serum levels</li>
+<li>Is this medication the most appropriate one? I had heard different Mg supplements have different absorption rates</li>
+</ul>
+<p>Now power users know that more context you share, you get a better answer. But just think about how people google search. They aren’t used to entering all the details.</p>
+<p>Here’s o3: it answered whether it's ok to supplement. But I had to follow up to ask if this specific medication is the most appropriate one.</p>
+<p><img src="/images/posts/2025-08-08/o3.png" alt="O3 Screenshot"></p>
+<br />
+<p>Here’s GPT-5-Thinking: It answered both parts without any follow up question</p>
+<p><img src="/images/posts/2025-08-08/gpt-5.png" alt="GPT-5 Screenshot"></p>
+<br />
+The future models will be many more steps ahead of our queries, trying to predict the real what behind the poorly formed queries. GPT-5 is an upgrade in that sense over o3 and while power users might feel underwhelmed by the delta between GPT-5 and o3, for most users, this is a major step up.
+<hr>
+
+  </div>
+
+  <footer>
+    <hr />
+    <!-- <div class="grid">
+      <div class="col">
+        <a href="http://twitter.com/share" class="twitter-share-button" data-count="none" data-via="">Tweet</a>
+        <a href="http://twitter.com/" class="twitter-follow-button" data-show-count="false">Follow @</a>
+        <script src="//platform.twitter.com/widgets.js" type="text/javascript"></script>
+      </div>
+    </div> -->
+  </footer>
+</article>
+
+    </main>
+
+    
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-32545112-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+  </div>
+</body>
+</html> 

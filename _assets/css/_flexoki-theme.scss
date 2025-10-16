@@ -1,0 +1,292 @@
+/*
+ * Flexoki palette mapped to Pico custom properties.
+ * Reference: https://github.com/kepano/flexoki
+ */
+:root,
+[data-theme="light"] {
+  color-scheme: light;
+
+  /* Flexoki tokens */
+  --flexoki-paper: #fffcf0;
+  --flexoki-cream: #f2f0e5;
+  --flexoki-sand: #e6e4d9;
+  --flexoki-clay: #d2cebd;
+  --flexoki-subtle: #605a52;
+  --flexoki-ink: #4f4945;
+  --flexoki-muted-text: #6f6758;
+  --flexoki-code-bg: #f5f2e4;
+  --flexoki-shadow: rgba(79, 73, 69, 0.08);
+
+  --flexoki-accent: #205ea6;
+  --flexoki-accent-hover: #1b4f8c;
+  --flexoki-accent-focus: rgba(32, 94, 166, 0.35);
+  --flexoki-accent-contrast: #fffcf0;
+  --flexoki-secondary: #ad8301;
+  --flexoki-secondary-contrast: #fffcf0;
+
+  /* Pico mappings */
+  --pico-background-color: var(--flexoki-paper);
+  --pico-color: var(--flexoki-ink);
+  --pico-text-selection-color: rgba(32, 94, 166, 0.25);
+
+  --pico-muted-color: var(--flexoki-muted-text);
+  --pico-muted-border-color: var(--flexoki-sand);
+
+  --pico-primary: var(--flexoki-accent);
+  --pico-primary-background: var(--flexoki-accent);
+  --pico-primary-border: var(--flexoki-accent);
+  --pico-primary-underline: rgba(32, 94, 166, 0.5);
+  --pico-primary-hover: var(--flexoki-accent-hover);
+  --pico-primary-hover-background: var(--flexoki-accent-hover);
+  --pico-primary-hover-border: var(--flexoki-accent-hover);
+  --pico-primary-hover-underline: rgba(27, 79, 140, 0.5);
+  --pico-primary-focus: var(--flexoki-accent-focus);
+  --pico-primary-inverse: var(--flexoki-accent-contrast);
+
+  --pico-secondary: var(--flexoki-secondary);
+  --pico-secondary-background: #8a6700;
+  --pico-secondary-border: var(--pico-secondary-background);
+  --pico-secondary-underline: rgba(173, 131, 1, 0.45);
+  --pico-secondary-hover: #c0940a;
+  --pico-secondary-hover-background: var(--pico-secondary-hover);
+  --pico-secondary-hover-border: var(--pico-secondary-hover-background);
+  --pico-secondary-hover-underline: rgba(173, 131, 1, 0.55);
+  --pico-secondary-focus: rgba(173, 131, 1, 0.25);
+  --pico-secondary-inverse: var(--flexoki-secondary-contrast);
+
+  --pico-contrast: var(--flexoki-ink);
+  --pico-contrast-background: var(--flexoki-ink);
+  --pico-contrast-border: var(--flexoki-ink);
+  --pico-contrast-underline: rgba(79, 73, 69, 0.5);
+  --pico-contrast-hover: #3b3531;
+  --pico-contrast-hover-background: #3b3531;
+  --pico-contrast-hover-border: #3b3531;
+  --pico-contrast-hover-underline: rgba(59, 53, 49, 0.5);
+  --pico-contrast-focus: rgba(110, 102, 88, 0.25);
+  --pico-contrast-inverse: var(--flexoki-accent-contrast);
+
+  --pico-box-shadow: 0 20px 45px var(--flexoki-shadow);
+
+  --pico-h1-color: #38322d;
+  --pico-h2-color: #3f3833;
+  --pico-h3-color: #4c453f;
+  --pico-h4-color: #5a534b;
+  --pico-h5-color: #655d55;
+  --pico-h6-color: #6f675f;
+
+  --pico-mark-background-color: rgba(173, 131, 1, 0.2);
+  --pico-mark-color: var(--flexoki-ink);
+  --pico-ins-color: #4d7f20;
+  --pico-del-color: #af3029;
+
+  --pico-blockquote-border-color: var(--pico-muted-border-color);
+  --pico-blockquote-footer-color: var(--pico-muted-color);
+
+  --pico-button-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  --pico-button-hover-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+
+  --pico-table-border-color: var(--pico-muted-border-color);
+  --pico-table-row-stripped-background-color: #f1ede0;
+
+  --pico-code-background-color: var(--flexoki-code-bg);
+  --pico-code-color: var(--flexoki-muted-text);
+  --pico-code-kbd-background-color: var(--flexoki-ink);
+  --pico-code-kbd-color: var(--flexoki-paper);
+
+  --pico-form-element-background-color: #fefbf1;
+  --pico-form-element-selected-background-color: var(--flexoki-cream);
+  --pico-form-element-border-color: var(--flexoki-sand);
+  --pico-form-element-color: var(--flexoki-ink);
+  --pico-form-element-placeholder-color: var(--pico-muted-color);
+  --pico-form-element-active-background-color: var(--flexoki-paper);
+  --pico-form-element-active-border-color: var(--pico-primary-border);
+  --pico-form-element-focus-color: var(--pico-primary-border);
+  --pico-form-element-disabled-opacity: 0.55;
+  --pico-form-element-invalid-border-color: #c7665f;
+  --pico-form-element-invalid-active-border-color: #b8545f;
+  --pico-form-element-invalid-focus-color: var(--pico-form-element-invalid-active-border-color);
+  --pico-form-element-valid-border-color: #839c3a;
+  --pico-form-element-valid-active-border-color: #6f8c1f;
+  --pico-form-element-valid-focus-color: var(--pico-form-element-valid-active-border-color);
+
+  --pico-switch-background-color: #e8e3d3;
+  --pico-switch-checked-background-color: var(--pico-primary-background);
+  --pico-switch-color: var(--flexoki-paper);
+  --pico-switch-thumb-box-shadow: 0 3px 7px rgba(32, 94, 166, 0.2);
+
+  --pico-range-border-color: var(--flexoki-sand);
+  --pico-range-active-border-color: #d2cebd;
+  --pico-range-thumb-border-color: var(--pico-background-color);
+  --pico-range-thumb-color: #8a6700;
+  --pico-range-thumb-active-color: var(--pico-primary-background);
+
+  --pico-accordion-border-color: var(--pico-muted-border-color);
+  --pico-accordion-active-summary-color: var(--pico-primary-hover);
+  --pico-accordion-close-summary-color: var(--pico-color);
+  --pico-accordion-open-summary-color: var(--pico-muted-color);
+
+  --pico-card-background-color: var(--pico-background-color);
+  --pico-card-border-color: var(--pico-muted-border-color);
+  --pico-card-box-shadow: var(--pico-box-shadow);
+  --pico-card-sectioning-background-color: #f6f3e6;
+
+  --pico-dropdown-background-color: var(--flexoki-paper);
+  --pico-dropdown-border-color: var(--flexoki-sand);
+  --pico-dropdown-box-shadow: var(--pico-box-shadow);
+  --pico-dropdown-color: var(--flexoki-ink);
+  --pico-dropdown-hover-background-color: var(--flexoki-cream);
+
+  --pico-loading-spinner-opacity: 0.45;
+
+  --pico-modal-overlay-background-color: rgba(242, 240, 229, 0.65);
+
+  --pico-progress-background-color: var(--flexoki-sand);
+  --pico-progress-color: var(--pico-primary-background);
+
+  --pico-tooltip-background-color: var(--pico-contrast-background);
+  --pico-tooltip-color: var(--pico-contrast-inverse);
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  /* Flexoki tokens */
+  --flexoki-paper: #100f0f;
+  --flexoki-cream: #1f1d1a;
+  --flexoki-sand: #2a2825;
+  --flexoki-clay: #37332f;
+  --flexoki-subtle: #514c45;
+  --flexoki-ink: #cecdc3;
+  --flexoki-muted-text: #9f9a90;
+  --flexoki-code-bg: #191816;
+  --flexoki-shadow: rgba(10, 9, 8, 0.5);
+
+  --flexoki-accent: #8ca0d7;
+  --flexoki-accent-hover: #7990c4;
+  --flexoki-accent-focus: rgba(140, 160, 215, 0.35);
+  --flexoki-accent-contrast: #0f0e0e;
+  --flexoki-secondary: #d0a94b;
+  --flexoki-secondary-contrast: #100f0f;
+
+  /* Pico mappings */
+  --pico-background-color: var(--flexoki-paper);
+  --pico-color: var(--flexoki-ink);
+  --pico-text-selection-color: rgba(140, 160, 215, 0.3);
+
+  --pico-muted-color: var(--flexoki-muted-text);
+  --pico-muted-border-color: var(--flexoki-clay);
+
+  --pico-primary: var(--flexoki-accent);
+  --pico-primary-background: #5d6fa7;
+  --pico-primary-border: var(--pico-primary-background);
+  --pico-primary-underline: rgba(140, 160, 215, 0.55);
+  --pico-primary-hover: var(--flexoki-accent-hover);
+  --pico-primary-hover-background: #4d6093;
+  --pico-primary-hover-border: var(--pico-primary-hover-background);
+  --pico-primary-hover-underline: rgba(121, 144, 196, 0.55);
+  --pico-primary-focus: var(--flexoki-accent-focus);
+  --pico-primary-inverse: var(--flexoki-accent-contrast);
+
+  --pico-secondary: var(--flexoki-secondary);
+  --pico-secondary-background: #957a2c;
+  --pico-secondary-border: var(--pico-secondary-background);
+  --pico-secondary-underline: rgba(208, 169, 75, 0.5);
+  --pico-secondary-hover: #b58d32;
+  --pico-secondary-hover-background: var(--pico-secondary-hover);
+  --pico-secondary-hover-border: var(--pico-secondary-hover-background);
+  --pico-secondary-hover-underline: rgba(208, 169, 75, 0.6);
+  --pico-secondary-focus: rgba(208, 169, 75, 0.25);
+  --pico-secondary-inverse: var(--flexoki-secondary-contrast);
+
+  --pico-contrast: var(--flexoki-ink);
+  --pico-contrast-background: #cecdc3;
+  --pico-contrast-border: var(--pico-contrast-background);
+  --pico-contrast-underline: rgba(206, 205, 195, 0.55);
+  --pico-contrast-hover: #f2f0e5;
+  --pico-contrast-hover-background: var(--pico-contrast-hover);
+  --pico-contrast-hover-border: var(--pico-contrast-hover-background);
+  --pico-contrast-hover-underline: rgba(206, 205, 195, 0.65);
+  --pico-contrast-focus: rgba(159, 154, 144, 0.25);
+  --pico-contrast-inverse: var(--flexoki-accent-contrast);
+
+  --pico-box-shadow: 0 14px 40px rgba(9, 8, 7, 0.55);
+
+  --pico-h1-color: #dedcd1;
+  --pico-h2-color: #d3d1c6;
+  --pico-h3-color: #c7c4ba;
+  --pico-h4-color: #bab6ab;
+  --pico-h5-color: #ada99e;
+  --pico-h6-color: #a09b91;
+
+  --pico-mark-background-color: rgba(208, 169, 75, 0.25);
+  --pico-mark-color: var(--flexoki-ink);
+  --pico-ins-color: #9cb963;
+  --pico-del-color: #cf5a49;
+
+  --pico-blockquote-border-color: var(--pico-muted-border-color);
+  --pico-blockquote-footer-color: var(--pico-muted-color);
+
+  --pico-button-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  --pico-button-hover-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+
+  --pico-table-border-color: var(--pico-muted-border-color);
+  --pico-table-row-stripped-background-color: #1b1917;
+
+  --pico-code-background-color: var(--flexoki-code-bg);
+  --pico-code-color: var(--flexoki-muted-text);
+  --pico-code-kbd-background-color: var(--flexoki-ink);
+  --pico-code-kbd-color: var(--flexoki-cream);
+
+  --pico-form-element-background-color: #191816;
+  --pico-form-element-selected-background-color: #2b2925;
+  --pico-form-element-border-color: var(--flexoki-sand);
+  --pico-form-element-color: var(--flexoki-ink);
+  --pico-form-element-placeholder-color: var(--pico-muted-color);
+  --pico-form-element-active-background-color: #201e1b;
+  --pico-form-element-active-border-color: var(--pico-primary-border);
+  --pico-form-element-focus-color: var(--pico-primary-border);
+  --pico-form-element-disabled-opacity: 0.55;
+  --pico-form-element-invalid-border-color: #cf5a49;
+  --pico-form-element-invalid-active-border-color: #b84c3d;
+  --pico-form-element-invalid-focus-color: var(--pico-form-element-invalid-active-border-color);
+  --pico-form-element-valid-border-color: #8da101;
+  --pico-form-element-valid-active-border-color: #7a8d1c;
+  --pico-form-element-valid-focus-color: var(--pico-form-element-valid-active-border-color);
+
+  --pico-switch-background-color: #2d2a27;
+  --pico-switch-checked-background-color: var(--pico-primary-background);
+  --pico-switch-color: var(--flexoki-cream);
+  --pico-switch-thumb-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.45);
+
+  --pico-range-border-color: var(--flexoki-sand);
+  --pico-range-active-border-color: var(--flexoki-clay);
+  --pico-range-thumb-border-color: var(--flexoki-paper);
+  --pico-range-thumb-color: #957a2c;
+  --pico-range-thumb-active-color: var(--pico-primary-background);
+
+  --pico-accordion-border-color: var(--pico-muted-border-color);
+  --pico-accordion-active-summary-color: var(--pico-primary-hover);
+  --pico-accordion-close-summary-color: var(--pico-color);
+  --pico-accordion-open-summary-color: var(--pico-muted-color);
+
+  --pico-card-background-color: var(--flexoki-paper);
+  --pico-card-border-color: var(--pico-muted-border-color);
+  --pico-card-box-shadow: var(--pico-box-shadow);
+  --pico-card-sectioning-background-color: #1c1a18;
+
+  --pico-dropdown-background-color: #1c1a18;
+  --pico-dropdown-border-color: var(--flexoki-clay);
+  --pico-dropdown-box-shadow: var(--pico-box-shadow);
+  --pico-dropdown-color: var(--flexoki-ink);
+  --pico-dropdown-hover-background-color: #25221f;
+
+  --pico-loading-spinner-opacity: 0.6;
+
+  --pico-modal-overlay-background-color: rgba(16, 15, 15, 0.65);
+
+  --pico-progress-background-color: var(--flexoki-clay);
+  --pico-progress-color: var(--pico-primary-background);
+
+  --pico-tooltip-background-color: var(--pico-contrast-background);
+  --pico-tooltip-color: var(--pico-contrast-inverse);
+}

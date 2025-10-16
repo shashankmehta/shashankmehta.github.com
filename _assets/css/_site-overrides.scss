@@ -16,7 +16,7 @@
 :root {
   --pico-font-family: "Lato", sans-serif;
   --pico-line-height: 1.6;         /* Adjust line height for better readability */
-  
+
   --pico-font-size: 112.5%;
 
   /* Custom heading sizes - these will scale with the base font size */
@@ -27,6 +27,8 @@
   --pico-font-size-h5: 1rem;
   --pico-font-size-h6: 1rem;
 }
+
+/* Flexoki theme tokens live in _flexoki-theme.scss */
 
 /* Override the actual heading styles */
 h1 { font-size: var(--pico-font-size-h1); }

@@ -30,4 +30,5 @@ $theme-color: "red";
 @use '_theme-toggle';
 
 // Import site overrides with the custom CSS variables
-@use '_site-overrides'; 
+@use '_flexoki-theme';
+@use '_site-overrides';
